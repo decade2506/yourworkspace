@@ -8,6 +8,9 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+	fontFamily: {
+		primary: "var(--font-montserrat)",
+	},
   	extend: {
   		colors: {
   			background: 'hsl(var(--background))',
