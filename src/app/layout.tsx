@@ -25,7 +25,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${montserrat.variable} antialiased flex flex-col min-h-screen`}
       >
-        <Header />
+        <div className="h-[80px]"><Header /></div>
         <main className="flex-grow">{children}</main>
         <Footer />
       </body>

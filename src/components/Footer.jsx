@@ -3,7 +3,7 @@ import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="py-6 mt-10">
+    <footer className="py-6 mt-0 mb-0">
       <div className="container mx-auto flex flex-col items-center px-4">
         {/* Copyright Text */}
         <p className="text-sm mb-4">

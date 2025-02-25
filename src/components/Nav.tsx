@@ -21,10 +21,10 @@ const Links = [
 const Nav = () => {
     const pathname = usePathname();
     return (
-        <nav className="flex gap-8">
+        <nav className="flex gap-7">
             {Links.map((link,index) => {
                 return (
-                    <Link href={link.path} key={index} className={`${link.path===pathname && "text-accent border-b-2 border-accent"} font-semibold hover:text-accent`}>
+                    <Link href={link.path} key={index} className={`${link.path===pathname && "text-accent border-b-2 border-accent"} font-medium hover:text-accent`}>
                         {link.name}
                     </Link>
                 );
