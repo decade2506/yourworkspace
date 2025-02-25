@@ -4,7 +4,7 @@
 
 @layer base{
   body{
-    @apply font-primary bg-primary;
-    color: #606060;
+    @apply font-primary bg-[#ffffff];
+    color: #303030;
   }
 }
