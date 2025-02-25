@@ -6,7 +6,7 @@ import MobileNav from "@/components/MobileNav";
 
 const Header = () => {
     return (
-        <header className="w-full py-5 xl:py-8 backdrop-blur-md z-50">
+        <header className="w-full py-5 xl:py-8 backdrop-blur-sm z-50">
             <div className="container mx-auto flex justify-between items-center">
                 <Link href="/">
                     <div className="flex items-center gap-3 ">
