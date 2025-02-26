@@ -1,6 +1,9 @@
 export default function Home() {
   return (
     <div>
+      <div className="h-[300px] bg-slate-300">
+        Hero
+      </div>
       <div className="h-[300px] bg-primary">
         Coffee
       </div>
