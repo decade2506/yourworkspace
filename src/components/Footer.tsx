@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="py-8 bg-gray-50">
       {/* Main Footer Content */}
-      <div className="container my-0 mx-auto px-4 mb-6 max-w-5xl">
+      <div className="container my-0 mx-auto px-4 mb-6 max-w-5xl flex flex-col items-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Information */}
           <div>
