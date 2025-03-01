@@ -15,6 +15,10 @@ const Links = [
     path: "/Workspace",
   },
   {
+    name: "Coffee",
+    path: "/Coffee",
+  },
+  {
     name: "Blog",
     path: "/Blog",
   },
@@ -31,7 +35,7 @@ const MobileNav = () => {
       >
         <CiMenuBurger className="text-[30px] text-accent"></CiMenuBurger>
       </SheetTrigger>
-      <SheetContent className="flex flex-col bg-white/80 backdrop-blur-sm">
+      <SheetContent className="flex flex-col bg-white">
         <SheetTitle className="sr-only"></SheetTitle>
         <nav className="flex flex-col justify-center items-end mt-40 gap-10">
           {Links.map((link, index) => {
@@ -39,11 +43,10 @@ const MobileNav = () => {
               <Link
                 href={link.path}
                 key={index}
-                className={`${
-                  link.path === pathname &&
-                  "text-accent border-b-2 border-accent"
-                } text-2xl hover:text-accent font-medium`}
-                onClick={()=>setOpen(false)}
+                className={`${link.path === pathname &&
+                  "text-accent"
+                  } text-2xl hover:text-accent font-medium  w-[280px]`}
+                onClick={() => setOpen(false)}
               >
                 {link.name}
               </Link>
