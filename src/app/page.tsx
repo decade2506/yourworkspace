@@ -183,11 +183,11 @@ export default function Home() {
       <div className="bg-yellow-100">
         <div className="h-[210px] marker:relative">
           <div className="absolute w-full px-10">
-            <h1 className="text-2xl text-amber-800 text-center p-3 font-semibold my-6">
+            <h1 className="text-2xl text-amber-800 text-center p-3 font-semibold my-1">
               Our Coffee Experience
               <div className="border-b-2 border-solid border-amber-800 my-2 w-[50px] mx-auto"></div>
             </h1>
-            <p className="text-center text-sm">
+            <p className="text-center text-sm mb-3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nulla
               aliquam totam, quis at sapiente ea! vero labore, amet earum.
             </p>
