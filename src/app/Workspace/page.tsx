@@ -1,7 +1,7 @@
 export default function Workspace() {
     return(
         <div>
-            <div className="h-[300px] bg-slate-200">
+            <div className="h-[300px] bg-green-50">
                 Hero Title
             </div>
             <div className="h-[300px] bg-primary">
