@@ -6,9 +6,9 @@ export default function Workspace() {
   return (
     <div>
       {/* Title */}
-      <div className="flex flex-col items-center bg-green-50">
+      <div className="flex flex-col items-center bg-green-200">
         <div className="mt-[40px] px-11 ">
-          <p className="text-sm text-center  text-green-700 font-semibold">
+          <p className="text-sm text-center  text-green-800 font-semibold">
             WORKING SPACE FOR EVERY NEED
           </p>
           <h1 className="text-4xl text-center text-black font-semibold my-5">
@@ -23,9 +23,6 @@ export default function Workspace() {
         <div className="flex justify-center gap-4 my-10">
           <Button className="rounded-full text-white bg-orange-400 px-10 hover:bg-black/80">
             Book Now
-          </Button>
-          <Button className="rounded-full text-green-500 border-2 border-green-500 bg-white px-10 hover:bg-green-500 hover:text-white">
-            More Detail
           </Button>
         </div>
       </div>
@@ -88,7 +85,7 @@ export default function Workspace() {
 
       {/* Range */}
       <div className="bg-white flex flex-col items-center">
-        <div className="mt-[40px] px-11 ">
+        <div className="mt-[40px] px-3 ">
           <p className="text-sm text-center  text-green-700 font-semibold">
             COMFORTABLE WORKSPACES
           </p>
@@ -464,9 +461,6 @@ export default function Workspace() {
           </p>
         </div>
       </div>
-
-      {/* Contact */}
-      <div></div>
     </div>
   );
 }

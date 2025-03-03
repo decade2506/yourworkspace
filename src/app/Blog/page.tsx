@@ -8,7 +8,7 @@ export default function Blog() {
       {/* Title */}
       <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-5 h-[267px]">
         <p className="text-sm text-green-200 font-semibold">OUR BLOG</p>
-        <h1 className="text-2xl text-white my-10">
+        <h1 className="text-2xl text-white my-10 font-semibold">
           Insights, Tips, And Inspiration
         </h1>
         <div className="absolute bottom-[-40%]">

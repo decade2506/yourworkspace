@@ -1,122 +1,147 @@
-import Banner from "@/components/Banner";
+import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 
 export default function Blog() {
   return (
     <div>
-      {/* Banner */}
-      <div className="h-96 bg-slate-500">
-        <Banner />
-        <div className="text-white">Intended Length For banner</div>
-      </div>
-
-      {/* About */}
-      <div className="flex flex-col items-center bg-white">
-        <h1 className="my-6 text-center text-2xl font-semibold text-amber-800">
-          About Our Coffee
-          <div className="border-b-2 border-solid border-amber-800 my-2 w-[50px] mx-auto"></div>
-        </h1>
-        <div className="flex justify-between items-center gap-3 mx-6 mb-6">
-          <Image
-            src="/brandpic/office/office3_3.jpg"
-            alt=""
-            width={200}
-            height={400}
-          ></Image>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-        </div>
-        <div className="flex justify-between items-center gap-3 mx-6 mb-6">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <Image
-            src="/brandpic/office/office3_3.jpg"
-            alt=""
-            width={200}
-            height={400}
-          ></Image>
-        </div>
-      </div>
-
-      {/* Drinks Menu */}
-      <div className="flex flex-col gap-3 bg-yellow-50">
-        <div className="flex flex-col items-center">
-          <h1 className="my-6 text-center text-2xl font-semibold text-amber-800">
-            Explore Our Menu
-            <div className="border-b-2 border-solid border-amber-800 my-2 w-[50px] mx-auto"></div>
+      {/* Title */}
+      <div className="flex flex-col items-center bg-yellow-100">
+        <div className="mt-[40px] px-5 ">
+          <p className="text-sm text-center  text-amber-600 font-semibold">
+            Coffee On The Go
+          </p>
+          <h1 className="text-4xl text-center text-amber-900 font-semibold my-5">
+            Delicious and Fresh Coffee That Will Boost Your Day
           </h1>
+          <p className="text-sm text-amber-700 text-center mb-9">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
+            repudiandae unde ut velit sapiente labore expedita soluta.
+          </p>
         </div>
-        <div className="px-10">
-          <h2 className="text-lg text-amber-800 font-semibold text-left mx-3">
-            Coffee - Cacao
-            <div className="border-b-2 border-solid border-amber-800 my-2 w-[40px]"></div>
-          </h2>
-          <div className="text-sm py-3 grid grid-cols-2 gap-24 mx-3">
-            <ul className="leading-loose w-[200px] text-red-500 font-semibold">
-              <li>ESPRESSO</li>
-              <li>MILK ESPRESSO</li>
-              <li>AMERICANO</li>
-              <li>DEN SAI GON</li>
-              <li>SUA SAI GON</li>
-              <li>BAC SIU</li>
-              <li>CACAO</li>
-              <li>SALT COFFEE</li>
-              <li>YOURS SPECIAL</li>
-              <li>WATER</li>
-            </ul>
-            <ul className="leading-loose font-semibold w-[100px] text-right">
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-            </ul>
+      </div>
+
+      {/* Coffee */}
+      <div className="bg-white p-10">
+        <div className="text-amber-700">
+          <div className="flex flex-col items-center relative my-6">
+            <Image
+              src="/brandpic/office/office3_3.jpg"
+              alt=""
+              height={500}
+              width={300}
+              className="rounded-2xl"
+            ></Image>
+            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2 left-2">High Quality Coffee Beans</Badge>
           </div>
-        </div>
-        <div className="px-10">
-          <h2 className="text-lg text-amber-800 font-semibold text-left mx-3">
-            Other Drinks
-            <div className="border-b-2 border-solid border-amber-800 my-2 w-[40px]"></div>
-          </h2>
-          <div className="text-sm py-3 grid grid-cols-2 gap-24 mx-3">
-            <ul className="leading-loose w-[200px] text-red-500 font-semibold">
-              <li>ESPRESSO</li>
-              <li>MILK ESPRESSO</li>
-              <li>AMERICANO</li>
-              <li>DEN SAI GON</li>
-              <li>SUA SAI GON</li>
-              <li>BAC SIU</li>
-              <li>CACAO</li>
-              <li>SALT COFFEE</li>
-              <li>YOURS SPECIAL</li>
-              <li>WATER</li>
-            </ul>
-            <ul className="leading-loose font-semibold w-[100px] text-right">
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-              <li>1$</li>
-            </ul>
+          <div className="flex flex-col items-center relative my-6">
+            <Image
+              src="/brandpic/office/office3_3.jpg"
+              alt=""
+              height={500}
+              width={300}
+              className="rounded-2xl"
+            ></Image>
+            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2 right-2">100% Freshly Made Coffee</Badge>
+          </div>
+          <div className="flex flex-col items-center relative my-6">
+            <Image
+              src="/brandpic/office/office3_3.jpg"
+              alt=""
+              height={500}
+              width={300}
+              className="rounded-2xl"
+            ></Image>
+            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2 left-2">Great Aroma</Badge>
+          </div>
+          <div className="flex flex-col items-center relative my-6">
+            <Image
+              src="/brandpic/office/office3_3.jpg"
+              alt=""
+              height={500}
+              width={300}
+              className="rounded-2xl"
+            ></Image>
+            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2 right-2">Boost Your Mood Everyday</Badge>
           </div>
         </div>
       </div>
 
-      {/* Gallery */}
-      <div className="bg-white my-0">
-        <div className="pt-[10px] px-11 ">
-          <h1 className="text-2xl text-center text-amber-800 font-semibold my-3">
-            Explore Our Gallery
-            <div className="border-b-2 border-solid border-amber-800 my-2 w-[50px] mx-auto"></div>
+      {/* Coffee Sercvices */}
+      <div className="bg-yellow-100 flex flex-col items-center">
+        <div className="mt-[40px] px-2 ">
+          <p className="text-sm text-center  text-amber-600 font-semibold">
+            Amazing Coffee Experience
+          </p>
+          <h1 className="text-3xl text-center text-amber-900 font-semibold my-3">
+            While You Are At It, Why Don't Enjoy A Cup Of Coffee
           </h1>
+        </div>
+        <div className="w-[326px] h-[241px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5">
+          <Image
+            src="/brandpic/office/office3_3.jpg"
+            alt=""
+            height={75}
+            width={75}
+            className="my-3"
+          />
+          <h1 className="text-xl my-3 text-center">Placeholder</h1>
+          <p className="text-sm text-center mb-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <div className="w-[326px] h-[241px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5">
+          <Image
+            src="/brandpic/office/office3_3.jpg"
+            alt=""
+            height={75}
+            width={75}
+            className="my-3"
+          />
+          <h1 className="text-xl my-3 text-center">Placeholder</h1>
+          <p className="text-sm text-center mb-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <div className="w-[326px] h-[241px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5">
+          <Image
+            src="/brandpic/office/office3_3.jpg"
+            alt=""
+            height={75}
+            width={75}
+            className="my-3"
+          />
+          <h1 className="text-xl my-3 text-center">Placeholder</h1>
+          <p className="text-sm text-center mb-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <div className="w-[326px] h-[241px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5">
+          <Image
+            src="/brandpic/office/office3_3.jpg"
+            alt=""
+            height={75}
+            width={75}
+            className="my-3"
+          />
+          <h1 className="text-xl my-3 text-center">Placeholder</h1>
+          <p className="text-sm text-center mb-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+
+      {/* Spaces */}
+      <div className="bg-white">
+        <div className="mt-[40px] px-3 ">
+          <p className="text-sm text-center mt-10 pt-6 text-amber-600 font-semibold">
+            FRESH COFFEE MAKE YOUR DAY
+          </p>
+          <h1 className="text-3xl text-center text-amber-900 font-semibold my-3">
+            Explore YOURS Coffee
+          </h1>
+          <p className="text-sm text-center">
+            Lorem ipsum dolor sit amet consectetur, <br /> adipisicing elit.
+          </p>
         </div>
         <div className="flex flex-col items-center gap-3 my-4">
           <Image

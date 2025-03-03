@@ -11,6 +11,10 @@ const Links = [
     path: "/",
   },
   {
+    name: "About",
+    path: "/About",
+  },
+  {
     name: "Workspace",
     path: "/Workspace",
   },
@@ -21,6 +25,10 @@ const Links = [
   {
     name: "Blog",
     path: "/Blog",
+  },
+  {
+    name: "Contact",
+    path: "/Contact",
   },
 ];
 
