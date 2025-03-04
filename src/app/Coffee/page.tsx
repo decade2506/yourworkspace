@@ -22,16 +22,16 @@ export default function Blog() {
 
       {/* Coffee */}
       <div className="bg-white p-10">
-        <div className="text-amber-700">
+        <div className="text-amber-700 md:flex gap-4">
           <div className="flex flex-col items-center relative my-6">
             <Image
               src="/brandpic/office/office3_3.jpg"
               alt=""
               height={500}
-              width={300}
-              className="rounded-2xl"
+              width={350}
+              className="rounded-2xl sm:h-[600px] sm:w-[450px]"
             ></Image>
-            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2 left-2">High Quality Coffee Beans</Badge>
+            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2  mr-[50px] text-center">High Quality Coffee Beans</Badge>
           </div>
           <div className="flex flex-col items-center relative my-6">
             <Image
@@ -39,9 +39,9 @@ export default function Blog() {
               alt=""
               height={500}
               width={300}
-              className="rounded-2xl"
+              className="rounded-2xl sm:h-[600px] sm:w-[450px]"
             ></Image>
-            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2 right-2">100% Freshly Made Coffee</Badge>
+            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2 ml-[50px] text-center ">100% Freshly Made Coffee</Badge>
           </div>
           <div className="flex flex-col items-center relative my-6">
             <Image
@@ -49,9 +49,9 @@ export default function Blog() {
               alt=""
               height={500}
               width={300}
-              className="rounded-2xl"
+              className="rounded-2xl  sm:h-[600px] sm:w-[450px]"
             ></Image>
-            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2 left-2">Great Aroma</Badge>
+            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2 mr-[150px] text-center">Great Aroma</Badge>
           </div>
           <div className="flex flex-col items-center relative my-6">
             <Image
@@ -59,9 +59,9 @@ export default function Blog() {
               alt=""
               height={500}
               width={300}
-              className="rounded-2xl"
+              className="rounded-2xl  sm:h-[600px] sm:w-[450px]"
             ></Image>
-            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2 right-2">Boost Your Mood Everyday</Badge>
+            <Badge className="bg-[#313131] text-white px-10 py-3 text-sm absolute bottom-2 ml-[20px] text-center">Boost Your Mood Everyday</Badge>
           </div>
         </div>
       </div>

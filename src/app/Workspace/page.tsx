@@ -37,7 +37,7 @@ export default function Workspace() {
             <li>Private Office Room</li>
           </ul>
         </div>
-        <div className="relative">
+        <div className="relative flex flex-col items-center">
           <div className="flex justify-center my-6">
             <Image
               src="/brandpic/office/office3_3.jpg"
@@ -47,7 +47,7 @@ export default function Workspace() {
               className="rounded-2xl"
             />
           </div>
-          <div className="flex flex-col gap-3 text-green-700 absolute bottom-3 left-14">
+          <div className="absolute bottom-9 xs:w-[300px] w-[400px] flex flex-wrap gap-3 text-green-700">
             <Badge className="w-[80px] p-2 bg-white border-2 border-green-500">
               Free Wifi
             </Badge>
@@ -65,7 +65,7 @@ export default function Workspace() {
             </Badge>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative flex flex-col items-center">
           <div className="flex justify-center my-6">
             <Image
               src="/brandpic/office/office3_3.jpg"
@@ -75,7 +75,7 @@ export default function Workspace() {
               className="rounded-2xl"
             />
           </div>
-          <div className="flex flex-col gap-3 text-green-700 absolute bottom-3 left-14">
+          <div className="flex flex-col gap-3 text-green-700 absolute bottom-8">
             <div className="h-[100px] w-[290px] rounded-2xl bg-white flex items-center justify-center font-semibold text-3xl">
               5+
             </div>
