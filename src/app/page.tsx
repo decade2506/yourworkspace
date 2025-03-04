@@ -88,6 +88,12 @@ const Space = [
   {
     img: "/brandpic/office/office4.png",
   },
+  {
+    img: "/brandpic/office/office5.png",
+  },
+  {
+    img: "/brandpic/office/office6.png",
+  },
 ];
 
 export default function Home() {
@@ -109,12 +115,12 @@ export default function Home() {
       {/* Title */}
       <div className="flex flex-col items-center bg-green-50">
         <motion.div>
-          <div className="mt-[40px] px-5 ">
+          <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%]">
             <motion.p
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
-              className="text-sm text-center  text-green-800 font-semibold"
+              className="text-sm text-center xl:text-left  text-green-800 font-semibold"
             >
               COFFEE & WORKING SPACE
             </motion.p>
@@ -122,11 +128,14 @@ export default function Home() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
-              className="text-4xl text-center text-black font-semibold my-5"
+              className="text-4xl text-center xl:text-left text-black font-semibold my-5 xl:mr-20"
             >
               Comfortable Working Space & Amazing Coffee Experience
             </motion.h1>
-            <motion.p variants={childVariants} className="text-sm text-center">
+            <motion.p
+              variants={childVariants}
+              className="text-sm text-center xl:text-left xl:mr-20"
+            >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
               quos repudiandae unde ut velit sapiente labore expedita soluta
               maiores deserunt exercitationem aliquam natus quis accusantium.
@@ -135,7 +144,7 @@ export default function Home() {
           <motion.div
             variants={childVariants}
             viewport={{ once: true, amount: 0.4 }}
-            className="flex justify-center gap-4 my-10"
+            className="flex justify-center xl:mr-[75%] gap-4 my-10"
           >
             <Button className="rounded-full text-green-500 border-2 border-green-500 bg-white px-10 hover:bg-green-500 hover:text-white">
               <Link href="/About">More Detail</Link>
@@ -145,13 +154,13 @@ export default function Home() {
       </div>
 
       {/* Services */}
-      <div className="bg-white">
-        <div className="flex flex-col items-center text-center">
+      <div className="bg-white md:flex flex-rows items-center justify-center flex-wrap gap-5">
+        <div className="flex flex-col items-center text-center md:text-left">
           <motion.ul
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-lg flex flex-col gap-3 my-10 text-green-600 font-semibold"
+            className="text-lg flex flex-col gap-3 lg:mb-10 my-10 md:ml-4 text-green-600 font-semibold"
           >
             <li>Working space</li>
             <li>Meeting Room</li>
@@ -163,33 +172,25 @@ export default function Home() {
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
-          className="relative flex flex-col items-center"
+          className="flex flex-col items-center relative"
         >
-          <div className="flex justify-center my-6">
+          <div className="flex justify-center my-6 lg:mt-6 lg:mb-0 lg:ml-16 mx-6">
             <Image
               src="/brandpic/office/office3_3.jpg"
               alt=""
-              width={325}
+              width={500}
               height={370}
-              className="rounded-2xl object-cover"
+              className="rounded-2xl w-full sm:w-[400px] md:w-[500px] lg:w-[586px] xl:w-[325px] xl:h-[455px] xl:mt-[-30%] h-[370px] object-cover object-center"
             />
           </div>
-          <div className="absolute bottom-9 xs:w-[300px] w-[400px] flex flex-wrap gap-3 text-green-700 text-center">
-            <Badge className="w-[80px] p-2 bg-white border-2 border-green-500">
-              Free Wifi
-            </Badge>
-            <Badge className="w-[110px] p-2 bg-white border-2 border-green-500">
-              Free Parking
-            </Badge>
+          <div className="absolute bottom-9 sm:mr-16 md:mr-36 md:bottom-[70%] lg:mr-[30%] xl:mr-[-10%] xl:bottom-[96%] xs:w-[300px] w-[400px] flex flex-wrap gap-3 text-green-700 text-center">
+            <Badge className="w-[80px] p-2 bg-white">Free Wifi</Badge>
+            <Badge className="w-[110px] p-2 bg-white">Free Parking</Badge>
             {/* <Badge className="w-[110px] p-2 bg-white border-2 border-green-500">
               24/7 Access
             </Badge> */}
-            <Badge className="w-[150px] p-2 bg-white border-2 border-green-500">
-              Free Coffee Break
-            </Badge>
-            <Badge className="w-[130px] p-2 bg-white border-2 border-green-500">
-              Flexible Hour
-            </Badge>
+            <Badge className="w-[150px] p-2 bg-white">Free Coffee Break</Badge>
+            <Badge className="w-[130px] p-2 bg-white">Flexible Hour</Badge>
           </div>
         </motion.div>
         <motion.div
@@ -198,16 +199,16 @@ export default function Home() {
           whileInView="visible"
           className="relative flex flex-col items-center"
         >
-          <div className="flex justify-center my-6">
+          <div className="flex justify-center mb-6 mt-0">
             <Image
               src="/brandpic/office/office3_3.jpg"
               alt=""
               width={325}
               height={370}
-              className="rounded-2xl"
+              className="rounded-2xl w-full sm:w-[400px] md:w-[690px] lg:w-[896px] xl:w-[350px] xl:h-[550px] xl:mt-[-20%] h-[370px] object-cover object-center"
             />
           </div>
-          <div className="flex flex-col gap-3 text-green-700 absolute bottom-8">
+          <div className="flex flex-col gap-3 text-green-700 absolute bottom-8 lg:ml-[-64%] md:ml-[-56%] xl:ml-[-12%]">
             <div className="h-[100px] w-[290px] rounded-2xl bg-white flex items-center justify-center font-semibold text-3xl">
               <CountUp
                 end={53}
@@ -247,7 +248,7 @@ export default function Home() {
             We Offer A Range Of Modern And Flexible Workspaces
           </motion.h1>
         </div>
-        <div className="pb-7">
+        <div className="pb-7 flex flex-wrap gap-3 items-center justify-center">
           {Workspace.map((item, index) => (
             <motion.div
               key={index}
@@ -255,7 +256,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="w-[326px] h-[241px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
+              className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
                 src={item.serviceimg}
@@ -299,7 +300,7 @@ export default function Home() {
             Lorem ipsum dolor sit amet consectetur, <br /> adipisicing elit.
           </motion.p>
         </div>
-        <div className="flex flex-col items-center gap-3 my-4">
+        <div className="flex flex-col xl:flex-row xl:justify-center flex-wrap items-center gap-3 my-4">
           {Space.map((item, index) => (
             <motion.div
               key={index}
@@ -339,7 +340,7 @@ export default function Home() {
             While You Are At It, Why Don't Enjoy A Cup Of Coffee
           </motion.h1>
         </div>
-        <div className="pb-7">
+        <div className="pb-7 flex flex-wrap gap-3 items-center justify-center">
           {Coffee.map((item, index) => (
             <motion.div
               key={index}
@@ -347,7 +348,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="w-[326px] h-[241px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
+              className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
                 src={item.serviceimg}
