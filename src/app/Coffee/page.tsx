@@ -1,179 +1,244 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const parentVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      duration: 0.8,
+      ease: "easeInOut",
+      staggerChildren: 0.5,
+    },
+  },
+};
+const childVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 1.2, ease: "easeInOut" },
+  },
+};
+const Coffee = [
+  {
+    img: "/brandpic/coffe/quality.jpg",
+    badge: "High Quality Coffee Beans",
+  },
+  {
+    img: "/brandpic/coffe/fresh.jpg",
+    badge: "100% Freshly Made Coffee",
+  },
+  {
+    img: "/brandpic/coffe/aroma.jpg",
+    badge: "Great Aroma",
+  },
+  {
+    img: "/brandpic/coffe/mood.jpg",
+    badge: "Boost Your Mood Everyday",
+  },
+];
+const Service = [
+  {
+    serviceimg: "/brandpic/office/office3_3.jpg",
+    title: "Exotic Coffee",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    serviceimg: "/brandpic/office/office3_3.jpg",
+    title: "Muliple variety",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    serviceimg: "/brandpic/office/office3_3.jpg",
+    title: "Fast Service",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    serviceimg: "/brandpic/office/office4.png",
+    title: "Pleasent Abient",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+];
+const Images = [
+  {
+    img: "/brandpic/office/office3_3.jpg",
+  },
+  {
+    img: "/brandpic/office/office3_2.jpg",
+  },
+  {
+    img: "/brandpic/office/office3_1.jpg",
+  },
+  {
+    img: "/brandpic/office/office5.png",
+  },
+  {
+    img: "/brandpic/office/office4.png",
+  },
+  {
+    img: "/brandpic/office/office5.png",
+  },
+  {
+    img: "/brandpic/office/office6.png",
+  },
+];
 
 export default function Blog() {
   return (
-    <div>
+    <motion.div
+      variants={parentVariants}
+      initial="hidden"
+      whileInView="visible"
+    >
       {/* Title */}
       <div className="flex flex-col items-center bg-yellow-100">
         <div className="mt-[40px] px-5 ">
-          <p className="text-sm text-center  text-amber-600 font-semibold">
+          <motion.p
+            variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="text-sm text-center  text-amber-600 font-medium"
+          >
             Coffee On The Go
-          </p>
-          <h1 className="text-4xl text-center text-amber-900 font-semibold my-5">
+          </motion.p>
+          <motion.h1
+            variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="text-4xl text-center text-amber-900 font-medium my-5"
+          >
             Delicious and Fresh Coffee That Will Boost Your Day
-          </h1>
-          <p className="text-sm text-amber-700 text-center mb-9">
+          </motion.h1>
+          <motion.p
+            variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="text-sm text-amber-700 text-center mb-9"
+          >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
             repudiandae unde ut velit sapiente labore expedita soluta.
-          </p>
+          </motion.p>
         </div>
       </div>
 
       {/* Coffee */}
       <div className="bg-white p-10">
         <div className="text-amber-700 md:flex gap-4">
-          <div className="flex flex-col items-center relative my-6">
-            <Image
-              src="/brandpic/office/office3_3.jpg"
-              alt=""
-              height={500}
-              width={350}
-              className="rounded-2xl sm:h-[600px] sm:w-[450px]"
-            ></Image>
-            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2  mr-[50px] text-center">High Quality Coffee Beans</Badge>
-          </div>
-          <div className="flex flex-col items-center relative my-6">
-            <Image
-              src="/brandpic/office/office3_3.jpg"
-              alt=""
-              height={500}
-              width={300}
-              className="rounded-2xl sm:h-[600px] sm:w-[450px]"
-            ></Image>
-            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2 ml-[50px] text-center ">100% Freshly Made Coffee</Badge>
-          </div>
-          <div className="flex flex-col items-center relative my-6">
-            <Image
-              src="/brandpic/office/office3_3.jpg"
-              alt=""
-              height={500}
-              width={300}
-              className="rounded-2xl  sm:h-[600px] sm:w-[450px]"
-            ></Image>
-            <Badge className="bg-[#313131] text-white px-5 py-3 text-sm absolute bottom-2 mr-[150px] text-center">Great Aroma</Badge>
-          </div>
-          <div className="flex flex-col items-center relative my-6">
-            <Image
-              src="/brandpic/office/office3_3.jpg"
-              alt=""
-              height={500}
-              width={300}
-              className="rounded-2xl  sm:h-[600px] sm:w-[450px]"
-            ></Image>
-            <Badge className="bg-[#313131] text-white px-10 py-3 text-sm absolute bottom-2 ml-[20px] text-center">Boost Your Mood Everyday</Badge>
-          </div>
+          {Coffee.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={childVariants}
+              initial="hidden"
+              whileInView="visible"
+              className="flex flex-col items-center relative my-6"
+            >
+              <Image
+                src={item.img}
+                alt=""
+                height={500}
+                width={350}
+                className="rounded-2xl sm:h-[600px] sm:w-[450px]"
+              ></Image>
+              <Badge className="bg-[#313131] text-white border-2 border-solid border-white px-8 py-3 text-sm absolute bottom-2 text-center">
+                {item.badge}
+              </Badge>
+            </motion.div>
+          ))}
         </div>
       </div>
 
       {/* Coffee Sercvices */}
       <div className="bg-yellow-100 flex flex-col items-center">
         <div className="mt-[40px] px-2 ">
-          <p className="text-sm text-center  text-amber-600 font-semibold">
+          <motion.p
+            variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="text-sm text-center  text-amber-600 font-medium"
+          >
             Amazing Coffee Experience
-          </p>
-          <h1 className="text-3xl text-center text-amber-900 font-semibold my-3">
+          </motion.p>
+          <motion.h1
+            variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="text-3xl text-center text-amber-900 font-medium my-3"
+          >
             While You Are At It, Why Don't Enjoy A Cup Of Coffee
-          </h1>
+          </motion.h1>
         </div>
-        <div className="w-[326px] h-[241px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5">
-          <Image
-            src="/brandpic/office/office3_3.jpg"
-            alt=""
-            height={75}
-            width={75}
-            className="my-3"
-          />
-          <h1 className="text-xl my-3 text-center">Placeholder</h1>
-          <p className="text-sm text-center mb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-        </div>
-        <div className="w-[326px] h-[241px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5">
-          <Image
-            src="/brandpic/office/office3_3.jpg"
-            alt=""
-            height={75}
-            width={75}
-            className="my-3"
-          />
-          <h1 className="text-xl my-3 text-center">Placeholder</h1>
-          <p className="text-sm text-center mb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-        </div>
-        <div className="w-[326px] h-[241px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5">
-          <Image
-            src="/brandpic/office/office3_3.jpg"
-            alt=""
-            height={75}
-            width={75}
-            className="my-3"
-          />
-          <h1 className="text-xl my-3 text-center">Placeholder</h1>
-          <p className="text-sm text-center mb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-        </div>
-        <div className="w-[326px] h-[241px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5">
-          <Image
-            src="/brandpic/office/office3_3.jpg"
-            alt=""
-            height={75}
-            width={75}
-            className="my-3"
-          />
-          <h1 className="text-xl my-3 text-center">Placeholder</h1>
-          <p className="text-sm text-center mb-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-        </div>
+        {Service.map((item, index) => (
+          <motion.div
+            key={index}
+            variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="w-[326px] h-[241px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
+          >
+            <Image
+              src={item.serviceimg}
+              alt=""
+              height={75}
+              width={75}
+              className="my-3"
+            />
+            <h1 className="text-xl my-3 text-center">{item.title}</h1>
+            <p className="text-sm text-center mb-5">{item.description}</p>
+          </motion.div>
+        ))}
       </div>
 
       {/* Spaces */}
       <div className="bg-white">
         <div className="mt-[40px] px-3 ">
-          <p className="text-sm text-center mt-10 pt-6 text-amber-600 font-semibold">
+          <motion.p
+            variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="text-sm text-center mt-10 pt-6 text-amber-600 font-medium"
+          >
             FRESH COFFEE MAKE YOUR DAY
-          </p>
-          <h1 className="text-3xl text-center text-amber-900 font-semibold my-3">
+          </motion.p>
+          <motion.h1
+            variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="text-3xl text-center text-amber-900 font-medium my-3"
+          >
             Explore YOURS Coffee
-          </h1>
-          <p className="text-sm text-center">
-            Lorem ipsum dolor sit amet consectetur, <br /> adipisicing elit.
-          </p>
+          </motion.h1>
+          <motion.p
+            variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="text-sm text-center"
+          >
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          </motion.p>
         </div>
-        <div className="flex flex-col items-center gap-3 my-4">
-          <Image
-            src="/brandpic/office/office3_2.jpg"
-            alt=""
-            width={326}
-            height={500}
-            className="rounded-2xl"
-          />
-          <Image
-            src="/brandpic/office/office3_3.jpg"
-            alt=""
-            width={326}
-            height={500}
-            className="rounded-2xl"
-          />
-          <Image
-            src="/brandpic/office/office3_2.jpg"
-            alt=""
-            width={326}
-            height={500}
-            className="rounded-2xl"
-          />
-          <Image
-            src="/brandpic/office/office3_3.jpg"
-            alt=""
-            width={326}
-            height={500}
-            className="rounded-2xl"
-          />
+        <div className="flex flex-col xl:flex-row xl:justify-center flex-wrap items-center gap-3 my-4">
+          {Images.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={childVariants}
+              initial="hidden"
+              whileInView="visible"
+            >
+              <Image
+                src={item.img}
+                alt=""
+                width={326}
+                height={500}
+                className="rounded-2xl"
+              />
+            </motion.div>
+          ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

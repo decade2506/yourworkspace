@@ -4,9 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import CountUp from "react-countup";
-import { useRef, useState, useEffect } from "react";
 const parentVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -30,22 +29,22 @@ const childVariants = {
 // Arrays
 const Workspace = [
   {
-    serviceimg: "/brandpic/office/office3_3.jpg",
+    serviceimg: "/brandpic/svimg/modern.png",
     title: "Modern Design",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    serviceimg: "/brandpic/office/office3_3.jpg",
+    serviceimg: "/brandpic/svimg/cozy.png",
     title: "Cozy Space",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    serviceimg: "/brandpic/office/office3_3.jpg",
+    serviceimg: "/brandpic/svimg/flexible.png",
     title: "Flexible Booking",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    serviceimg: "/brandpic/office/office3_3.jpg",
+    serviceimg: "/brandpic/svimg/beanbag.png",
     title: "Office Space",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
@@ -97,15 +96,6 @@ const Space = [
 ];
 
 export default function Home() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
-  const [hasStarted, setHasStarted] = useState(false);
-
-  useEffect(() => {
-    if (isInView && !hasStarted) {
-      setHasStarted(true);
-    }
-  }, [isInView, hasStarted]);
   return (
     <motion.div
       variants={parentVariants}
@@ -115,25 +105,22 @@ export default function Home() {
       {/* Title */}
       <div className="flex flex-col items-center bg-green-50">
         <motion.div>
-          <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%]">
+          <div className="mt-[40px] px-5 sm:px-11 xl:pr-20 xsl:pr-[20%]">
             <motion.p
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
-              className="text-sm text-center xl:text-left  text-green-800 font-semibold"
+              className="text-sm text-center xl:text-left  text-green-800 font-medium"
             >
               COFFEE & WORKING SPACE
             </motion.p>
-            <motion.h1
-              variants={childVariants}
-              initial="hidden"
-              whileInView="visible"
-              className="text-4xl text-center xl:text-left text-black font-semibold my-5 xl:mr-20"
-            >
+            <motion.h1 className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-black font-medium my-5 xl:mr-20">
               Comfortable Working Space & Amazing Coffee Experience
             </motion.h1>
             <motion.p
               variants={childVariants}
+              initial="hidden"
+              whileInView="visible"
               className="text-sm text-center xl:text-left xl:mr-20"
             >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
@@ -143,8 +130,10 @@ export default function Home() {
           </div>
           <motion.div
             variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true, amount: 0.4 }}
-            className="flex justify-center xl:mr-[75%] gap-4 my-10"
+            className="flex justify-center xl:mr-[80%] gap-4 my-10"
           >
             <Button className="rounded-full text-green-500 border-2 border-green-500 bg-white px-10 hover:bg-green-500 hover:text-white">
               <Link href="/About">More Detail</Link>
@@ -160,7 +149,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-lg flex flex-col gap-3 lg:mb-10 my-10 md:ml-4 text-green-600 font-semibold"
+            className="text-lg xl:text-xl flex flex-col gap-3 lg:mb-10 my-10 md:ml-4 text-green-600 font-medium leading-[2.8] xl:leading-[3]"
           >
             <li>Working space</li>
             <li>Meeting Room</li>
@@ -178,12 +167,17 @@ export default function Home() {
             <Image
               src="/brandpic/office/office3_3.jpg"
               alt=""
-              width={297}
-              height={331}
+              width={325}
+              height={370}
               className="rounded-2xl sm:w-[400px] md:w-[500px] lg:w-[586px] xl:w-[325px] xl:h-[455px] xl:mt-[-30%] h-[370px] object-cover object-center"
             />
           </div>
-          <div className="absolute bottom-9 sm:mr-16 md:mr-36 md:bottom-[70%] lg:mr-[30%] xl:mr-[-10%] xl:bottom-[96%] xs:w-[300px] w-[400px] flex flex-wrap gap-3 text-green-700 text-center">
+          <motion.div
+            variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="absolute bottom-9 sm:mr-16 md:mr-36 md:bottom-[70%] lg:mr-[30%] xl:mr-[-10%] xl:bottom-[96%] xs:w-[300px] w-[400px] flex flex-wrap gap-3 text-green-700 text-center"
+          >
             <Badge className="w-[80px] p-2 bg-white">Free Wifi</Badge>
             <Badge className="w-[110px] p-2 bg-white">Free Parking</Badge>
             {/* <Badge className="w-[110px] p-2 bg-white border-2 border-green-500">
@@ -191,7 +185,7 @@ export default function Home() {
             </Badge> */}
             <Badge className="w-[150px] p-2 bg-white">Free Coffee Break</Badge>
             <Badge className="w-[130px] p-2 bg-white">Flexible Hour</Badge>
-          </div>
+          </motion.div>
         </motion.div>
         <motion.div
           variants={childVariants}
@@ -209,7 +203,7 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col gap-3 text-green-700 absolute bottom-8 lg:ml-[-64%] md:ml-[-56%] xl:ml-[-12%]">
-            <div className="h-[100px] w-[290px] rounded-2xl bg-white flex items-center justify-center font-semibold text-3xl">
+            <div className="h-[100px] w-[290px] rounded-2xl bg-white flex items-center justify-center font-medium text-3xl">
               <CountUp
                 end={53}
                 duration={3}
@@ -230,7 +224,7 @@ export default function Home() {
 
       {/* Comfortable */}
       <div className="bg-green-50 flex flex-col items-center">
-        <div className="mt-[40px] px-3 ">
+        <div className="mt-[40px] px-3 xl:px-36 ">
           <motion.p
             variants={childVariants}
             initial="hidden"
@@ -243,7 +237,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-3xl text-center text-black font-semibold my-3"
+            className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
             We Offer A Range Of Modern And Flexible Workspaces
           </motion.h1>
@@ -255,7 +249,6 @@ export default function Home() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
               className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
@@ -265,8 +258,22 @@ export default function Home() {
                 width={75}
                 className="my-3"
               />
-              <h1 className="text-xl my-3 text-center">{item.title}</h1>
-              <p className="text-sm text-center mb-5">{item.description}</p>
+              <motion.h1
+                variants={childVariants}
+                initial="hidden"
+                whileInView="visible"
+                className="text-xl my-3 text-center"
+              >
+                {item.title}
+              </motion.h1>
+              <motion.p
+                variants={childVariants}
+                initial="hidden"
+                whileInView="visible"
+                className="text-sm text-center mb-5"
+              >
+                {item.description}
+              </motion.p>
             </motion.div>
           ))}
         </div>
@@ -279,7 +286,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center mt-10 pt-6 text-green-700 font-semibold"
+            className="text-sm text-center mt-10 pt-6 text-green-700 font-medium"
           >
             COMFORTABLE SPACES
           </motion.p>
@@ -287,7 +294,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-3xl text-center text-black font-semibold my-3"
+            className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
             Explore Our Spaces
           </motion.h1>
@@ -322,12 +329,12 @@ export default function Home() {
 
       {/* Coffee */}
       <div className="bg-yellow-50 flex flex-col items-center">
-        <div className="mt-[40px] px-2 ">
+        <div className="mt-[40px] px-2 xl:px-36">
           <motion.p
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center  text-amber-800 font-semibold"
+            className="text-sm text-center text-amber-800 font-semibold"
           >
             Amazing Coffee Experience
           </motion.p>
@@ -335,7 +342,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-3xl text-center text-black font-semibold my-3"
+            className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
             While You Are At It, Why Don't Enjoy A Cup Of Coffee
           </motion.h1>
@@ -348,7 +355,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
+              className="w-[326px] h-[241px] lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
                 src={item.serviceimg}
@@ -357,8 +364,22 @@ export default function Home() {
                 width={75}
                 className="my-3"
               />
-              <h1 className="text-xl my-3 text-center">{item.title}</h1>
-              <p className="text-sm text-center mb-5">{item.description}</p>
+              <motion.h1
+                variants={childVariants}
+                initial="hidden"
+                whileInView="visible"
+                className="text-xl my-3 text-center"
+              >
+                {item.title}
+              </motion.h1>
+              <motion.p
+                variants={childVariants}
+                initial="hidden"
+                whileInView="visible"
+                className="text-sm text-center mb-5"
+              >
+                {item.description}
+              </motion.p>
             </motion.div>
           ))}
         </div>
