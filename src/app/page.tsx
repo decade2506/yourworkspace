@@ -205,7 +205,7 @@ export default function Home() {
               alt=""
               width={325}
               height={370}
-              className="rounded-2xl w-full sm:w-[400px] md:w-[690px] lg:w-[896px] xl:w-[350px] xl:h-[550px] xl:mt-[-20%] h-[370px] object-cover object-center"
+              className="rounded-2xl sm:w-[400px] md:w-[690px] lg:w-[896px] xl:w-[350px] xl:h-[550px] xl:mt-[-20%] h-[370px] object-cover object-center"
             />
           </div>
           <div className="flex flex-col gap-3 text-green-700 absolute bottom-8 lg:ml-[-64%] md:ml-[-56%] xl:ml-[-12%]">
