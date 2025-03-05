@@ -178,8 +178,8 @@ export default function Home() {
             <Image
               src="/brandpic/office/office3_3.jpg"
               alt=""
-              width={500}
-              height={370}
+              width={297}
+              height={331}
               className="rounded-2xl w-full sm:w-[400px] md:w-[500px] lg:w-[586px] xl:w-[325px] xl:h-[455px] xl:mt-[-30%] h-[370px] object-cover object-center"
             />
           </div>
