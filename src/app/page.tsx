@@ -110,7 +110,7 @@ export default function Home() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
-              className="text-sm text-center xl:text-left  text-green-800 font-medium"
+              className="text-sm text-center xl:text-left  text-green-800 font-medium tracking-wider"
             >
               COFFEE & WORKING SPACE
             </motion.p>
@@ -229,7 +229,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center  text-green-700 font-semibold"
+            className="text-sm text-center  text-green-700 font-medium tracking-wider"
           >
             COMFORTABLE WORKSPACES
           </motion.p>
@@ -286,7 +286,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center mt-10 pt-6 text-green-700 font-medium"
+            className="text-sm text-center mt-10 pt-6 text-green-700 font-medium tracking-wider"
           >
             COMFORTABLE SPACES
           </motion.p>
@@ -307,20 +307,21 @@ export default function Home() {
             Lorem ipsum dolor sit amet consectetur, <br /> adipisicing elit.
           </motion.p>
         </div>
-        <div className="flex flex-col xl:flex-row xl:justify-center flex-wrap items-center gap-3 my-4">
+        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 px-3 my-6 space-y-4">
           {Space.map((item, index) => (
             <motion.div
               key={index}
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              className="break-inside-avoid rounded-2xl overflow-hidden"
             >
               <Image
                 src={item.img}
-                alt=""
+                alt={`Coffee Image ${index + 1}`}
                 width={326}
-                height={500}
-                className="rounded-2xl"
+                height={index % 2 === 0 ? 500 : 350} // Random heights for organic look
+                className="w-full object-cover rounded-2xl"
               />
             </motion.div>
           ))}
@@ -334,9 +335,9 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center text-amber-800 font-semibold"
+            className="text-sm text-center text-amber-800 font-medium tracking-wider"
           >
-            Amazing Coffee Experience
+            AMAZING COFFEE EXPERIENCE
           </motion.p>
           <motion.h1
             variants={childVariants}

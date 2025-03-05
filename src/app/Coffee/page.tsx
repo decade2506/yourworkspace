@@ -101,15 +101,15 @@ export default function Blog() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center  text-amber-600 font-medium"
+            className="text-sm text-center xl:text-left text-amber-600 font-medium tracking-wider"
           >
-            Coffee On The Go
+            COFFEE ON THE GO
           </motion.p>
           <motion.h1
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-4xl text-center text-amber-900 font-medium my-5"
+            className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-amber-900 font-medium my-5"
           >
             Delicious and Fresh Coffee That Will Boost Your Day
           </motion.h1>
@@ -117,7 +117,7 @@ export default function Blog() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-amber-700 text-center mb-9"
+            className="text-sm text-amber-700 text-center xl:text-left mb-9"
           >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
             repudiandae unde ut velit sapiente labore expedita soluta.
@@ -127,7 +127,7 @@ export default function Blog() {
 
       {/* Coffee */}
       <div className="bg-white p-10">
-        <div className="text-amber-700 md:flex gap-4">
+        <div className="text-amber-700 lg:flex items-center justify-center gap-4">
           {Coffee.map((item, index) => (
             <motion.div
               key={index}
@@ -141,7 +141,7 @@ export default function Blog() {
                 alt=""
                 height={500}
                 width={350}
-                className="rounded-2xl sm:h-[600px] sm:w-[450px]"
+                className="rounded-2xl sm:h-[600px] sm:w-[450px] md:w-3/4 lg:w-[420px] object-cover object-center"
               ></Image>
               <Badge className="bg-[#313131] text-white border-2 border-solid border-white px-8 py-3 text-sm absolute bottom-2 text-center">
                 {item.badge}
@@ -158,48 +158,50 @@ export default function Blog() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center  text-amber-600 font-medium"
+            className="text-sm text-center  text-amber-600 font-medium tracking-wider"
           >
-            Amazing Coffee Experience
+            AMAZING COFFEE EXPERIENCE
           </motion.p>
           <motion.h1
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-3xl text-center text-amber-900 font-medium my-3"
+            className="text-3xl md:text-5xl md:mx-36 text-center text-amber-900 font-medium my-3"
           >
             While You Are At It, Why Don't Enjoy A Cup Of Coffee
           </motion.h1>
         </div>
-        {Service.map((item, index) => (
-          <motion.div
-            key={index}
-            variants={childVariants}
-            initial="hidden"
-            whileInView="visible"
-            className="w-[326px] h-[241px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
-          >
-            <Image
-              src={item.serviceimg}
-              alt=""
-              height={75}
-              width={75}
-              className="my-3"
-            />
-            <h1 className="text-xl my-3 text-center">{item.title}</h1>
-            <p className="text-sm text-center mb-5">{item.description}</p>
-          </motion.div>
-        ))}
+        <div className="flex flex-wrap gap-3 items-center justify-center my-6">
+          {Service.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={childVariants}
+              initial="hidden"
+              whileInView="visible"
+              className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
+            >
+              <Image
+                src={item.serviceimg}
+                alt=""
+                height={75}
+                width={75}
+                className="my-3"
+              />
+              <h1 className="text-xl my-3 text-center">{item.title}</h1>
+              <p className="text-sm text-center mb-5">{item.description}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
-      {/* Spaces */}
+      {/* gallery */}
       <div className="bg-white">
         <div className="mt-[40px] px-3 ">
           <motion.p
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center mt-10 pt-6 text-amber-600 font-medium"
+            className="text-sm text-center mt-10 pt-6 text-amber-600 font-medium tracking-wider"
           >
             FRESH COFFEE MAKE YOUR DAY
           </motion.p>
@@ -207,7 +209,7 @@ export default function Blog() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-3xl text-center text-amber-900 font-medium my-3"
+            className="text-3xl md:text-5xl text-center text-amber-900 font-medium my-3"
           >
             Explore YOURS Coffee
           </motion.h1>
@@ -220,20 +222,21 @@ export default function Blog() {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </motion.p>
         </div>
-        <div className="flex flex-col xl:flex-row xl:justify-center flex-wrap items-center gap-3 my-4">
+        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 px-3 my-6 space-y-4">
           {Images.map((item, index) => (
             <motion.div
               key={index}
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              className="break-inside-avoid rounded-2xl overflow-hidden"
             >
               <Image
                 src={item.img}
-                alt=""
+                alt={`Coffee Image ${index + 1}`}
                 width={326}
-                height={500}
-                className="rounded-2xl"
+                height={index % 2 === 0 ? 500 : 350} // Random heights for organic look
+                className="w-full object-cover rounded-2xl"
               />
             </motion.div>
           ))}

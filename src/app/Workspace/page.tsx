@@ -161,7 +161,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center xl:text-left text-green-800 font-medium"
+            className="text-sm text-center xl:text-left text-green-800 font-medium tracking-wider"
           >
             WORKING SPACE FOR EVERY NEED
           </motion.p>
@@ -278,7 +278,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center text-green-700 font-medium"
+            className="text-sm text-center text-green-700 font-medium tracking-wider"
           >
             COMFORTABLE WORKSPACES
           </motion.p>
@@ -321,7 +321,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center xl:text-left mt-10 pt-6 text-green-700 font-medium"
+            className="text-sm text-center xl:text-left mt-10 pt-6 text-green-700 font-medium tracking-wider"
           >
             OUR SPACES
           </motion.p>
@@ -337,11 +337,11 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center xl:text-right xl:w-1/2 xl:ml-[50%] xl:absolute top-[70%]"
+            className="text-lg text-center xl:text-right xl:w-1/2 xl:ml-[40%] xl:absolute top-[70%]"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
-            repudiandae unde ut velit sapiente labore expedita soluta maiores
-            deserunt exercitationem aliquam natus quis accusantium, m.
+            Whether you’re looking for a quiet spot to work, a professional
+            setting for a meeting, or a venue for your next seminar, we have the
+            perfect space for you.
           </motion.p>
         </div>
         {space.map((item, index) => (
@@ -421,7 +421,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center mt-10 pt-6 text-green-700 font-medium"
+            className="text-sm text-center mt-10 pt-6 text-green-700 font-medium tracking-wider"
           >
             COMFORTABLE SPACES
           </motion.p>
@@ -439,23 +439,24 @@ export default function Workspace() {
             whileInView="visible"
             className="text-sm text-center"
           >
-            Lorem ipsum dolor sit amet consectetur, <br /> adipisicing elit.
+            Take a look at our vibrant and dynamic workspaces.
           </motion.p>
         </div>
-        <div className="flex flex-col xl:flex-row xl:justify-center flex-wrap items-center gap-3 my-4">
+        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 px-3 my-6 space-y-4">
           {Gallery.map((item, index) => (
             <motion.div
               key={index}
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              className="break-inside-avoid rounded-2xl overflow-hidden"
             >
               <Image
                 src={item.img}
-                alt=""
+                alt={`Coffee Image ${index + 1}`}
                 width={326}
-                height={500}
-                className="rounded-2xl"
+                height={index % 2 === 0 ? 500 : 350} // Random heights for organic look
+                className="w-full object-cover rounded-2xl"
               />
             </motion.div>
           ))}
@@ -464,77 +465,72 @@ export default function Workspace() {
 
       {/* Our Facilities */}
       <div className="bg-slate-50 flex flex-col items-center">
-        <div className="mt-[40px] px-11 ">
-          <motion.p
+        <div className="md:flex flex-col xl:flex-row items-center justify-center">
+          <div className="mt-[40px] px-11 xl:w-[40%]">
+            <motion.p
+              variants={childVariants}
+              initial="hidden"
+              whileInView="visible"
+              className="text-sm text-center xl:text-left mt-10 pt-6 text-green-700 font-medium tracking-wider"
+            >
+              OUR FACILITIES
+            </motion.p>
+            <motion.h1
+              variants={childVariants}
+              initial="hidden"
+              whileInView="visible"
+              className="text-3xl text-center xl:text-left text-green-700 font-medium my-6"
+            >
+              Premium Amenities for a Seamless Work Experience
+            </motion.h1>
+            <motion.p
+              variants={childVariants}
+              initial="hidden"
+              whileInView="visible"
+              className="text-lg text-center xl:text-left"
+            >
+              We provide a wide range of top-notch amenities designed to make
+              your work experience as smooth and comfortable as possible.
+            </motion.p>
+          </div>
+          <motion.div
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className="text-sm text-center mt-10 pt-6 text-green-700 font-medium"
+            className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 mx-10 my-6 xl:w-[40%]"
           >
-            OUR FACILITIES
-          </motion.p>
-          <motion.h1
-            variants={childVariants}
-            initial="hidden"
-            whileInView="visible"
-            className="text-3xl text-center text-green-700 font-medium my-6"
-          >
-            Premium Amenities for a Seamless Work Experience
-          </motion.h1>
-          <motion.p
-            variants={childVariants}
-            initial="hidden"
-            whileInView="visible"
-            className="text-sm text-center"
-          >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
-            repudiandae unde ut velit sapiente labore expedita soluta maiores
-            deserunt exercitationem aliquam natus quis accusantium, m.
-          </motion.p>
+            <Image
+              src="/brandpic/profile/profile1.jpg"
+              alt=""
+              height={85}
+              width={85}
+              className="rounded-full md:w-[20%] xl:mt-[-20%]"
+            />
+            <Image
+              src="/brandpic/profile/profile2.jpg"
+              alt=""
+              height={120}
+              width={120}
+              className="rounded-full md:w-[50%] xl:mb-[-20%]"
+            />
+            <Image
+              src="/brandpic/profile/profile3.jpg"
+              alt=""
+              height={80}
+              width={80}
+              className="rounded-full md:w-[40%] xl:mt-[-10%] xl:w-[48%]"
+            />
+          </motion.div>
         </div>
-        <motion.div
-          variants={childVariants}
-          initial="hidden"
-          whileInView="visible"
-          className="flex items-center gap-14"
-        >
-          <Image
-            src="/brandpic/profile/profile1.jpg"
-            alt=""
-            height={150}
-            width={150}
-            className="rounded-full"
-          />
-          <Image
-            src="/brandpic/profile/profile2.jpg"
-            alt=""
-            height={190}
-            width={190}
-            className="rounded-full"
-          />
-        </motion.div>
-        <motion.div
-          variants={childVariants}
-          initial="hidden"
-          whileInView="visible"
-          className="flex items-end"
-        >
-          <Image
-            src="/brandpic/profile/profile3.jpg"
-            alt=""
-            height={105}
-            width={105}
-            className="rounded-full"
-          />
-        </motion.div>
-        <div className="flex flex-wrap items-center justify-center gap-5 xl:px-[200px] xsl:px-[300px] xxl:px-[400px]">
+
+        <div className="flex flex-wrap items-center justify-center gap-5 xl:px-[200px] xsl:px-[300px] xxl:px-[400px] mb-10">
           {Facilities.map((item, index) => (
             <motion.div
               key={index}
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
-              className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
+              className="w-[326px] h-[241px] sm:w-3/4 lg:w-[45%] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
                 src={item.img}
