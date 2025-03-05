@@ -180,7 +180,7 @@ export default function Home() {
               alt=""
               width={297}
               height={331}
-              className="rounded-2xl w-full sm:w-[400px] md:w-[500px] lg:w-[586px] xl:w-[325px] xl:h-[455px] xl:mt-[-30%] h-[370px] object-cover object-center"
+              className="rounded-2xl sm:w-[400px] md:w-[500px] lg:w-[586px] xl:w-[325px] xl:h-[455px] xl:mt-[-30%] h-[370px] object-cover object-center"
             />
           </div>
           <div className="absolute bottom-9 sm:mr-16 md:mr-36 md:bottom-[70%] lg:mr-[30%] xl:mr-[-10%] xl:bottom-[96%] xs:w-[300px] w-[400px] flex flex-wrap gap-3 text-green-700 text-center">
