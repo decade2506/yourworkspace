@@ -27,19 +27,19 @@ const childVariants = {
 
 const Numbers = [
   {
-    count: "100",
+    count: 100,
     title: "Active Members",
   },
   {
-    count: "100",
+    count: 100,
     title: "Successful Events",
   },
   {
-    count: "100",
+    count: 100,
     title: "Partnerships",
   },
   {
-    count: "100",
+    count: 100,
     title: "Locations Serving",
   },
 ];
@@ -258,7 +258,7 @@ export default function About() {
             >
               <div className="flex justify-center">
                 <CountUp
-                  end={item.count}
+                  end={item.count || 0}
                   duration={3}
                   delay={2}
                   startOnMount={false}
