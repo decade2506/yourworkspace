@@ -21,7 +21,7 @@ const childVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 1.2, ease: "easeInOut" },
+    transition: { duration: 1, ease: "easeInOut" },
   },
 };
 
@@ -258,7 +258,7 @@ export default function About() {
             >
               <div className="flex justify-center">
                 <CountUp
-                  end={item.count || 0}
+                  end={item.count}
                   duration={3}
                   delay={2}
                   startOnMount={false}

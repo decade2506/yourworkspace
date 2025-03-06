@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat} from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,12 +7,11 @@ import Footer from "@/components/Footer";
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"]
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
-
 export const metadata: Metadata = {
-  title: "Your Workspace",
+  title: "YOURS Workspace",
 };
 
 export default function RootLayout({
@@ -25,7 +24,9 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${montserrat.variable} antialiased flex flex-col min-h-screen`}
       >
-        <div className="h-[80px]"><Header /></div>
+        <div className="h-[80px]">
+          <Header />
+        </div>
         <main className="flex-grow">{children}</main>
         <Footer />
       </body>

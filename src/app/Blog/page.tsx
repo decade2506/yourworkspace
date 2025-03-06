@@ -1,28 +1,69 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+const parentVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      duration: 0.8,
+      ease: "easeInOut",
+      staggerChildren: 0.5,
+    },
+  },
+};
+const childVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 1, ease: "easeInOut" },
+  },
+};
 
 export default function Blog() {
   return (
     <div>
       {/* Title */}
-      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-5 h-[267px]">
-        <p className="text-sm text-green-200 font-semibold">OUR BLOG</p>
-        <h1 className="text-2xl text-white my-10 font-semibold">
+      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 h-[300px] md:h-[600px] xl:h-[900px]">
+        <motion.p
+          variants={childVariants}
+          initial="hidden"
+          whileInView="visible"
+          className="text-[1.02rem] text-green-200 font-medium tracking-wider"
+        >
+          OUR BLOG
+        </motion.p>
+        <motion.h1
+          variants={childVariants}
+          initial="hidden"
+          whileInView="visible"
+          className="text-3xl md:text-5xl text-white my-10 md:mb-32 font-medium"
+        >
           Insights, Tips, And Inspiration
-        </h1>
-        <div className="absolute bottom-[-40%]">
+        </motion.h1>
+        <motion.div
+          variants={childVariants}
+          initial="hidden"
+          whileInView="visible"
+          className="absolute top-[80%] md:top-[60%] lg:top-[70%] xl:top-[60%] w-full flex justify-center "
+        >
           <Image
             src="/brandpic/office/office3_2.jpg"
             alt="H"
-            width={300}
-            height={300}
-            className="rounded-2xl"
+            width={312}
+            height={165}
+            className="sm:w-[90%] sm:h-[200px] md:h-[340px] xl:h-[500px] rounded-2xl object-cover object-center"
+            priority
           ></Image>
-        </div>
+        </motion.div>
       </div>
       {/* Latest Blog */}
-      <div className="px-10 py-32 bg-slate-100">
+      <div className="px-10 py-32 pt-40 bg-slate-100">
         <h1 className="text-lg text-green-800 my-5">Latest Post</h1>
         <div className="flex flex-col items-center gap-5">
           <div className="flex flex-col p-2 bg-white rounded-2xl">

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
+import Link from "next/link";
 
 const parentVariants = {
   hidden: { opacity: 0 },
@@ -22,7 +23,7 @@ const childVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 1.2, ease: "easeInOut" },
+    transition: { duration: 1, ease: "easeInOut" },
   },
 };
 
@@ -191,7 +192,7 @@ export default function Workspace() {
           className="flex justify-center xl:mr-[85%] gap-4 my-10"
         >
           <Button className="rounded-full text-white bg-orange-400 px-10 hover:bg-black/80">
-            Book Now
+            <Link href="/Contact">Book Now</Link>
           </Button>
         </motion.div>
       </div>
