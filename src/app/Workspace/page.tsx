@@ -291,7 +291,7 @@ export default function Workspace() {
             We Offer A Range Of Modern And Flexible Workspaces
           </motion.h1>
         </div>
-        <div className="pb-7 flex flex-wrap gap-3 items-center justify-center">
+        <div className="pb-7 flex flex-wrap md:px-36 xl:px-0 xl:flex-nowrap xl:w-5/6 gap-3 items-center justify-center">
           {service.map((item, index) => (
             <motion.div
               key={index}
@@ -344,72 +344,87 @@ export default function Workspace() {
             perfect space for you.
           </motion.p>
         </div>
+
         {space.map((item, index) => (
           <motion.div
-            key={index}
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            className=" bg-white relative w-[326px] h-[550px] sm:h-[100%] lg:h-[100%] sm:pb-6  sm:w-3/4 rounded-2xl border-2 border-solid my-5 flex flex-col items-center"
+            key={index}
+            className="flex flex-col items-center xl:items-end justify-end my-8 xl:relative"
           >
             <Image
               src={item.image}
               alt=""
-              width={326}
-              height={200}
-              className="rounded-t-2xl sm:w-[100%]"
+              width={1088}
+              height={600}
+              className="hidden xl:block rounded-2xl w-[1088px] h-[600px] object-cover object-center"
             />
-            <Badge className="absolute hidden md:block bottom-[92%] left-[1%] p-3 text-white bg-green-900">
-              {item.badge}
-            </Badge>
-            <div className="flex flex-col md:flex-row items-center gap-4 flex-wrap md:ml-[-60%] lg:ml-[-70%]">
+            <motion.div
+              variants={childVariants}
+              initial="hidden"
+              whileInView="visible"
+              className=" bg-white relative w-[326px] h-[550px] sm:h-[100%] lg:h-[100%] xl:w-[415px] xl:h-[340px] sm:pb-6  sm:w-3/4 rounded-2xl border-2 border-solid my-5 flex flex-col items-center xl:absolute xl:right-5"
+            >
               <Image
-                src={item.littleimg}
+                src={item.image}
                 alt=""
-                width={40}
-                height={40}
-                className="mt-6 mb-3"
+                width={326}
+                height={200}
+                className="rounded-t-2xl sm:w-[100%] xl:hidden"
               />
-              <motion.h2
-                variants={childVariants}
-                initial="hidden"
-                whileInView="visible"
-                className="text-sm text-slate-400 md:text-left md:pt-6"
-              >
-                {item.capacity}
-              </motion.h2>
-            </div>
+              <Badge className="absolute hidden md:block bottom-[92%] left-[1%] xl:bottom-[155%] xl:left-[-155%] p-3 text-white bg-green-900">
+                {item.badge}
+              </Badge>
+              <div className="flex flex-col md:flex-row items-center gap-4 flex-wrap md:ml-[-60%] lg:ml-[-70%] xl:ml-[-40%]">
+                <Image
+                  src={item.littleimg}
+                  alt=""
+                  width={40}
+                  height={40}
+                  className="mt-6 mb-3"
+                />
+                <motion.h2
+                  variants={childVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  className="text-sm text-slate-400 md:text-left md:pt-6"
+                >
+                  {item.capacity}
+                </motion.h2>
+              </div>
 
-            <div className="p-5">
-              <motion.h1
-                variants={childVariants}
-                initial="hidden"
-                whileInView="visible"
-                className="text-xl mt-2 text-center md:text-left"
-              >
-                {item.title}
-              </motion.h1>
-              <motion.p
-                variants={childVariants}
-                initial="hidden"
-                whileInView="visible"
-                className="text-sm text-center md:text-left mt-5"
-              >
-                {item.content}
-              </motion.p>
-            </div>
-            <div className="border-t-2 border-solid border-slate-300 pt-6 sm:px-6 md:px-8 lg:px-14 flex justify-center items-center gap-5 sm:gap-40 md:gap-[250px] lg:gap-[350px]">
-              <motion.p
-                variants={childVariants}
-                initial="hidden"
-                whileInView="visible"
-              >
-                {item.price}
-              </motion.p>
-              <Button className="rounded-full text-white bg-green-700 px-10 hover:bg-black/80">
-                Book Now
-              </Button>
-            </div>
+              <div className="p-5">
+                <motion.h1
+                  variants={childVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  className="text-xl mt-2 text-center md:text-left"
+                >
+                  {item.title}
+                </motion.h1>
+                <motion.p
+                  variants={childVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  className="text-sm text-center md:text-left mt-5"
+                >
+                  {item.content}
+                </motion.p>
+              </div>
+              <div className="border-t-2 border-solid border-slate-300 pt-6 sm:px-6 md:px-8 lg:px-14 xl:px-6 flex justify-center items-center gap-5 sm:gap-40 md:gap-[250px] lg:gap-[350px] xl:gap-24">
+                <motion.p
+                  variants={childVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                >
+                  {item.price}
+                </motion.p>
+                <Button className="rounded-full text-white bg-green-700 px-10 hover:bg-black/80">
+                  Book Now
+                </Button>
+              </div>
+            </motion.div>
           </motion.div>
         ))}
       </div>
@@ -479,7 +494,7 @@ export default function Workspace() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
-              className="text-3xl text-center xl:text-left text-green-700 font-medium my-6"
+              className="text-3xl md:text-5xl text-center xl:text-left text-green-700 font-medium my-6"
             >
               Premium Amenities for a Seamless Work Experience
             </motion.h1>
@@ -523,14 +538,14 @@ export default function Workspace() {
           </motion.div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-5 xl:px-[200px] xsl:px-[300px] xxl:px-[400px] mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-5 xl:px-[200px] xsl:px-[300px] xxl:px-[400px] my-20">
           {Facilities.map((item, index) => (
             <motion.div
               key={index}
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
-              className="w-[326px] h-[241px] sm:w-3/4 lg:w-[45%] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
+              className="w-[326px] h-[245px] sm:w-3/4 lg:w-[45%] xl:w-[30%] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-4 bg-white p-5"
             >
               <Image
                 src={item.img}
@@ -539,7 +554,7 @@ export default function Workspace() {
                 width={75}
                 className="my-3"
               />
-              <h1 className="text-xl my-3 text-center">{item.title}</h1>
+              <h1 className="text-xl my-3 mx-[-5] text-center">{item.title}</h1>
               <p className="text-sm text-center mb-5">{item.content}</p>
             </motion.div>
           ))}

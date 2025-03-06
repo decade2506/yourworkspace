@@ -51,22 +51,22 @@ const Workspace = [
 ];
 const Coffee = [
   {
-    serviceimg: "/brandpic/office/office3_3.jpg",
+    serviceimg: "/brandpic/coffe/beans.png",
     title: "Exotic Coffee",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    serviceimg: "/brandpic/office/office3_3.jpg",
+    serviceimg: "/brandpic/coffe/variety.png",
     title: "Muliple variety",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    serviceimg: "/brandpic/office/office3_3.jpg",
+    serviceimg: "/brandpic/coffe/service.png",
     title: "Fast Service",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    serviceimg: "/brandpic/office/office4.png",
+    serviceimg: "/brandpic/coffe/abient.png",
     title: "Pleasent Abient",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
