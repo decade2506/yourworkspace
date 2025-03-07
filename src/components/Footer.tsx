@@ -1,3 +1,6 @@
+"use client";
+
+import useInvalidname from "@/lib/use-invalid-paths";
 import Link from "next/link";
 import {
   FaTwitter,
@@ -10,6 +13,8 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const invalidPath: boolean = useInvalidname();
+  if (invalidPath) return <></>;
   return (
     <footer className="py-8 bg-gray-50">
       {/* Main Footer Content */}
@@ -36,8 +41,9 @@ const Footer = () => {
             <div className="flex items-start">
               <FaMapMarkerAlt className="mr-2 mt-1 text-gray-600" />
               <address className="not-italic">
-                103 đường số 4, Khu đô thị mới An Cựu, <br />phường An Đông quận Thuận
-                Hoá, <br />thành phố Huế
+                103 đường số 4, Khu đô thị mới An Cựu, <br />
+                phường An Đông quận Thuận Hoá, <br />
+                thành phố Huế
               </address>
             </div>
           </div>
@@ -49,8 +55,10 @@ const Footer = () => {
               <li className="flex items-start">
                 <FaClock className="mr-2 mt-1 text-gray-600" />
                 <div>
-                  <p>Thứ 2 - Thứ 6: 7:00 AM - 8:00 PM</p><br />
-                  <p>Thứ 7: 9:00 AM - 6:00 PM</p><br />
+                  <p>Thứ 2 - Thứ 6: 7:00 AM - 8:00 PM</p>
+                  <br />
+                  <p>Thứ 7: 9:00 AM - 6:00 PM</p>
+                  <br />
                   <p>Chủ nhật: Đóng cửa</p>
                 </div>
               </li>

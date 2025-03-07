@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Nav from './Nav';
 import MobileNav from './MobileNav';
+import useInvalidname from '@/lib/use-invalid-paths';
 
 const Header = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -27,6 +28,8 @@ const Header = () => {
     // Calculate background opacity based on scroll position
     // Start with 0.6 opacity (your bg-green-50/60) and decrease to 0
     const bgOpacity = Math.max(0, 0.3 + (scrollPosition / 300) * 0.5);
+    const invalidPath: boolean = useInvalidname();
+    if(invalidPath) return <></>
 
     return (
         <header
