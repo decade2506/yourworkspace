@@ -92,7 +92,7 @@ export default function BlogClient({ posts }: BlogProps) {
             viewport={{ once: true }}
             className="flex flex-col md:grid md:grid-cols-2 md:place-items-start items-center min-w-[315px] xl:max-h-[685px] mx-3 bg-white rounded-2xl"
           >
-            {posts.slice(0, 4).map((post, key) => (
+            {posts.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()).slice(0, 4).map((post, key) => (
               <motion.div
                 variants={childVariants}
                 initial="hidden"
@@ -146,7 +146,7 @@ export default function BlogClient({ posts }: BlogProps) {
             Feature Post
           </motion.h1>
           <div className="flex flex-col items-center gap-3">
-            {posts.map((post, key) => (
+            {posts.sort((a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime()).map((post, key) => (
               <motion.div
                 variants={childVariants}
                 initial="hidden"
