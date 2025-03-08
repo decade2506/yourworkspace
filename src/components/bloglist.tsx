@@ -35,7 +35,7 @@ export default function BlogClient({ posts }: BlogProps) {
   return (
     <div>
       {/* Title */}
-      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 h-[300px] md:h-[600px] xl:h-[900px]">
+      <div className="relative flex flex-col items-center justify-center gap-3 text-center bg-green-800 p-8 h-[300px] md:h-[600px] xl:h-[900px] xs:pt-52 sm:pt-32 md:pt-0">
         <motion.p
           variants={childVariants}
           initial="hidden"
@@ -50,7 +50,7 @@ export default function BlogClient({ posts }: BlogProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl text-white my-10 md:mb-32 font-medium"
+          className="text-3xl md:text-5xl text-white mt-2 mb-32 font-medium"
         >
           Insights, Tips, And Inspiration
         </motion.h1>
@@ -59,7 +59,7 @@ export default function BlogClient({ posts }: BlogProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="absolute top-[80%] md:top-[60%] lg:top-[70%] xl:top-[60%] md:px-5 lg:px-0 flex justify-center "
+          className="absolute top-[85%] md:top-[60%] lg:top-[70%] xl:top-[60%] md:px-5 lg:px-0 flex justify-center "
         >
           <Image
             src="/brandpic/office/exmpl2.jpg"

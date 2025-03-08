@@ -2,8 +2,9 @@ import BlogClient from "@/components/bloglist";
 import { client } from "@/sanity/lib/client";
 import { SanityTypes } from "@/@types";
 
+export const revalidate = 5;
 async function getPosts() {
-  const query = `*[_type=='post'] | order(_createdAt desc)`;
+  const query = `*[_type=='post'] | order(publishedAt desc)`;
   return await client.fetch<SanityTypes.Post[]>(query);
 }
 
