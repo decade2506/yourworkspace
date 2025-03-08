@@ -28,8 +28,9 @@ async function getPost(slug: string): Promise<SanityTypes.Post | null> {
 }
 
 // Main page component
-export default async function Post({ params }: { params: Awaited<{ slug: string }> }) {
-  const post = await getPost(params.slug);
+export default async function Post({ params }: { params: { slug: string } }) {
+  const resolvedParams = await Promise.resolve(params); // Ensure params is resolved
+  const post = await getPost(resolvedParams.slug);
 
   if (!post) {
     return <div className="text-center">Post not found</div>;
