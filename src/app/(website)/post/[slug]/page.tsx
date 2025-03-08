@@ -18,8 +18,31 @@ async function getPost(slug: string): Promise<any> {
   return await client.fetch(query, { slug })
 }
 
-export default async function Post({ params: { slug } }: { params: { slug: string } }) {
-  const post: SanityTypes.Post = await getPost(slug);
+interface PageParams {
+  slug: string;
+}
+
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: PageParams 
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const post = await getPost(resolvedParams.slug);
+  
+  return {
+    title: post.title,
+    description: `Read ${post.title} on Your Site`,
+  };
+}
+
+export default async function Post({
+  params,
+}: {
+  params: PageParams;
+}) {
+  const resolvedParams = await params;
+  const post: SanityTypes.Post = await getPost(resolvedParams.slug);
   console.log(post)
   return (
     <div className="flex flex-col items-center w-full p-6">
@@ -27,7 +50,7 @@ export default async function Post({ params: { slug } }: { params: { slug: strin
       <div className="text-gray-500 text-sm mt-2">
         {new Date(post.publishedAt).toDateString()}
       </div>
-      <h1 className="text-3xl font-bold mt-4"></h1>
+      <h1 className="text-3xl font-bold mt-4">{post.title}</h1>
     </div>
   );
 }
