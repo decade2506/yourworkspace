@@ -4,7 +4,7 @@ import React from "react";
 import { CalendarIcon } from "lucide-react";
 
 // Define the type explicitly
-interface PageProps {
+type PageProps = {
   params: {
     slug: string;
   };
