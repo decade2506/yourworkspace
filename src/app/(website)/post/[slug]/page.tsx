@@ -18,17 +18,10 @@ async function getPost(slug: string): Promise<any> {
   return await client.fetch(query, { slug })
 }
 
-interface PageParams {
-  slug: string;
-}
-
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: PageParams 
-}): Promise<Metadata> {
-  const resolvedParams = await params;
-  const post = await getPost(resolvedParams.slug);
+// Simplified approach without complex typings
+export async function generateMetadata(props: any): Promise<Metadata> {
+  const slug = props.params.slug;
+  const post = await getPost(slug);
   
   return {
     title: post.title,
@@ -36,14 +29,11 @@ export async function generateMetadata({
   };
 }
 
-export default async function Post({
-  params,
-}: {
-  params: PageParams;
-}) {
-  const resolvedParams = await params;
-  const post: SanityTypes.Post = await getPost(resolvedParams.slug);
-  console.log(post)
+// Simplified approach without complex typings
+export default async function Post(props: any) {
+  const slug = props.params.slug;
+  const post = await getPost(slug);
+  
   return (
     <div className="flex flex-col items-center w-full p-6">
       <CalendarIcon size={20} />
