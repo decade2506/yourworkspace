@@ -89,18 +89,15 @@ const Images = [
 
 export default function Blog() {
   return (
-    <motion.div
-      variants={parentVariants}
-      initial="hidden"
-      whileInView="visible"
-    >
+    <div>
       {/* Title */}
-      <div className="flex flex-col items-center bg-yellow-100">
+      <div className="flex flex-col items-center bg-yellow-100 py-40">
         <div className="mt-[40px] px-5 ">
           <motion.p
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-sm text-center xl:text-left text-amber-600 font-medium tracking-wider"
           >
             COFFEE ON THE GO
@@ -109,6 +106,7 @@ export default function Blog() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-amber-900 font-medium my-5"
           >
             Delicious and Fresh Coffee That Will Boost Your Day
@@ -117,6 +115,7 @@ export default function Blog() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-sm text-amber-700 text-center xl:text-left mb-9"
           >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
@@ -134,6 +133,7 @@ export default function Blog() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{once: true}}
               className="flex flex-col items-center relative my-6"
             >
               <Image
@@ -158,6 +158,7 @@ export default function Blog() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-sm text-center  text-amber-600 font-medium tracking-wider"
           >
             AMAZING COFFEE EXPERIENCE
@@ -166,6 +167,7 @@ export default function Blog() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-3xl md:text-5xl md:mx-36 text-center text-amber-900 font-medium my-3"
           >
             While You Are At It, Why Don't Enjoy A Cup Of Coffee
@@ -178,6 +180,7 @@ export default function Blog() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{once: true}}
               className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
@@ -201,6 +204,7 @@ export default function Blog() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-sm text-center mt-10 pt-6 text-amber-600 font-medium tracking-wider"
           >
             FRESH COFFEE MAKE YOUR DAY
@@ -209,6 +213,7 @@ export default function Blog() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-3xl md:text-5xl text-center text-amber-900 font-medium my-3"
           >
             Explore YOURS Coffee
@@ -217,6 +222,7 @@ export default function Blog() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-sm text-center"
           >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -229,6 +235,7 @@ export default function Blog() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{once: true}}
               className="break-inside-avoid rounded-2xl overflow-hidden"
             >
               <Image
@@ -242,6 +249,6 @@ export default function Blog() {
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

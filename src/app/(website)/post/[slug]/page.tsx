@@ -18,7 +18,6 @@ async function getPost(slug: string): Promise<any> {
   return await client.fetch(query, { slug })
 }
 
-// Simplified approach without complex typings
 export async function generateMetadata(props: any): Promise<Metadata> {
   const slug = props.params.slug;
   const post = await getPost(slug);
@@ -29,10 +28,8 @@ export async function generateMetadata(props: any): Promise<Metadata> {
   };
 }
 
-// Simplified approach without complex typings
-export default async function Post(props: any) {
-  const slug = props.params.slug;
-  const post = await getPost(slug);
+export default async function Post({params: {slug}}: {params: {slug: string}}) {
+  const post: SanityTypes.Post = await getPost(slug);
   
   return (
     <div className="flex flex-col items-center w-full p-6">

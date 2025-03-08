@@ -150,18 +150,15 @@ const Facilities = [
 
 export default function Workspace() {
   return (
-    <motion.div
-      variants={parentVariants}
-      initial="hidden"
-      whileInView="visible"
-    >
+    <div>
       {/* Title */}
-      <div className="flex flex-col items-center bg-green-200">
+      <div className="flex flex-col items-center bg-green-200 pt-40">
         <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%] ">
           <motion.p
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-sm text-center xl:text-left text-green-800 font-medium tracking-wider"
           >
             WORKING SPACE FOR EVERY NEED
@@ -170,6 +167,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-black font-medium my-5"
           >
             Discover Flexible And Inspiring Workspaces
@@ -178,6 +176,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-sm text-center xl:text-left"
           >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
@@ -189,6 +188,7 @@ export default function Workspace() {
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{once: true}}
           className="flex justify-center xl:mr-[85%] gap-4 my-10"
         >
           <Button className="rounded-full text-white bg-orange-400 px-10 hover:bg-black/80">
@@ -204,6 +204,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-lg xl:text-xl leading-[2.8] xl:leading-[3] flex flex-col gap-3 lg:mb-10 my-10 md:ml-4 text-green-600 font-medium"
           >
             <li>Working space</li>
@@ -216,6 +217,7 @@ export default function Workspace() {
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{once: true}}
           className="flex flex-col items-center relative"
         >
           <div className="flex justify-center my-6 lg:mt-6 lg:mb-0 lg:ml-16 mx-6">
@@ -241,6 +243,7 @@ export default function Workspace() {
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{once: true}}
           className="relative flex flex-col items-center"
         >
           <div className="flex justify-center mb-6 mt-0">
@@ -279,6 +282,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-sm text-center text-green-700 font-medium tracking-wider"
           >
             COMFORTABLE WORKSPACES
@@ -287,6 +291,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
             We Offer A Range Of Modern And Flexible Workspaces
@@ -299,6 +304,7 @@ export default function Workspace() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{once: true}}
               className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
@@ -322,6 +328,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-sm text-center xl:text-left mt-10 pt-6 text-green-700 font-medium tracking-wider"
           >
             OUR SPACES
@@ -330,6 +337,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-3xl md:text-5xl xl:leading-relaxed text-center xl:text-left xl:w-[50%] text-black font-medium my-6"
           >
             Take A Look At Our Vibrant And Dynamic Workspaces
@@ -338,6 +346,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-lg text-center xl:text-right xl:w-1/2 xl:ml-[40%] xl:absolute top-[70%]"
           >
             Whether you’re looking for a quiet spot to work, a professional
@@ -351,6 +360,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             key={index}
             className="flex flex-col items-center xl:items-end justify-end my-8 xl:relative"
           >
@@ -365,6 +375,7 @@ export default function Workspace() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{once: true}}
               className=" bg-white relative w-[326px] h-[550px] sm:h-[100%] lg:h-[100%] xl:w-[415px] xl:h-[340px] sm:pb-6  sm:w-3/4 rounded-2xl border-2 border-solid my-5 flex flex-col items-center xl:absolute xl:right-5"
             >
               <Image
@@ -437,6 +448,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-sm text-center mt-10 pt-6 text-green-700 font-medium tracking-wider"
           >
             COMFORTABLE SPACES
@@ -445,6 +457,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
             Explore Our Spaces
@@ -453,6 +466,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="text-sm text-center"
           >
             Take a look at our vibrant and dynamic workspaces.
@@ -465,6 +479,7 @@ export default function Workspace() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{once: true}}
               className="break-inside-avoid rounded-2xl overflow-hidden"
             >
               <Image
@@ -487,6 +502,7 @@ export default function Workspace() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{once: true}}
               className="text-sm text-center xl:text-left mt-10 pt-6 text-green-700 font-medium tracking-wider"
             >
               OUR FACILITIES
@@ -495,6 +511,7 @@ export default function Workspace() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{once: true}}
               className="text-3xl md:text-5xl text-center xl:text-left text-green-700 font-medium my-6"
             >
               Premium Amenities for a Seamless Work Experience
@@ -503,6 +520,7 @@ export default function Workspace() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{once: true}}
               className="text-lg text-center xl:text-left"
             >
               We provide a wide range of top-notch amenities designed to make
@@ -513,6 +531,7 @@ export default function Workspace() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{once: true}}
             className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 mx-10 my-6 xl:w-[40%]"
           >
             <Image
@@ -546,6 +565,7 @@ export default function Workspace() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{once: true}}
               className="w-[326px] h-[245px] sm:w-3/4 lg:w-[45%] xl:w-[30%] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-4 bg-white p-5"
             >
               <Image
@@ -561,6 +581,6 @@ export default function Workspace() {
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

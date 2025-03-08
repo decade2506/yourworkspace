@@ -97,30 +97,34 @@ const Space = [
 
 export default function Home() {
   return (
-    <motion.div
-      variants={parentVariants}
-      initial="hidden"
-      whileInView="visible"
-    >
+    <div>
       {/* Title */}
-      <div className="flex flex-col items-center bg-green-50">
+      <div className="flex flex-col items-center bg-green-50 pt-40">
         <motion.div>
           <div className="mt-[40px] px-5 sm:px-11 xl:pr-20 xsl:pr-[20%]">
             <motion.p
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="text-sm text-center xl:text-left  text-green-800 font-medium tracking-wider"
             >
               COFFEE & WORKING SPACE
             </motion.p>
-            <motion.h1 className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-black font-medium my-5 xl:mr-20">
+            <motion.h1
+              variants={childVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-black font-medium my-5 xl:mr-20"
+            >
               Comfortable Working Space & Amazing Coffee Experience
             </motion.h1>
             <motion.p
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="text-sm text-center xl:text-left xl:mr-20"
             >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
@@ -132,7 +136,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: true }}
             className="flex justify-center xl:mr-[80%] gap-4 my-10"
           >
             <Button className="rounded-full text-green-500 border-2 border-green-500 bg-white px-10 hover:bg-green-500 hover:text-white">
@@ -149,6 +153,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="text-lg xl:text-xl flex flex-col gap-3 lg:mb-10 my-10 md:ml-4 text-green-600 font-medium leading-[2.8] xl:leading-[3]"
           >
             <li>Working space</li>
@@ -161,6 +166,7 @@ export default function Home() {
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           className="flex flex-col items-center relative"
         >
           <div className="flex justify-center my-6 lg:mt-6 lg:mb-0 lg:ml-16 mx-6">
@@ -176,6 +182,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="absolute bottom-9 sm:mr-16 md:mr-36 md:bottom-[70%] lg:mr-[30%] xl:mr-[-10%] xl:bottom-[96%] xs:w-[300px] w-[400px] flex flex-wrap gap-3 text-green-700 text-center"
           >
             <Badge className="w-[80px] p-2 bg-white">Free Wifi</Badge>
@@ -191,6 +198,7 @@ export default function Home() {
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           className="relative flex flex-col items-center"
         >
           <div className="flex justify-center mb-6 mt-0">
@@ -229,6 +237,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="text-sm text-center  text-green-700 font-medium tracking-wider"
           >
             COMFORTABLE WORKSPACES
@@ -237,6 +246,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
             We Offer A Range Of Modern And Flexible Workspaces
@@ -249,6 +259,7 @@ export default function Home() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
@@ -262,6 +273,7 @@ export default function Home() {
                 variants={childVariants}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 className="text-xl my-3 text-center"
               >
                 {item.title}
@@ -270,6 +282,7 @@ export default function Home() {
                 variants={childVariants}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 className="text-sm text-center mb-5"
               >
                 {item.description}
@@ -286,6 +299,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="text-sm text-center mt-10 pt-6 text-green-700 font-medium tracking-wider"
           >
             COMFORTABLE SPACES
@@ -294,6 +308,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
             Explore Our Spaces
@@ -302,6 +317,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="text-sm text-center"
           >
             Lorem ipsum dolor sit amet consectetur, <br /> adipisicing elit.
@@ -314,6 +330,7 @@ export default function Home() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="break-inside-avoid rounded-2xl overflow-hidden"
             >
               <Image
@@ -335,6 +352,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="text-sm text-center text-amber-800 font-medium tracking-wider"
           >
             AMAZING COFFEE EXPERIENCE
@@ -343,6 +361,7 @@ export default function Home() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
             While You Are At It, Why Don't Enjoy A Cup Of Coffee
@@ -355,7 +374,7 @@ export default function Home() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true }}
               className="w-[326px] h-[241px] lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
@@ -369,6 +388,7 @@ export default function Home() {
                 variants={childVariants}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 className="text-xl my-3 text-center"
               >
                 {item.title}
@@ -377,6 +397,7 @@ export default function Home() {
                 variants={childVariants}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 className="text-sm text-center mb-5"
               >
                 {item.description}
@@ -385,6 +406,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

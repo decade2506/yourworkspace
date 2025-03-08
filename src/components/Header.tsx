@@ -33,7 +33,7 @@ const Header = () => {
 
     return (
         <header
-            className={`w-full py-2 xl:py-4 backdrop-blur-sm fixed top-0 left-0 z-50 transition-all duration-300 h-[80px] border-b-2`}
+            className={`w-full py-2 xl:py-4 backdrop-blur-sm fixed top-0 left-0 z-50 transition-all duration-300 h-[80px]`}
             style={{
                 backgroundColor: `rgba(255,255,255 , ${bgOpacity})`,
                 transform: bgOpacity === 0 ? 'translateY(-100%)' : 'translateY(0)'

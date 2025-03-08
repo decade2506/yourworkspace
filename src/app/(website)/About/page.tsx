@@ -117,11 +117,7 @@ const Community = [
 ];
 export default function About() {
   return (
-    <motion.div
-      variants={parentVariants}
-      initial="hidden"
-      whileInView="visible"
-    >
+    <div>
       {/* Title */}
       <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 h-[300px] md:h-[600px] xl:h-[900px]">
         <motion.p
@@ -340,6 +336,7 @@ export default function About() {
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           className="text-[1.02rem] text-green-600 my-5 font-medium"
         >
           THE YOURS COMMUNITY
@@ -348,6 +345,7 @@ export default function About() {
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           className="text-2xl text-green-800 font-medium text-center"
         >
           A Diverse Network Of Innovators And Creators
@@ -356,6 +354,7 @@ export default function About() {
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           className="text-sm text-green-900 text-center mt-3"
         >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
@@ -445,6 +444,6 @@ export default function About() {
           </motion.div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
