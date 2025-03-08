@@ -1,25 +1,10 @@
 import { client } from "@/sanity/lib/client";
 import React from "react";
 import { CalendarIcon } from "lucide-react";
-
-// Define Post Type
-type PostType = {
-  _id: string;
-  publishedAt: string;
-  title: string;
-  author: {
-    name: string;
-    image: string;
-  };
-  image: string;
-  slug: {
-    current: string;
-  };
-  body: any;
-};
+import { SanityTypes } from "@/@types";
 
 // Fetch post from Sanity
-async function getPost(slug: string): Promise<PostType | null> {
+async function getPost(slug: string): Promise<SanityTypes.Post | null> {
   try {
     const query = `*[_type == 'post' && slug.current == $slug][0]{
       _id,
@@ -41,6 +26,17 @@ async function getPost(slug: string): Promise<PostType | null> {
   }
 }
 
+// Generate static params
+export async function generateStaticParams() {
+  // Fetch all post slugs from Sanity
+  const query = `*[_type == 'post']{ 'slug': slug.current }`;
+  const posts = await client.fetch(query);
+  
+  return posts.map((post: { slug: string }) => ({
+    slug: post.slug,
+  }));
+}
+
 // Main Page Component
 export default async function Post({ params }: { params: { slug: string } }) {
   if (!params?.slug) {
@@ -60,7 +56,6 @@ export default async function Post({ params }: { params: { slug: string } }) {
         {new Date(post.publishedAt).toDateString()}
       </div>
       <h1 className="text-3xl font-bold mt-4">{post.title}</h1>
-      <div className="mt-2 text-gray-600">By {post.author.name}</div>
     </div>
   );
 }
