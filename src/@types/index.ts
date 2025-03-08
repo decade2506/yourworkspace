@@ -1,4 +1,5 @@
 import { SanityImageAssetDocument } from "next-sanity";
+import { PortableTextBlock } from "sanity";
 
 export namespace SanityTypes {
     export interface Post {
@@ -6,7 +7,7 @@ export namespace SanityTypes {
         publishedAt: string;
         title: string;
         slug: {current: string};
-        image: SanityImageAssetDocument;
-        body: any;
+        image?: SanityImageAssetDocument | null; // Allow for missing images
+        body: PortableTextBlock[];
     }
 }
