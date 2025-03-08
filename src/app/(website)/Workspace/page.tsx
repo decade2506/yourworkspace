@@ -192,7 +192,7 @@ export default function Workspace() {
           className="flex justify-center xl:mr-[85%] gap-4 my-10"
         >
           <Button className="rounded-full text-white bg-orange-400 px-10 hover:bg-black/80">
-            <Link href="/Contact">Book Now</Link>
+            <Link href="/contact">Book Now</Link>
           </Button>
         </motion.div>
       </div>

@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { SanityTypes } from "@/@types";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "next-sanity";
+import { useEffect, useState } from "react";
 
 interface BlogProps {
   posts: SanityTypes.Post[];
@@ -196,7 +197,7 @@ export default function BlogClient({ posts }: BlogProps) {
               </motion.div>
             ))}
             {/* Load More */}
-            <motion.div
+            {/* <motion.div
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
@@ -206,7 +207,7 @@ export default function BlogClient({ posts }: BlogProps) {
               <Button className="rounded-xl px-6 bg-green-800 text-white mx-auto hover:bg-white hover:text-green-900 hover:border-2 border-green-800">
                 Load More
               </Button>
-            </motion.div>
+            </motion.div> More Time to Implement */}
           </div>
         </div>
       </div>

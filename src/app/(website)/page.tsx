@@ -140,7 +140,7 @@ export default function Home() {
             className="flex justify-center xl:mr-[80%] gap-4 my-10"
           >
             <Button className="rounded-full text-green-500 border-2 border-green-500 bg-white px-10 hover:bg-green-500 hover:text-white">
-              <Link href="/About">More Detail</Link>
+              <Link href="/about">More Detail</Link>
             </Button>
           </motion.div>
         </motion.div>
