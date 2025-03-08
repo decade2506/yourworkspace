@@ -3,16 +3,10 @@ import { client } from "@/sanity/lib/client";
 import React from "react";
 import { CalendarIcon } from "lucide-react";
 
-// Define the type explicitly
-type PageProps = {
-  params: {
-    slug: string;
-  };
-}
-
 // Fetch post from Sanity
 async function getPost(slug: string): Promise<SanityTypes.Post | null> {
-  const query = `*[_type=='post' && slug.current == $slug][0]{
+  try {
+    const query = `*[_type=='post' && slug.current == $slug][0]{
       _id,
       publishedAt,
       title,
@@ -23,13 +17,18 @@ async function getPost(slug: string): Promise<SanityTypes.Post | null> {
       image,
       slug,
       body
-  }`;
+    }`;
 
-  return await client.fetch(query, { slug });
+    const post = await client.fetch<SanityTypes.Post | null>(query, { slug });
+    return post ?? null;
+  } catch (error) {
+    console.error("Error fetching post:", error);
+    return null;
+  }
 }
 
 // Main page component
-export default async function Post({ params }: PageProps) {
+export default async function Post({ params }: { params: Awaited<{ slug: string }> }) {
   const post = await getPost(params.slug);
 
   if (!post) {
