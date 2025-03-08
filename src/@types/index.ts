@@ -7,7 +7,6 @@ export namespace SanityTypes {
         title: string;
         slug: {current: string};
         image: SanityImageAssetDocument;
-        description: string;
         body: any;
     }
 }

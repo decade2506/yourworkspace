@@ -48,12 +48,6 @@ export const postType = defineType({
       type: "datetime",
     }),
     defineField({
-      name: "description",  
-      title: "Description",
-      type: "string",
-      validation: (Rule) => Rule.min(50).max(250),
-    }),
-    defineField({
       name: "body",
       type: "blockContent",
     }),

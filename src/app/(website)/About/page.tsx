@@ -128,6 +128,7 @@ export default function About() {
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           className="text-[1.02rem] text-green-200 font-medium tracking-wider"
         >
           ABOUT
@@ -136,6 +137,7 @@ export default function About() {
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           className="text-3xl md:text-5xl text-white my-10 md:mb-32 font-medium"
         >
           Empowering Innovation Through Community
@@ -144,27 +146,30 @@ export default function About() {
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
-          className="absolute top-[80%] md:top-[60%] lg:top-[70%] xl:top-[60%] w-full flex justify-center "
+          viewport={{ once: true }}
+          className="absolute top-[80%] md:top-[60%] lg:top-[70%] xl:top-[60%] flex justify-center md:px-5 lg:px-0"
         >
           <Image
-            src="/brandpic/office/office3_2.jpg"
+            src="/brandpic/office/exmpl.jpg"
             alt="H"
-            width={312}
-            height={165}
-            className="sm:w-[90%] sm:h-[200px] md:h-[340px] xl:h-[500px] rounded-2xl object-cover object-center"
+            width={1800}
+            height={500}
+            className="sm:aspect-[5/2] xs:max-h-[165px] md:max-h-[340px] xl:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
             priority
-          ></Image>
+            quality={100}
+          />
         </motion.div>
       </div>
 
       {/* About Us */}
-      <div className="px-10 pt-32 sm:pt-[200px] pb-16 bg-slate-100 flex flex-col items-center">
+      <div className="px-10 pt-52 sm:pt-[200px] pb-16 bg-slate-100 flex flex-col items-center">
         <div className="flex flex-col xl:flex-row items-center justify-center gap-0">
           <div className="flex flex-col xl:items-start xl:ml-[10%] xl:mr-[5%] w-full">
             <motion.h1
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="text-[1.02rem] text-green-600 my-5 font-medium tracking-wider text-center"
             >
               ABOUT US
@@ -173,6 +178,7 @@ export default function About() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="text-3xl md:text-5xl text-green-900 font-medium text-center xl:text-left"
             >
               Where Creativity Meets Productivity
@@ -181,6 +187,7 @@ export default function About() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="text-lg text-green-900 text-center mt-3 xl:text-left"
             >
               YOURS Workspace is more than just a coworking space – it’s a
@@ -193,6 +200,7 @@ export default function About() {
                   variants={childVariants}
                   initial="hidden"
                   whileInView="visible"
+                  viewport={{ once: true }}
                   className="font-medium mb-1 text-green-950"
                 >
                   Mission
@@ -201,6 +209,7 @@ export default function About() {
                   variants={childVariants}
                   initial="hidden"
                   whileInView="visible"
+                  viewport={{ once: true }}
                   className="text-sm"
                 >
                   Our mission is to create a dynamic coworking space and
@@ -213,6 +222,7 @@ export default function About() {
                   variants={childVariants}
                   initial="hidden"
                   whileInView="visible"
+                  viewport={{ once: true }}
                   className="font-medium mb-1 text-green-950"
                 >
                   Vision
@@ -221,6 +231,7 @@ export default function About() {
                   variants={childVariants}
                   initial="hidden"
                   whileInView="visible"
+                  viewport={{ once: true }}
                   className="text-sm"
                 >
                   Our vision is to become the leading hub for modern
@@ -235,6 +246,7 @@ export default function About() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="mb-7 w-full flex justify-center xl:mr-[10%]"
           >
             <Image
@@ -254,6 +266,7 @@ export default function About() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="flex flex-col p-3 px-10 gap-2 items-center justify-center bg-green-900 rounded-2xl h-[130px] w-[300px] sm:w-[98%] md:w-[49%] lg:w-[45%] text-2xl font-medium"
             >
               <div className="flex justify-center">
@@ -282,6 +295,7 @@ export default function About() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="text-sm text-center text-green-700 font-medium tracking-wider"
           >
             COMFORTABLE WORKSPACES
@@ -290,6 +304,7 @@ export default function About() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
             We Offer A Range Of Modern And Flexible Workspaces
@@ -302,6 +317,7 @@ export default function About() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
@@ -353,12 +369,14 @@ export default function About() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="bg-white p-5 flex flex-col md:w-[45%] md:h-[380px] xl:w-[30%] xl:mx-1 items-center center rounded-2xl py-7"
             >
               <motion.div
                 variants={childVariants}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 className="flex flex-wrap md:flex-nowrap items-center justify-center gap-3 mx-10 my-6 xl:w-[40%]"
               >
                 <Image
@@ -388,6 +406,7 @@ export default function About() {
                   variants={childVariants}
                   initial="hidden"
                   whileInView="visible"
+                  viewport={{ once: true }}
                   className="text-lg font-medium my-5"
                 >
                   {item.title}
@@ -404,11 +423,12 @@ export default function About() {
             </motion.div>
           ))}
         </div>
-        <div className="p-4 flex flex-wrap items-center justify-center gap-4">
+        <div className="p-4 flex flex-wrap items-center justify-center gap-4 mt-8">
           <motion.p
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="text-center font-medium"
           >
             Ready To Join A Community That Fosters Collaboration?
@@ -417,6 +437,7 @@ export default function About() {
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
           >
             <Button className="bg-green-800 text-white text-[1.05rem] rounded-full py-7 px-8">
               <Link href="/Contact">Schedule A Tour</Link>
