@@ -1,7 +1,8 @@
 import { client } from "@/sanity/lib/client";
 import React from "react";
 import { CalendarIcon } from "lucide-react";
-import { SanityTypes } from "@/@types";
+import { SanityTypes } from "@/@types"; // Adjust the import path as needed
+import { Metadata } from "next";
 
 // Fetch post from Sanity
 async function getPost(slug: string): Promise<SanityTypes.Post | null> {
@@ -37,8 +38,27 @@ export async function generateStaticParams() {
   }));
 }
 
+// Generate metadata
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: { slug: string } 
+}): Promise<Metadata> {
+  const post = await getPost(params.slug);
+  
+  return {
+    title: post?.title || "Post Not Found",
+    description: `Read about ${post?.title || "our content"}`,
+  };
+}
+
 // Main Page Component
-export default async function Post({ params }: { params: { slug: string } }) {
+type Props = {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export default async function Post({ params, searchParams }: Props) {
   if (!params?.slug) {
     return <div className="text-center">Invalid post</div>;
   }
