@@ -60,7 +60,7 @@ export default function BlogClient({ posts }: BlogProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="absolute top-[85%] md:top-[60%] lg:top-[70%] xl:top-[60%] md:px-5 lg:px-0 flex justify-center "
+          className="absolute top-[85%] md:top-[60%] lg:top-[70%] xl:top-[60%] md:px-5 lg:px-0 flex justify-center items-center"
         >
           <Image
             src="/brandpic/office/exmpl2.jpg"
