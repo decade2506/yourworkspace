@@ -10,23 +10,23 @@ const Links = [
     },
     {
         name: "About",
-        path: "/about",
+        path: "/About",
       },
     {
         name: "Workspace",
-        path: "/workspace",
+        path: "/Workspace",
     },
     {
         name: "Coffee",
-        path: "/coffee",
+        path: "/Coffee",
     },
     {
         name: "Blog",
-        path: "/blog",
+        path: "/Blog",
     },
     {
         name: "Contact",
-        path: "/contact",
+        path: "/Contact",
       },
 ]
 
