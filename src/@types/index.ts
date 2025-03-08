@@ -7,7 +7,7 @@ export namespace SanityTypes {
         publishedAt: string;
         title: string;
         slug: {current: string};
-        image?: SanityImageAssetDocument | null; // Allow for missing images
-        body: PortableTextBlock[];
+        image: SanityImageAssetDocument;
+        body: any;
     }
 }
