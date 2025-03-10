@@ -46,7 +46,7 @@ export default async function Post(props: any) {
           <CalendarIcon size={20} />
           {new Date(post.publishedAt).toDateString()}
         </div>
-        <div className="absolute top-[88%] md:top-[60%] lg:top-[70%] xl:top-[60%] md:px-5 lg:px-0 flex justify-center ">
+        <div className="absolute top-[88%] md:top-[60%] lg:top-[70%] xl:top-[60%] md:px-5 lg:px-0 flex justify-center left-0 right-0 mx-auto">
           <Image
             src={urlFor(post.image).url()}
             alt={post.title}
