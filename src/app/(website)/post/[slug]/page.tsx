@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "next-sanity";
-// import Link from "next/link";
+import Link from "next/link";
 
 async function getPost(slug: string): Promise<any> {
   const query = `
@@ -21,6 +21,19 @@ async function getPost(slug: string): Promise<any> {
   return await client.fetch(query, { slug });
 }
 
+async function getLatestPosts(currentPostId: string): Promise<any[]> {
+  const query = `
+  *[_type == 'post' && _id != $currentPostId] | order(publishedAt desc) [0...4] {
+    _id,
+    title,
+    slug,
+    image,
+    publishedAt
+  }
+  `;
+  return await client.fetch(query, { currentPostId });
+}
+
 export async function generateMetadata(props: any): Promise<Metadata> {
   const slug = props.params.slug;
   const post = await getPost(slug);
@@ -34,6 +47,7 @@ export async function generateMetadata(props: any): Promise<Metadata> {
 export default async function Post(props: any) {
   const slug = props.params.slug;
   const post = await getPost(slug);
+  const latestPosts = await getLatestPosts(post._id);
 
   return (
     <div>
@@ -58,11 +72,56 @@ export default async function Post(props: any) {
           />
         </div>
       </div>
-      {/* content */}
-      <article className="pt-44 px-10 pb-20 prose max-w-3xl mx-auto">
-        <PortableText value={post.body} />
-      </article>
-      {/* Latest Blog */}
+      <div className="pt-44 flex flex-col gap-2 xl:flex-row mx-[15%]">
+        {/* content */}
+        <article className=" pt-10 pl-10 pb-20 prose max-w-3xl mx-auto">
+          <PortableText value={post.body} />
+        </article>
+        {/* Latest Blog */}
+        <div className="pr-10 py-2">
+          <h1
+            className="text-xl text-center xl:text-left text-green-800 ml-2 py-4"
+          >
+            Latest Post
+          </h1>
+          <div className="flex flex-col md:flex-row flex-wrap xl:flex-nowrap xl:flex-col md:items-center justify-center items-start gap-1">
+            {latestPosts.map((latestPosts) => (
+              <div
+              key={latestPosts._id}
+                className="flex items-center gap-2 pb-4"
+              >
+                <Link href={`/post/${latestPosts.slug.current}`}>
+                  <Image
+                    src={urlFor(latestPosts.image).url()}
+                    alt={latestPosts.title}
+                    height={200}
+                    width={200}
+                    quality={100}
+                    className="rounded-2xl min-w-[80px] md:max-w-[80px] lg:max-w-[100px] aspect-square object-cover object-center cursor-pointer"
+                  />
+                </Link>
+                <div className="flex flex-col gap-2 items-start sm:max-w-[200px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[100px]">
+                  <div>
+                    <Link
+                      href={`/post/${latestPosts.slug.current}`}
+                      className="text-[1.1rem] text-green-950 font-medium]cursor-pointer"
+                    >
+                      {latestPosts.title}
+                    </Link>
+                    <p className="text-[0.8rem] text-accent mt-2">
+                      {new Date(latestPosts.publishedAt).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
