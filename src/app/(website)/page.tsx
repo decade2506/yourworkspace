@@ -173,9 +173,10 @@ export default function Home() {
             <Image
               src="/brandpic/office/office3_3.jpg"
               alt=""
-              width={325}
-              height={370}
-              className="rounded-2xl sm:w-[400px] md:w-[500px] lg:w-[586px] xl:w-[325px] xl:h-[455px] xl:mt-[-30%] h-[370px] object-cover object-center"
+              width={960}
+              height={455}
+              className="rounded-2xl sm:aspect-[3/5] xs:max-h-[350px] md:max-w-[465px] lg:max-w-[620px] xl:max-h-[455px] xl:max-w-[350px] xl:mt-[-30%] object-cover object-center"
+              quality={100}
             />
           </div>
           <motion.div
@@ -187,9 +188,6 @@ export default function Home() {
           >
             <Badge className="w-[80px] p-2 bg-white">Free Wifi</Badge>
             <Badge className="w-[110px] p-2 bg-white">Free Parking</Badge>
-            {/* <Badge className="w-[110px] p-2 bg-white border-2 border-green-500">
-              24/7 Access
-            </Badge> */}
             <Badge className="w-[150px] p-2 bg-white">Free Coffee Break</Badge>
             <Badge className="w-[130px] p-2 bg-white">Flexible Hour</Badge>
           </motion.div>
@@ -205,9 +203,9 @@ export default function Home() {
             <Image
               src="/brandpic/office/office3_3.jpg"
               alt=""
-              width={325}
-              height={370}
-              className="rounded-2xl sm:w-[400px] md:w-[690px] lg:w-[896px] xl:w-[350px] xl:h-[550px] xl:mt-[-20%] h-[370px] object-cover object-center"
+              width={960}
+              height={550}
+              className="rounded-2xl sm:aspect-[2/5] xs:max-h-[350px] xl:max-h-[555px] mx-5 xl:max-w-[360px] xl:mt-[-20%] object-cover object-center"
             />
           </div>
           <div className="flex flex-col gap-3 text-green-700 absolute bottom-8 lg:ml-[-64%] md:ml-[-56%] xl:ml-[-12%]">

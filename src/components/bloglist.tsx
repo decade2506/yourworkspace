@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { SanityTypes } from "@/@types";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "next-sanity";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface BlogProps {
   posts: SanityTypes.Post[];
@@ -31,8 +31,13 @@ const childVariants = {
     transition: { duration: 1, ease: "easeInOut" },
   },
 };
+const POSTS_PER_PAGE = 4;
 
 export default function BlogClient({ posts }: BlogProps) {
+  const [visiblePosts, setVisiblePosts] = useState(POSTS_PER_PAGE);
+  const loadMorePosts = () => {
+    setVisiblePosts((prevVisiblePosts) => prevVisiblePosts + POSTS_PER_PAGE);
+  };
   return (
     <div>
       {/* Title */}
@@ -121,7 +126,7 @@ export default function BlogClient({ posts }: BlogProps) {
                     day: "numeric",
                   })}
                 </p>
-                <div className="text-sm my-2 line-clamp-2 md:hidden">
+                <div className="text-sm my-2 line-clamp-2">
                   <PortableText value={post.body} />
                 </div>
                 <Link
@@ -147,7 +152,7 @@ export default function BlogClient({ posts }: BlogProps) {
             Feature Post
           </motion.h1>
           <div className="flex flex-col items-center gap-3">
-            {posts.sort((a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime()).map((post, key) => (
+            {posts.sort((a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime()).slice(0, visiblePosts).map((post, key) => (
               <motion.div
                 variants={childVariants}
                 initial="hidden"
@@ -197,17 +202,22 @@ export default function BlogClient({ posts }: BlogProps) {
               </motion.div>
             ))}
             {/* Load More */}
-            {/* <motion.div
-              variants={childVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="p-6 flex justify-center bg-slate-100"
-            >
-              <Button className="rounded-xl px-6 bg-green-800 text-white mx-auto hover:bg-white hover:text-green-900 hover:border-2 border-green-800">
-                Load More
-              </Button>
-            </motion.div> More Time to Implement */}
+            {visiblePosts < posts.length && (
+              <motion.div
+                variants={childVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="p-6 flex justify-center bg-slate-100"
+              >
+                <Button
+                  className="rounded-xl px-6 bg-green-800 text-white mx-auto hover:bg-white hover:text-green-900 hover:border-2 border-green-800"
+                  onClick={loadMorePosts}
+                >
+                  Load More
+                </Button>
+              </motion.div>
+            )}
           </div>
         </div>
       </div>

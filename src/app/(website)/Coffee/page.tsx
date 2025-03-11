@@ -126,7 +126,7 @@ export default function Blog() {
 
       {/* Coffee */}
       <div className="bg-white p-10">
-        <div className="text-amber-700 lg:flex items-center justify-center gap-4">
+        <div className="text-amber-700 md:flex items-center justify-center gap-4">
           {Coffee.map((item, index) => (
             <motion.div
               key={index}
@@ -139,9 +139,9 @@ export default function Blog() {
               <Image
                 src={item.img}
                 alt=""
-                height={500}
-                width={350}
-                className="rounded-2xl sm:h-[600px] sm:w-[450px] md:w-3/4 lg:w-[420px] object-cover object-center"
+                height={600}
+                width={520}
+                className="rounded-2xl aspect-[3/5] object-cover object-center"
               ></Image>
               <Badge className="bg-[#313131] text-white border-2 border-solid border-white px-8 py-3 text-sm absolute bottom-2 text-center">
                 {item.badge}

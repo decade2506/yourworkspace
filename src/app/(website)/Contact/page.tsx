@@ -11,30 +11,30 @@ import {
 
 const contact = [
   {
-    image: "/brandpic/office/office3_3.jpg",
-    title: "Placeholder",
+    image: "/brandpic/svimg/chat.png",
+    title: "Chat To Sales",
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    info: "yours@workspace.vn"
+    info: "yours@workspace.vn",
   },
   {
-    image: "/brandpic/office/office3_3.jpg",
-    title: "Placeholder",
+    image: "/brandpic/svimg/mail.png",
+    title: "Chat To Support",
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    info: "yours@workspace.vn"
+    info: "yours@workspace.vn",
   },
   {
-    image: "/brandpic/office/office3_3.jpg",
-    title: "Placeholder",
+    image: "/brandpic/svimg/map.png",
+    title: "Visit Us",
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    info: "yours@workspace.vn"
+    info: "yours@workspace.vn",
   },
   {
-    image: "/brandpic/office/office3_3.jpg",
-    title: "Placeholder",
+    image: "/brandpic/svimg/phone.png",
+    title: "Call Us",
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    info: "yours@workspace.vn"
+    info: "(+84) 94 777 71 02",
   },
-]
+];
 
 export default function Contact() {
   return (
@@ -42,14 +42,14 @@ export default function Contact() {
       {/* Title */}
       <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 h-[300px] md:h-[600px] xl:h-[900px] xs:pt-52 sm:pt-32 md:pt-0">
         <p className="text-[1.02rem] text-green-200 font-medium tracking-wider">
-          ABOUT
+          Contact Us
         </p>
         <h1 className="text-3xl md:text-5xl text-white mt-2 mb-32 font-medium">
-          Empowering Innovation Through Community
+          We’re Here to Help!
         </h1>
         <div className="absolute top-[85%] md:top-[60%] lg:top-[70%] xl:top-[60%] flex justify-center md:px-5 lg:px-0 left-0 right-0 mx-auto">
           <Image
-            src="/brandpic/office/exmpl.jpg"
+            src="/brandpic/office/exmpl3.jpg"
             alt="H"
             width={1800}
             height={500}
@@ -61,16 +61,16 @@ export default function Contact() {
       </div>
 
       {/* Contact Us */}
-      <div className="px-20 pt-32 pb-16 bg-slate-100 flex flex-col items-center">
-        <h1 className="text-[1.02rem] text-green-600 my-5 font-semibold tracking-wide">
+      <div className="px-20 pt-44 pb-16 bg-slate-100 flex flex-col items-center">
+        <h1 className="text-[1.02rem] text-green-600 my-5 font-medium tracking-wide">
           CONTACT US
         </h1>
-        <h1 className="text-3xl md:5xl text-green-800 font-semibold text-center">
+        <h1 className="text-3xl md:text-5xl text-green-800 font-medium text-center">
           You Can Also Contact Our Friendly Team Directly
         </h1>
         <div className="pt-10">
           <div className="flex flex-col xl:flex-row items-center">
-            <form className="flex flex-col gap-6 p-3 bg-white rounded-xl xs:w-[320px] sm:w-3/4 h-auto my-7 px-5 py-11 xl:mr-[-10%]">
+            <form className="flex flex-col gap-6 p-3 bg-white rounded-xl xs:w-[320px] sm:w-3/4 h-auto my-7 px-5 py-11 xl:mr-[-10%] shadow-2xl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <p>Full name</p>
                 <Input
@@ -110,22 +110,18 @@ export default function Contact() {
               </Button>
             </form>
             <div className="flex flex-wrap gap-2 justify-center xl:mr-[-10%]">
-              {contact.map((item, index)=>(
-                <div key={index} className="w-[326px] h-[254px] sm:w-3/4 md:w-1/3 rounded-2xl bg-white flex flex-col items-center justify-center my-3">
-                <Image
-                  src={item.image}
-                  alt=""
-                  height={75}
-                  width={75}
-                />
-                <h1 className="text-xl my-3 text-center">{item.title}</h1>
-                <p className="text-sm text-center mb-3 mx-7">
-                  {item.des}
-                </p>
-                <p className="text-sm text-green-600 text-center mb-2 mx-10">
-                  {item.info}
-                </p>
-              </div>
+              {contact.map((item, index) => (
+                <div
+                  key={index}
+                  className="w-[326px] h-[254px] sm:w-3/4 md:w-1/3 rounded-2xl bg-white flex flex-col items-center justify-center my-3"
+                >
+                  <Image src={item.image} alt="" height={75} width={75} />
+                  <h1 className="text-xl my-3 text-center">{item.title}</h1>
+                  <p className="text-sm text-center mb-3 mx-7">{item.des}</p>
+                  <p className="text-sm text-green-600 text-center mb-2 mx-10">
+                    {item.info}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
@@ -134,10 +130,10 @@ export default function Contact() {
 
       {/* Common Question */}
       <div className="bg-white p-10 flex flex-col items-center">
-        <h1 className="text-[1.02rem] text-green-600 my-5 font-semibold tracking-wide">
+        <h1 className="text-[1.02rem] text-green-600 my-5 font-medium tracking-wide">
           COMMON QUESTIONS
         </h1>
-        <h1 className="text-3xl md:text-5xl text-green-800 md:mx-52 xl:mx-64 xsl:mx-72 font-semibold text-center">
+        <h1 className="text-3xl md:text-5xl text-green-800 md:mx-52 xl:mx-64 xsl:mx-72 font-medium text-center">
           Everything You Need To Know About Worknow
         </h1>
         <p className="text-sm text-green-900 text-center mt-3 md:mx-52 xl:mx-64 xsl:mx-72">
