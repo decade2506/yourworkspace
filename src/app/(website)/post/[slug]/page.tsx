@@ -100,7 +100,7 @@ export default async function Post(props: any) {
                     className="rounded-2xl min-w-[80px] md:max-w-[80px] lg:max-w-[100px] aspect-square object-cover object-center cursor-pointer"
                   />
                 </Link>
-                <div className="flex flex-col gap-2 items-starts xs:max-w-[120px] sm:max-w-[180px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[100px]">
+                <div className="flex flex-col gap-2 items-starts xs:max-w-[100px] sm:max-w-[180px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[100px]">
                   <div>
                     <Link
                       href={`/post/${latestPosts.slug.current}`}
