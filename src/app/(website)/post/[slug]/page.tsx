@@ -105,7 +105,7 @@ export default async function Post(props: any) {
                     <Link
                       href={`/post/${latestPosts.slug.current}`}
                       className="text-[1.1rem] sm:text-2xl md:text-[1.1rem] text-green-950 font-medium cursor-pointer"
-                    >
+                    > 
                       {latestPosts.title}
                     </Link>
                     <p className="text-[0.8rem] text-accent mt-2">
