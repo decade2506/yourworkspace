@@ -78,7 +78,7 @@ export default async function Post(props: any) {
           <PortableText value={post.body} />
         </article>
         {/* Latest Blog */}
-        <div className="pr-10 py-2">
+        <div className="pr-3 py-2">
           <h1
             className="text-xl text-center xl:text-left text-green-800 ml-2 py-4"
           >
