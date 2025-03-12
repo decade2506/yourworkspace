@@ -72,7 +72,7 @@ export default async function Post(props: any) {
           />
         </div>
       </div>
-      <div className="pt-44 flex flex-col gap-2 xl:flex-row mx-[15%]">
+      <div className="pt-44 flex flex-col gap-10 xl:flex-row mx-[15%]">
         {/* content */}
         <article className=" pt-10 pl-10 pb-20 prose max-w-3xl mx-auto">
           <PortableText value={post.body} />
@@ -97,7 +97,7 @@ export default async function Post(props: any) {
                     height={200}
                     width={200}
                     quality={100}
-                    className="rounded-2xl xs:min-w-[70px] min-w-[80px] md:max-w-[80px] lg:max-w-[100px] aspect-square object-cover object-center cursor-pointer"
+                    className="rounded-2xl xs:max-w-[100px] min-w-[80px] md:max-w-[80px] lg:max-w-[120px] aspect-square object-cover object-center cursor-pointer"
                   />
                 </Link>
                 <div className="flex flex-col gap-2 items-starts xs:max-w-[100px] sm:max-w-[180px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[100px]">
