@@ -74,13 +74,13 @@ export default async function Post(props: any) {
       </div>
       <div className="pt-44 flex flex-col gap-10 xl:flex-row mx-[15%]">
         {/* content */}
-        <article className=" pt-10 pl-10 pb-20 prose max-w-3xl mx-auto">
+        <article className=" pt-10 pl-10 pb-20 prose max-w-5xl mx-auto">
           <PortableText value={post.body} />
         </article>
         {/* Latest Blog */}
-        <div className="pr-3 py-2">
+        <div className="pr-3 py-2 xl:mr-[-10%]">
           <h1
-            className="text-xl text-center xl:text-left text-green-800 ml-2 py-4"
+            className="text-xl text-center xl:text-left text-green-800 ml-2 py-4 mb-5"
           >
             Latest Post
           </h1>
@@ -88,7 +88,7 @@ export default async function Post(props: any) {
             {latestPosts.map((latestPosts) => (
               <div
               key={latestPosts._id}
-                className="flex items-center xs:gap-12 gap-8 pb-4"
+                className="flex items-center xs:gap-12 sm:gap-3 pb-4"
               >
                 <Link href={`/post/${latestPosts.slug.current}`}>
                   <Image
@@ -100,7 +100,7 @@ export default async function Post(props: any) {
                     className="rounded-2xl xs:max-w-[40px] min-w-[80px] md:max-w-[80px] lg:max-w-[120px] aspect-square object-cover object-center cursor-pointer"
                   />
                 </Link>
-                <div className="flex flex-col items-center justify-center gap-2 sm:max-w-[180px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[100px] text-left">
+                <div className="flex flex-col items-center justify-center gap-2 md:max-w-[160px] text-left">
                   <div>
                     <Link
                       href={`/post/${latestPosts.slug.current}`}
