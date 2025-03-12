@@ -84,7 +84,7 @@ export default async function Post(props: any) {
           >
             Latest Post
           </h1>
-          <div className="flex flex-col md:flex-row flex-wrap xl:flex-nowrap xl:flex-col md:items-center justify-center items-start gap-1">
+          <div className="flex flex-col md:flex-row flex-wrap xl:flex-nowrap xl:flex-col md:items-center justify-center items-start gap-3">
             {latestPosts.map((latestPosts) => (
               <div
               key={latestPosts._id}
@@ -100,7 +100,7 @@ export default async function Post(props: any) {
                     className="rounded-2xl xs:min-w-[70px] min-w-[80px] md:max-w-[80px] lg:max-w-[100px] aspect-square object-cover object-center cursor-pointer"
                   />
                 </Link>
-                <div className="flex flex-col gap-4 items-starts xs:max-w-[100px] sm:max-w-[180px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[100px]">
+                <div className="flex flex-col gap-2 items-starts xs:max-w-[100px] sm:max-w-[180px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[100px]">
                   <div>
                     <Link
                       href={`/post/${latestPosts.slug.current}`}
