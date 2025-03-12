@@ -26,7 +26,6 @@ const Header = () => {
     }, []);
 
     // Calculate background opacity based on scroll position
-    // Start with 0.6 opacity (your bg-green-50/60) and decrease to 0
     const bgOpacity = Math.max(0, 0.3 + (scrollPosition / 300) * 0.5);
     const invalidPath: boolean = useInvalidname();
     if(invalidPath) return <></>
@@ -39,7 +38,7 @@ const Header = () => {
                 transform: bgOpacity === 0 ? 'translateY(-100%)' : 'translateY(0)'
             }}
         >
-            <div className="container mx-auto flex justify-between items-center">
+            <div className="container flex justify-between items-center">
                 <Link href="/">
                     <div className="flex items-center gap-3">
                         <Image
