@@ -97,7 +97,7 @@ export default async function Post(props: any) {
                     height={200}
                     width={200}
                     quality={100}
-                    className="rounded-2xl xs:max-w-[100px] min-w-[80px] md:max-w-[80px] lg:max-w-[120px] aspect-square object-cover object-center cursor-pointer"
+                    className="rounded-2xl min-w-[80px] md:max-w-[80px] lg:max-w-[120px] aspect-square object-cover object-center cursor-pointer"
                   />
                 </Link>
                 <div className="flex flex-col gap-2 items-starts xs:max-w-[70px] sm:max-w-[180px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[100px]">
