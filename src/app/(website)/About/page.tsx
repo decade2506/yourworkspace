@@ -5,18 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
-const parentVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.5,
-      duration: 0.8,
-      ease: "easeInOut",
-      staggerChildren: 0.5,
-    },
-  },
-};
+
 const childVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -24,7 +13,10 @@ const childVariants = {
     transition: { duration: 1, ease: "easeInOut" },
   },
 };
-
+const upwardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
 const Numbers = [
   {
     count: 100,
@@ -162,7 +154,7 @@ export default function About() {
         <div className="flex flex-col xl:flex-row items-center justify-center gap-0">
           <div className="flex flex-col xl:items-start xl:ml-[10%] xl:mr-[5%] w-full">
             <motion.h1
-              variants={childVariants}
+              variants={upwardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -288,7 +280,7 @@ export default function About() {
       <div className="bg-white flex flex-col items-center">
         <div className="mt-[40px] px-3 xl:px-36">
           <motion.p
-            variants={childVariants}
+            variants={upwardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -333,7 +325,7 @@ export default function About() {
       {/* Comunity */}
       <div className="py-10 bg-slate-100 flex flex-col items-center p-8">
         <motion.h1
-          variants={childVariants}
+          variants={upwardVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

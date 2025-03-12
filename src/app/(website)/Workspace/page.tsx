@@ -7,18 +7,7 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import Link from "next/link";
 
-const parentVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.5,
-      duration: 0.8,
-      ease: "easeInOut",
-      staggerChildren: 0.5,
-    },
-  },
-};
+
 const childVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -26,8 +15,10 @@ const childVariants = {
     transition: { duration: 1, ease: "easeInOut" },
   },
 };
-
-// Arrays
+const upwardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
 const service = [
   {
     serviceimg: "/brandpic/svimg/modern.png",
@@ -280,7 +271,7 @@ export default function Workspace() {
       <div className="bg-white flex flex-col items-center">
         <div className="mt-[40px] px-3 xl:px-36">
           <motion.p
-            variants={childVariants}
+            variants={upwardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -326,7 +317,7 @@ export default function Workspace() {
       <div className="bg-slate-50 flex flex-col items-center">
         <div className="mt-[40px] px-11 xl:relative">
           <motion.p
-            variants={childVariants}
+            variants={upwardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -446,7 +437,7 @@ export default function Workspace() {
       <div className="bg-white">
         <div className="mt-[40px] px-11 ">
           <motion.p
-            variants={childVariants}
+            variants={upwardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -500,7 +491,7 @@ export default function Workspace() {
         <div className="md:flex flex-col xl:flex-row items-center justify-center">
           <div className="mt-[40px] px-11 xl:w-[40%]">
             <motion.p
-              variants={childVariants}
+              variants={upwardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}

@@ -4,24 +4,16 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const parentVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.5,
-      duration: 0.8,
-      ease: "easeInOut",
-      staggerChildren: 0.5,
-    },
-  },
-};
 const childVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: { duration: 1, ease: "easeInOut" },
   },
+};
+const upwardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 const Coffee = [
   {
@@ -155,7 +147,7 @@ export default function Blog() {
       <div className="bg-yellow-100 flex flex-col items-center">
         <div className="mt-[40px] px-2 ">
           <motion.p
-            variants={childVariants}
+            variants={upwardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{once: true}}
@@ -201,7 +193,7 @@ export default function Blog() {
       <div className="bg-white">
         <div className="mt-[40px] px-3 ">
           <motion.p
-            variants={childVariants}
+            variants={upwardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{once: true}}
