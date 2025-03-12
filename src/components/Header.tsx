@@ -38,7 +38,7 @@ const Header = () => {
                 transform: bgOpacity === 0 ? 'translateY(-100%)' : 'translateY(0)'
             }}
         >
-            <div className="container flex justify-between items-center">
+            <div className="container mx-auto flex justify-between items-center">
                 <Link href="/">
                     <div className="flex items-center gap-3">
                         <Image
