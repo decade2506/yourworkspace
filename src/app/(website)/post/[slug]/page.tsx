@@ -88,7 +88,7 @@ export default async function Post(props: any) {
             {latestPosts.map((latestPosts) => (
               <div
               key={latestPosts._id}
-                className="flex items-center gap-2 pb-4"
+                className="flex items-center gap-3 pb-4"
               >
                 <Link href={`/post/${latestPosts.slug.current}`}>
                   <Image
