@@ -1,8 +1,35 @@
 "use server";
 import { FormData } from "@/@types/mail-form";
 import { VerifyCaptcha } from "@/utils/captcha";
+import { headers } from "next/headers";
+
+const submissionTracker = new Map<string, number[]>();
+
+const WINDOW_SIZE_MS = 3600000;
+const MAX_SUBMISSIONS = 5;
 
 export async function ContactAction(token: string | null, formdata: FormData) {
+  const headersList = await headers();
+  const forwarded = headersList.get("x-forwarded-for");
+  const ip = forwarded ? forwarded.split(",")[0] : "unknown";
+
+  const now = Date.now();
+  let submissions = submissionTracker.get(ip) || [];
+
+  submissions = submissions.filter(
+    (timestamp) => now - timestamp < WINDOW_SIZE_MS
+  );
+
+  if (submissions.length >= MAX_SUBMISSIONS) {
+    return {
+      success: false,
+      message: "Too many submissions. Please try again later.",
+    };
+  }
+
+  submissions.push(now);
+  submissionTracker.set(ip, submissions);
+
   if (!token) {
     return {
       success: false,
@@ -11,11 +38,11 @@ export async function ContactAction(token: string | null, formdata: FormData) {
   }
 
   const captchaData = await VerifyCaptcha(token);
-  if(!captchaData){
-    return{
-        success: false,
-        message: "Captcha verification failed"
-    }
+  if (!captchaData) {
+    return {
+      success: false,
+      message: "Captcha verification failed",
+    };
   }
 
   // Check if captcha was successful
@@ -26,7 +53,7 @@ export async function ContactAction(token: string | null, formdata: FormData) {
       errors: captchaData["error-codes"],
     };
   }
-  
+
   // Only check score if captcha was successful (when success is true, we have score property)
   if (captchaData.score < 0.5) {
     return {
@@ -68,6 +95,6 @@ function isValidPhone(phone: string): boolean {
   // Allow digits, spaces, plus, dash, and parentheses
   // And require at least 7 digits total
   const phoneRegex = /^[+\d\s()-]{7,}$/;
-  const digitCount = phone.replace(/\D/g, '').length;
+  const digitCount = phone.replace(/\D/g, "").length;
   return phoneRegex.test(phone) && digitCount >= 7;
 }
