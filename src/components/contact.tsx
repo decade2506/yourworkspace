@@ -246,7 +246,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex flex-col gap-6 p-3 bg-white rounded-xl xs:w-[320px] sm:w-3/4 h-auto my-7 px-5 py-11 xl:mr-[-10%] shadow-2xl"
+              className="flex flex-col gap-6 p-3 bg-white rounded-xl xs:w-[320px] sm:w-3/4 h-auto my-7 px-2 sm:px-5 py-11 xl:mr-[-10%] shadow-2xl"
             >
               <div className="grid grid-cols-1 gap-3">
                 <>
@@ -329,10 +329,8 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                 {...register("message")}
               />
 
-              {/* Add this before the submit button */}
-              <div id="recaptcha-container" className="my-4"></div>
+              <div id="recaptcha-container" className="my-4 mr-5"></div>
 
-              {/* Status message */}
               {submitStatus && (
                 <div
                   className={`p-3 rounded-lg ${
