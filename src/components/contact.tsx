@@ -248,7 +248,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex flex-col gap-6 p-3 bg-white rou md:gap-6s:w-[320px] sm:w-3/4 divuto my-7 px-2 sm:px-5 py-11 xl:mr-[-10%] shadow-2xl"
+              className="flex flex-col gap-6 p-3 bg-white rounded-2xl md:gap-6 x:max-w-[320px] sm:w-3/4 divuto my-7 px-2 sm:px-5 py-11 xl:mr-[-10%] shadow-2xl"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
                 <div>
