@@ -18,6 +18,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useEffect } from "react";
 import { ContactAction } from "@/app/action";
 import { getCaptchaToken } from "@/utils/captcha";
+import Script from "next/script";
 
 const contact = [
   {
@@ -173,6 +174,11 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
 
   return (
     <div>
+      <Script
+        src={`https://www.google.com/recaptcha/api.js`}
+        strategy="beforeInteractive"
+      />
+      
       {/* Title */}
       <motion.div
         variants={childVariants}
@@ -329,7 +335,10 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                 {...register("message")}
               />
 
-              <div id="recaptcha-container" className="my-4 mr-5"></div>
+              <div 
+                className="g-recaptcha" 
+                data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+              />
 
               {submitStatus && (
                 <div
