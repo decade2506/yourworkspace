@@ -15,7 +15,8 @@ async function getPost(slug: string): Promise<any> {
     title,
     slug,
     image,
-    body
+    body,
+    "author": author->name
   }[0]
   `;
   return await client.fetch(query, { slug });
@@ -56,9 +57,19 @@ export default async function Post(props: any) {
         <h1 className="text-3xl md:text-5xl text-white mt-2 mb-2 font-medium">
           {post.title}
         </h1>
-        <div className="text-yellow-600 text-sm mb-52 flex items-center gap-2">
-          <CalendarIcon size={20} />
-          {new Date(post.publishedAt).toDateString()}
+        <div className="text-yellow-600 text-sm mb-52 flex items-center gap-10">
+          <div className="flex items-center gap-2">
+            <CalendarIcon size={20} />
+            {new Date(post.publishedAt).toDateString()}
+          </div>
+          <div>|</div>
+          {post.author && (
+            <div>
+              <div className="flex items-center gap-2">
+                <span>By {post.author}</span>
+              </div>
+            </div>
+          )}
         </div>
         <div className="absolute top-[88%] md:top-[60%] lg:top-[70%] xl:top-[60%] md:px-5 lg:px-0 flex justify-center left-0 right-0 mx-auto">
           <Image
@@ -79,15 +90,13 @@ export default async function Post(props: any) {
         </article>
         {/* Latest Blog */}
         <div className="pr-3 py-2 xl:mr-[-10%]">
-          <h1
-            className="text-xl text-center xl:text-left text-green-800 ml-2 py-4 mb-5"
-          >
+          <h1 className="text-xl text-center xl:text-left text-green-800 ml-2 py-4 mb-5">
             Latest Post
           </h1>
           <div className="flex flex-col md:flex-row flex-wrap xl:flex-nowrap xl:flex-col md:items-center justify-center items-start gap-3">
             {latestPosts.map((latestPosts) => (
               <div
-              key={latestPosts._id}
+                key={latestPosts._id}
                 className="flex items-center xs:gap-12 sm:gap-3 pb-4"
               >
                 <Link href={`/post/${latestPosts.slug.current}`}>
@@ -105,15 +114,18 @@ export default async function Post(props: any) {
                     <Link
                       href={`/post/${latestPosts.slug.current}`}
                       className="text-[1.05rem] sm:text-2xl md:text-[1.1rem] text-green-950 font-medium cursor-pointer"
-                    > 
+                    >
                       {latestPosts.title}
                     </Link>
                     <p className="text-[0.8rem] text-accent mt-2">
-                      {new Date(latestPosts.publishedAt).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
+                      {new Date(latestPosts.publishedAt).toLocaleDateString(
+                        "en-US",
+                        {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        }
+                      )}
                     </p>
                   </div>
                 </div>
