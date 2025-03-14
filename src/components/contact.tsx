@@ -110,17 +110,6 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
     message: string;
   } | null>(null);
 
-  // Add useEffect to load the captcha
-  useEffect(() => {
-    // Render the captcha when component mounts
-    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-    if (typeof grecaptcha !== 'undefined' && siteKey) {
-      grecaptcha.render('recaptcha-container', {
-        sitekey: siteKey,
-      });
-    }
-  }, []);
-
   const onSubmit = async (data: FormData) => {
     try {
       setSubmitStatus(null);
@@ -176,7 +165,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
     <div>
       <Script
         src={`https://www.google.com/recaptcha/api.js`}
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
       />
       
       {/* Title */}
@@ -336,7 +325,8 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
               />
 
               <div 
-                className="g-recaptcha" 
+                id="recaptcha-container"
+                className="g-recaptcha mb-4" 
                 data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
               />
 
