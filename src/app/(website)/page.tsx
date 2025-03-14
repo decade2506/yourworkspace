@@ -206,7 +206,6 @@ export default function Home() {
               <CountUp
                 end={53}
                 duration={3}
-                delay={2}
                 startOnMount={false}
                 enableScrollSpy={true}
                 scrollSpyDelay={2}

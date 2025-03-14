@@ -104,6 +104,13 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
     resolver: zodResolver(mailFormSchema),
   });
 
+  // Add state for client-side rendering of reCAPTCHA
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   // Add state for submission status
   const [submitStatus, setSubmitStatus] = useState<{
     success: boolean;
@@ -206,7 +213,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
             alt="H"
             width={1800}
             height={500}
-            className="sm:aspect-[5/2] xs:max-h-[165px] md:max-h-[340px] xl:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
+            className="w-full h-auto sm:aspect-[5/2] xs:max-h-[165px] md:max-h-[340px] xl:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
             priority
             quality={100}
           />
@@ -241,10 +248,10 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex flex-col gap-6 p-3 bg-white rounded-xl xs:w-[320px] sm:w-3/4 h-auto my-7 px-2 sm:px-5 py-11 xl:mr-[-10%] shadow-2xl"
+              className="flex flex-col gap-6 p-3 bg-white rou md:gap-6s:w-[320px] sm:w-3/4 divuto my-7 px-2 sm:px-5 py-11 xl:mr-[-10%] shadow-2xl"
             >
-              <div className="grid grid-cols-1 gap-3">
-                <>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
+                <div>
                   <p>
                     Full name <span className="text-red-500">*</span>
                   </p>
@@ -256,13 +263,12 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                   />
                   <div className="h-[10px]">
                     {errors.name && (
-                      <p className="text-red-500 text-sm">
-                        {errors.name.message}
+                      <p className="text-red-500 text-sm">{errors.name.message}
                       </p>
                     )}
                   </div>
-                </>
-                <>
+                </div>
+                <div>
                   <p>
                     Email <span className="text-red-500">*</span>
                   </p>
@@ -279,8 +285,8 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                       </p>
                     )}
                   </div>
-                </>
-                <>
+                </div>
+                <div>
                   <p>
                     Phone <span className="text-red-500">*</span>
                   </p>
@@ -297,8 +303,8 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                       </p>
                     )}
                   </div>
-                </>
-                <>
+                </div>
+                <div>
                   <p>
                     Company name <span className="text-red-500">*</span>
                   </p>
@@ -315,7 +321,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                       </p>
                     )}
                   </div>
-                </>
+                </div>
               </div>
               <p>Message</p>
               <Textarea
@@ -324,11 +330,14 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                 {...register("message")}
               />
 
-              <div 
-                id="recaptcha-container"
-                className="g-recaptcha mb-4" 
-                data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-              />
+              {/* Only render reCAPTCHA on client side */}
+              {isClient && (
+                <div 
+                  id="recaptcha-container"
+                  className="g-recaptcha mb-4" 
+                  data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                />
+              )}
 
               {submitStatus && (
                 <div
@@ -349,7 +358,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                 {isSubmitting ? "Processing..." : "Submit"}
               </Button>
             </motion.form>
-            <div className="flex flex-wrap gap-2 justify-center xl:mr-[-10%]">
+            <div className="flex flex-wrap gap-8 justify-center xl:mr-[-12%]">
               {contact.map((item, index) => (
                 <motion.div
                   variants={childVariants}
@@ -361,9 +370,11 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                 >
                   <Image
                     src={item.image}
-                    alt=""
-                    height={75}
+                    alt={item.title}
                     width={75}
+                    height={75}
+                    className="w-[75px] h-[75px] object-contain"
+                    priority={index === 0}
                   />
                   <h1 className="text-xl my-3 text-center">{item.title}</h1>
                   <p className="text-sm text-center mb-3 mx-7">{item.des}</p>
