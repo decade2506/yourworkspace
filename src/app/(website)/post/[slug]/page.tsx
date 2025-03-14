@@ -57,7 +57,7 @@ export default async function Post(props: any) {
         <h1 className="text-3xl md:text-5xl text-white mt-2 mb-2 font-medium">
           {post.title}
         </h1>
-        <div className="text-yellow-600 text-sm mb-52 flex items-center gap-10">
+        <div className="text-yellow-600 text-sm mb-52 flex items-center gap-10 font-semibold">
           <div className="flex items-center gap-2">
             <CalendarIcon size={20} />
             {new Date(post.publishedAt).toDateString()}
