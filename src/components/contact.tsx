@@ -418,13 +418,13 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
           We want to make sure that every question you have about our spaces,
           memberships, and services is answered clearly.
         </motion.p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 my-10 mx-[-11] gap-5">
+        <div className="flex my-10 mx-[-11] gap-5">
           <motion.div
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="bg-slate-100 p-5 text-left rounded-xl mx-auto"
+            className="bg-slate-100 px-10 p-5 text-left rounded-xl mx-auto"
           >
             {Question_1.map((item, index) => (
               <Accordion
@@ -434,27 +434,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
               >
                 <AccordionItem value={item.value}>
                   <AccordionTrigger>{item.question}</AccordionTrigger>
-                  <AccordionContent>{item.answer}</AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            ))}
-          </motion.div>
-          <motion.div
-            variants={childVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="bg-slate-100 p-5 text-left rounded-xl mx-auto"
-          >
-            {Question_1.map((item, index) => (
-              <Accordion
-                key={index}
-                type="single"
-                collapsible
-              >
-                <AccordionItem value={item.value}>
-                  <AccordionTrigger>{item.question}</AccordionTrigger>
-                  <AccordionContent>{item.answer}</AccordionContent>
+                  <AccordionContent className="text-wrap">{item.answer}</AccordionContent>
                 </AccordionItem>
               </Accordion>
             ))}
