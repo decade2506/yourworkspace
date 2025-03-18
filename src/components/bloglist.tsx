@@ -72,14 +72,14 @@ export default function BlogClient({ posts }: BlogProps) {
             alt="H"
             width={1800}
             height={500}
-            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[165px] xsm:max-h-[250px] md:max-h-[340px] xl:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
+            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[165px] xsm:max-h-[250px] md:max-h-[340px] xl:max-h-[300px] xxxl:max-h-[450px] hd:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
             priority
             quality={100}
           />
         </motion.div>
       </div>
 
-      <div className="flex xl:flex-row-reverse flex-col justify-center gap-5 pt-52 mt-40 bg-slate-100">
+      <div className="flex xl:flex-row-reverse flex-col justify-center gap-5 pt-52 mt-20 bg-slate-100">
         {/* Latest Blog */}
         <div>
           <motion.h1

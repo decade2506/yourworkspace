@@ -209,7 +209,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
             alt="H"
             width={1800}
             height={500}
-            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[165px] xsm:max-h-[250px] md:max-h-[340px] xl:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
+            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[165px] xsm:max-h-[250px] md:max-h-[340px] xl:max-h-[300px] xxxl:max-h-[450px] hd:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
             priority
             quality={100}
           />
@@ -217,7 +217,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
       </div>
 
       {/* Contact Us */}
-      <motion.div className="px-20 pt-44 mt-40 pb-16 bg-slate-100 flex flex-col items-center">
+      <motion.div className="px-20 pt-44 mt-20 pb-16 bg-slate-100 flex flex-col items-center">
         <motion.h1
           variants={upwardVariants_2}
           initial="hidden"

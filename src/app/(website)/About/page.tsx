@@ -135,14 +135,14 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="absolute top-[85%] md:top-[60%] lg:top-[70%] xl:top-[60%] flex justify-center md:px-5 xl:px-8 lg:px-0 left-0 right-0 mx-auto"
+          className="absolute top-[85%] md:top-[60%] lg:top-[70%] xl:top-[60%]  flex justify-center md:px-5 xl:px-8 lg:px-0 left-0 right-0 mx-auto"
         >
           <Image
             src="/brandpic/office/exmpl.jpg"
             alt="H"
             width={1800}
             height={500}
-            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[165px] xsm:max-h-[250px] md:max-h-[340px] xl:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
+            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[165px] xsm:max-h-[250px] md:max-h-[340px] xl:max-h-[300px] xxxl:max-h-[450px] hd:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
             priority
             quality={100}
           />
@@ -150,7 +150,7 @@ export default function About() {
       </div>
 
       {/* About Us */}
-      <div className="px-10 pt-52 mt-48 sm:pt-[200px] pb-16 bg-slate-100 flex flex-col items-center">
+      <div className="px-10 pt-52 mt-20 sm:pt-[200px] pb-16 bg-slate-100 flex flex-col items-center">
         <div className="flex flex-col xl:flex-row items-center justify-center gap-0">
           <div className="flex flex-col xl:items-start xl:ml-[10%] xl:mr-[5%] w-full">
             <motion.h1
