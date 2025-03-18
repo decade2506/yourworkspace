@@ -143,7 +143,7 @@ export default function Workspace() {
     <div className="overflow-hidden w-full min-h-screen">
       {/* Title */}
       <div className="flex flex-col items-center justify-center bg-green-200 pt-40 min-h-screen">
-        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%] ml-10">
+        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%] xl:ml-10">
           <motion.p
             variants={childVariants}
             initial="hidden"

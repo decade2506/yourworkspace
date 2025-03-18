@@ -86,7 +86,7 @@ export default function Blog() {
     <div className="overflow-hidden w-full min-h-screen">
       {/* Title */}
       <div className="flex flex-col items-center justify-center bg-yellow-100 pt-40 min-h-screen">
-        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%] ml-20">
+        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[10%] xl:ml-20">
           <motion.p
             variants={childVariants}
             initial="hidden"
@@ -101,7 +101,7 @@ export default function Blog() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-amber-900 font-medium my-5 mr-32"
+            className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-amber-900 font-medium my-5 xl:mr-32"
           >
             Cà phê tươi ngon chắc chắn sẽ làm bạn phấn chấn mỗi ngày
           </motion.h1>
