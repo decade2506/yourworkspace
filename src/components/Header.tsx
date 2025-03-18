@@ -26,7 +26,7 @@ const Header = () => {
   }, []);
 
   // Calculate background opacity based on scroll position
-  const bgOpacity = Math.max(0, 0.3 + (scrollPosition / 300) * 0.5);
+  const bgOpacity = Math.max(0, 0.4 + (scrollPosition / 300) * 0.5);
   const invalidPath: boolean = useInvalidname();
   if (invalidPath) return <></>;
 

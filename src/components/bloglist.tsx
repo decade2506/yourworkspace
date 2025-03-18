@@ -41,7 +41,7 @@ export default function BlogClient({ posts }: BlogProps) {
   return (
     <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[300px] md:h-[600px] xl:max-h-[900px] xxs:pt-52 sm:pt-32 md:pt-0">
+      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[300px] md:h-[600px] xl:max-h-[900px] xxs:pt-52 sm:pt-32 md:pt-0" style={{ background: "linear-gradient(to bottom, #065F46 90%, #f1f5f9 100%)" }}>
         <motion.p
           variants={childVariants}
           initial="hidden"

@@ -86,7 +86,7 @@ export default function Blog() {
     <div className="overflow-hidden w-full min-h-screen">
       {/* Title */}
       <div className="flex flex-col items-center justify-center bg-yellow-100 pt-40 min-h-screen">
-        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[10%] xl:ml-20">
+        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[10%] xl:ml-4">
           <motion.p
             variants={childVariants}
             initial="hidden"

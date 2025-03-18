@@ -111,7 +111,7 @@ export default function About() {
   return (
     <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[300px] md:h-[600px] xl:max-h-[900px] xxs:pt-52 sm:pt-32 md:pt-0">
+      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[300px] md:h-[600px] xl:max-h-[900px] xxs:pt-52 sm:pt-32 md:pt-0" style={{ background: "linear-gradient(to bottom, #065F46 90%, #f1f5f9 100%)" }}>
         <motion.p
           variants={childVariants}
           initial="hidden"
@@ -430,7 +430,7 @@ export default function About() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <Button className="bg-green-800 text-white text-[1.05rem] rounded-full py-7 px-8">
+            <Button className="bg-green-800 text-white hover:bg-white hover:text-green-800 text-[1.05rem] rounded-full py-7 px-8">
               <Link href="/Contact">Schedule A Tour</Link>
             </Button>
           </motion.div>

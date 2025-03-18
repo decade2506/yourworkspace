@@ -41,11 +41,11 @@ const MobileNav = () => {
         className="flex justify-center items-center"
         onClick={() => setOpen(true)}
       >
-        <GiHamburgerMenu className="text-[30px] text-accent"></GiHamburgerMenu>
+        <GiHamburgerMenu className="text-[30px] text-[#028f76]"></GiHamburgerMenu>
       </SheetTrigger>
       <SheetContent className="flex flex-col bg-white">
         <SheetTitle className="sr-only"></SheetTitle>
-        <nav className="flex flex-col justify-center items-center mt-40 gap-10">
+        <nav className="flex flex-col items-center mt-40 gap-10">
           {Links.map((link, index) => {
             return (
               <Link
@@ -53,7 +53,7 @@ const MobileNav = () => {
                 key={index}
                 className={`${link.path === pathname &&
                   "text-accent"
-                  } text-2xl hover:text-accent font-medium`}
+                  } text-2xl hover:text-accent font-medium text-center`}
                 onClick={() => setOpen(false)}
               >
                 {link.name}

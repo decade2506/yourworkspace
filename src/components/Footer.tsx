@@ -100,7 +100,7 @@ const Footer = () => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-400 text-gray-400"
+              className="hover:text-black text-gray-400"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

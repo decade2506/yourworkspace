@@ -90,9 +90,9 @@ const Space = [
 
 export default function Home() {
   return (
-    <div className="overflow-hidden w-full min-h-screen">
+    <div className="bg-slate-50 overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="flex flex-col items-center justify-center bg-green-50 pt-40 min-h-screen xs:pt-32 xsm:pt-32 sm:pt-52 md:pt-24 lg:pt-40 xl:pt-24 xl:pb-3 xsl:pt-28">
+      <div className="flex flex-col items-center justify-center bg-gradient-to-b from-green-700 via-green-700 to-white/70 pt-40 min-h-screen xs:pt-32 xsm:pt-32 sm:pt-52 md:pt-24 lg:pt-40 xl:pt-24 xl:pb-3 xsl:pt-28" style={{ background: "linear-gradient(to bottom, #047857 88%, #ffffff 100%)" }}>
         <motion.div>
           <div className=" px-5 sm:px-11 xl:pr-20 xsl:pr-[20%]">
             <motion.p
@@ -100,7 +100,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-sm text-center xl:text-left  text-green-800 font-medium tracking-wider"
+              className="text-sm text-center xl:text-left  text-green-300 font-medium tracking-wider"
             >
               CÀ PHÊ & KHÔNG GIAN LÀM VIỆC
             </motion.p>
@@ -109,7 +109,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-black font-medium my-5 xl:mr-20"
+              className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-white font-medium my-5 xl:mr-20"
             >
               Không gian làm việc thoải mái và trải nghiệm cà phê tuyệt vời
             </motion.h1>
@@ -118,7 +118,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-sm md:text-lg text-center xl:text-left xl:mr-20"
+              className="text-sm md:text-lg text-center xl:text-left xl:mr-20 text-white/70"
             >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
               quos repudiandae unde ut velit sapiente labore expedita soluta
@@ -133,7 +133,7 @@ export default function Home() {
             className="flex justify-center xl:mr-[80%] gap-4 my-10"
           >
             <Button className="rounded-full text-green-500 border-2 border-green-500 bg-white px-10 hover:bg-green-500 hover:text-white">
-              <Link href="/About">More Detail</Link>
+              <Link href="/About">Biết thêm chi tiết</Link>
             </Button>
           </motion.div>
         </motion.div>
@@ -221,7 +221,7 @@ export default function Home() {
       </div>
 
       {/* Comfortable */}
-      <div className="bg-green-50 flex flex-col items-center">
+      <div className="flex flex-col items-center">
         <div className="mt-[40px] px-3 xl:px-36 ">
           <motion.p
             variants={upwardVariants}
@@ -283,7 +283,7 @@ export default function Home() {
       </div>
 
       {/* Gallery */}
-      <div className="bg-white">
+      <div className="bg-white py-10">
         <div className="mt-[40px] px-11 ">
           <motion.p
             variants={upwardVariants}
@@ -336,7 +336,7 @@ export default function Home() {
       </div>
 
       {/* Coffee */}
-      <div className="bg-yellow-50 flex flex-col items-center">
+      <div className="flex flex-col items-center mt-9">
         <div className="mt-[40px] px-2 xl:px-36">
           <motion.p
             variants={upwardVariants}
