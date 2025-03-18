@@ -3,6 +3,8 @@
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const childVariants = {
   hidden: { opacity: 0 },
@@ -81,10 +83,10 @@ const Images = [
 
 export default function Blog() {
   return (
-    <div>
+    <div className="overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="flex flex-col items-center bg-yellow-100 py-40">
-        <div className="mt-[40px] px-5 ">
+      <div className="flex flex-col items-center justify-center bg-yellow-100 pt-40 min-h-screen">
+        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[10%]">
           <motion.p
             variants={childVariants}
             initial="hidden"
@@ -114,6 +116,17 @@ export default function Blog() {
             repudiandae unde ut velit sapiente labore expedita soluta.
           </motion.p>
         </div>
+        <motion.div
+            variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex justify-center xl:mr-[80%] gap-4 my-10"
+          >
+            <Button className="rounded-full text-green-500 border-2 border-green-500 bg-white px-10 hover:bg-green-500 hover:text-white">
+              <Link href="/about">More Detail</Link>
+            </Button>
+          </motion.div>
       </div>
 
       {/* Coffee */}
@@ -173,7 +186,7 @@ export default function Blog() {
               initial="hidden"
               whileInView="visible"
               viewport={{once: true}}
-              className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
+              className="xxs:w-[300px] xs:w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
                 src={item.serviceimg}

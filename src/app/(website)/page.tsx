@@ -90,9 +90,9 @@ const Space = [
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="flex flex-col items-center bg-green-50 pt-40 xs:pt-32 xs:pb-16 xsm:pt-32 sm:pt-52 md:pt-24 lg:pt-40 xl:pt-24 xl:pb-3 xsl:pt-28">
+      <div className="flex flex-col items-center justify-center bg-green-50 pt-40 min-h-screen xs:pt-32 xsm:pt-32 sm:pt-52 md:pt-24 lg:pt-40 xl:pt-24 xl:pb-3 xsl:pt-28">
         <motion.div>
           <div className=" px-5 sm:px-11 xl:pr-20 xsl:pr-[20%]">
             <motion.p
@@ -140,7 +140,7 @@ export default function Home() {
       </div>
 
       {/* Services */}
-      <div className="bg-white md:flex flex-rows items-center justify-center flex-wrap gap-5 xsl:pb-24 hd:pb-28 hd:gap-9">
+      <div className="bg-white md:flex flex-rows items-center justify-center flex-wrap gap-5 pt-3 pb-10 hd:pb-28 hd:gap-9">
         <div className="flex flex-col items-center text-center md:text-left">
           <motion.ul
             variants={childVariants}
@@ -168,7 +168,7 @@ export default function Home() {
               alt=""
               width={960}
               height={455}
-              className="rounded-2xl sm:aspect-[3/5] xs:max-h-[350px] md:max-w-[465px] lg:max-w-[620px] xl:max-h-[455px] xl:max-w-[350px] xl:mt-[-43%] xsl:mt-[-36%] object-cover object-center"
+              className="rounded-2xl sm:aspect-[3/5] xs:max-h-[350px] md:max-w-[465px] lg:max-w-[620px] xl:max-h-[455px] xl:max-w-[350px] object-cover object-center"
               quality={100}
             />
           </div>
@@ -177,7 +177,7 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="absolute bottom-9 sm:mr-16 md:mr-36 md:bottom-[70%] lg:mr-[30%] xl:mr-[-10%] xl:bottom-[110%] xsl:bottom-[100%] xs:w-[300px] w-[400px] flex flex-wrap gap-3 text-green-700 text-center"
+            className="absolute bottom-9 sm:mr-[50%] md:mr-36 md:bottom-[72%] lgl:bottom-[68%] xl:bottom-[75%] lg:mr-[30%] xl:mr-[-10%] xxs:w-[250px] xs:w-[300px] w-[400px] flex flex-wrap gap-3 text-green-700 text-center"
           >
             <Badge className="w-[80px] p-2 bg-white">Free Wifi</Badge>
             <Badge className="w-[110px] p-2 bg-white">Free Parking</Badge>
@@ -198,13 +198,13 @@ export default function Home() {
               alt=""
               width={960}
               height={550}
-              className="rounded-2xl sm:aspect-[2/5] xs:max-h-[350px] xl:max-h-[555px] mx-5 xl:max-w-[360px] xl:mt-[-34%] xsl:mt-[-37%] hd:mt-[-30%] object-cover object-center"
+              className="rounded-2xl sm:aspect-[2/5] xs:max-h-[350px] xl:max-h-[555px] mx-5 xl:max-w-[360px] object-cover object-center"
             />
           </div>
           <div className="flex flex-col gap-3 text-green-700 absolute bottom-8 lg:ml-[-64%] md:ml-[-56%] xl:ml-[-12%]">
-            <div className="h-[100px] w-[290px] rounded-2xl bg-white flex items-center justify-center font-medium text-3xl">
+            <div className="h-[100px] xxs:w-[250px] xs:w-[290px] rounded-2xl bg-white flex items-center justify-center font-medium text-3xl">
               <CountUp
-                end={53}
+                end={52}
                 duration={3}
                 startOnMount={false}
                 enableScrollSpy={true}
@@ -250,7 +250,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
+              className="xxs:w-[300px] xs:w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
                 src={item.serviceimg}
@@ -365,7 +365,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="w-[326px] h-[241px] lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
+              className="xxs:w-[300px] xs:w-[326px] h-[241px] lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
                 src={item.serviceimg}

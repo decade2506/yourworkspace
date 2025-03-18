@@ -109,9 +109,9 @@ const Community = [
 ];
 export default function About() {
   return (
-    <div>
+    <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 h-[300px] md:h-[600px] xl:h-[900px] xs:pt-52 sm:pt-32 md:pt-0">
+      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[300px] md:h-[600px] xl:max-h-[900px] xxs:pt-52 sm:pt-32 md:pt-0">
         <motion.p
           variants={childVariants}
           initial="hidden"
@@ -135,14 +135,14 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="absolute top-[85%] md:top-[60%] lg:top-[70%] xl:top-[60%] flex justify-center md:px-5 lg:px-0 left-0 right-0 mx-auto"
+          className="absolute top-[85%] md:top-[60%] lg:top-[70%] xl:top-[60%] flex justify-center md:px-5 xl:px-8 lg:px-0 left-0 right-0 mx-auto"
         >
           <Image
             src="/brandpic/office/exmpl.jpg"
             alt="H"
             width={1800}
             height={500}
-            className="w-full h-auto sm:aspect-[5/2] xs:max-h-[165px] md:max-h-[340px] xl:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
+            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[165px] xsm:max-h-[250px] md:max-h-[340px] xl:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
             priority
             quality={100}
           />
@@ -150,7 +150,7 @@ export default function About() {
       </div>
 
       {/* About Us */}
-      <div className="px-10 pt-52 sm:pt-[200px] pb-16 bg-slate-100 flex flex-col items-center">
+      <div className="px-10 pt-52 mt-48 sm:pt-[200px] pb-16 bg-slate-100 flex flex-col items-center">
         <div className="flex flex-col xl:flex-row items-center justify-center gap-0">
           <div className="flex flex-col xl:items-start xl:ml-[10%] xl:mr-[5%] w-full">
             <motion.h1
@@ -255,13 +255,13 @@ export default function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex flex-col p-3 px-10 gap-2 items-center justify-center bg-green-900 rounded-2xl h-[130px] w-[300px] sm:w-[98%] md:w-[49%] lg:w-[45%] text-2xl font-medium"
+              className="flex flex-col p-3 px-10 gap-2 items-center justify-center bg-green-900 rounded-2xl h-[130px] xxs:w-[250px] xs:w-[300px] sm:w-[98%] md:w-[49%] lg:w-[45%] text-2xl font-medium"
             >
               <div className="flex justify-center">
                 <CountUp
                   end={item.count}
                   duration={3}
-                  delay={2}
+                  delay={0}
                   startOnMount={false}
                   enableScrollSpy={true}
                   scrollSpyDelay={2}
@@ -306,7 +306,7 @@ export default function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
+              className="xxs:w-[300px] xs:w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
                 src={item.serviceimg}

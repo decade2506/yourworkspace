@@ -120,10 +120,10 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
   const onSubmit = async (data: FormData) => {
     try {
       setSubmitStatus(null);
-      
+
       // First get the captcha token before sending the email
       const token = await getCaptchaToken();
-      
+
       // Verify captcha first
       if (!token) {
         setSubmitStatus({
@@ -132,18 +132,20 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
         });
         return;
       }
-      
+
       // Verify captcha on server
       const captchaResult = await ContactAction(token, data);
-      
+
       if (!captchaResult.success) {
         setSubmitStatus({
           success: false,
-          message: captchaResult.message || "CAPTCHA verification failed. Please try again.",
+          message:
+            captchaResult.message ||
+            "CAPTCHA verification failed. Please try again.",
         });
         return;
       }
-      
+
       // Only send email if captcha is successful
       const result = await sendMail(data);
 
@@ -169,20 +171,14 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
   };
 
   return (
-    <div>
+    <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       <Script
         src={`https://www.google.com/recaptcha/api.js`}
         strategy="afterInteractive"
       />
-      
+
       {/* Title */}
-      <motion.div
-        variants={childVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 h-[300px] md:h-[600px] xl:h-[900px] xs:pt-52 sm:pt-32 md:pt-0"
-      >
+      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[300px] md:h-[600px] xl:max-h-[900px] xxs:pt-52 sm:pt-32 md:pt-0">
         <motion.p
           variants={childVariants}
           initial="hidden"
@@ -190,7 +186,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
           viewport={{ once: true }}
           className="text-[1.02rem] text-green-200 font-medium tracking-wider"
         >
-          Contact Us
+          CONTACT US
         </motion.p>
         <motion.h1
           variants={childVariants}
@@ -199,29 +195,29 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl text-white mt-2 mb-32 font-medium"
         >
-          We're Here to Help!
+          We're Here To Help
         </motion.h1>
         <motion.div
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="absolute top-[85%] md:top-[60%] lg:top-[70%] xl:top-[60%] flex justify-center md:px-5 lg:px-0 left-0 right-0 mx-auto"
+          className="absolute top-[85%] md:top-[60%] lg:top-[70%] xl:top-[60%] flex justify-center md:px-5 xl:px-8 lg:px-0 left-0 right-0 mx-auto"
         >
           <Image
             src="/brandpic/office/exmpl3.jpg"
             alt="H"
             width={1800}
             height={500}
-            className="w-full h-auto sm:aspect-[5/2] xs:max-h-[165px] md:max-h-[340px] xl:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
+            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[165px] xsm:max-h-[250px] md:max-h-[340px] xl:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
             priority
             quality={100}
           />
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* Contact Us */}
-      <motion.div className="px-20 pt-44 pb-16 bg-slate-100 flex flex-col items-center">
+      <motion.div className="px-20 pt-44 mt-40 pb-16 bg-slate-100 flex flex-col items-center">
         <motion.h1
           variants={upwardVariants_2}
           initial="hidden"
@@ -248,7 +244,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex flex-col gap-6 p-3 bg-white rounded-2xl md:gap-6 x:max-w-[320px] sm:w-3/4 divuto my-7 px-2 sm:px-5 py-11 xl:mr-[-10%] shadow-2xl"
+              className="flex flex-col gap-6 p-3 bg-white rounded-2xl md:gap-6 xxs:w-[300px] sm:w-3/4 divuto my-7 px-2 sm:px-5 py-11 xl:mr-[-10%] shadow-2xl"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
                 <div>
@@ -263,7 +259,8 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                   />
                   <div className="h-[10px]">
                     {errors.name && (
-                      <p className="text-red-500 text-sm">{errors.name.message}
+                      <p className="text-red-500 text-sm">
+                        {errors.name.message}
                       </p>
                     )}
                   </div>
@@ -332,9 +329,9 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
 
               {/* Only render reCAPTCHA on client side */}
               {isClient && (
-                <div 
+                <div
                   id="recaptcha-container"
-                  className="g-recaptcha mb-4" 
+                  className="g-recaptcha mb-4 xxs:ml-[-3%] sm:ml-0"
                   data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                 />
               )}
@@ -342,7 +339,9 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
               {submitStatus && (
                 <div
                   className={`p-3 rounded-lg ${
-                    submitStatus.success ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
+                    submitStatus.success
+                      ? "bg-green-100 text-green-700"
+                      : "bg-red-100 text-red-700"
                   }`}
                 >
                   {submitStatus.message}
@@ -366,7 +365,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                   whileInView="visible"
                   viewport={{ once: true }}
                   key={index}
-                  className="w-[326px] h-[254px] sm:w-3/4 md:w-1/3 rounded-2xl bg-white flex flex-col items-center justify-center my-3"
+                  className="xxs:w-[300px] xs:w-[326px] h-[254px] sm:w-3/4 md:w-1/3 rounded-2xl bg-white flex flex-col items-center justify-center my-3"
                 >
                   <Image
                     src={item.image}
@@ -418,23 +417,21 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
           We want to make sure that every question you have about our spaces,
           memberships, and services is answered clearly.
         </motion.p>
-        <div className="flex my-10 mx-[-11] gap-5">
+        <div className="flex justify-center items-center gap-5">
           <motion.div
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="bg-slate-100 px-10 p-5 text-left rounded-xl mx-auto"
+            className="px-10 p-5 text-left rounded-xl mx-auto"
           >
             {Question_1.map((item, index) => (
-              <Accordion
-                key={index}
-                type="single"
-                collapsible
-              >
+              <Accordion key={index} type="single" collapsible className="w-full transition-all duration-300 ease-in-out">
                 <AccordionItem value={item.value}>
                   <AccordionTrigger>{item.question}</AccordionTrigger>
-                  <AccordionContent className="text-wrap">{item.answer}</AccordionContent>
+                  <AccordionContent className="text-wrap w-full">
+                    {item.answer}
+                  </AccordionContent>
                 </AccordionItem>
               </Accordion>
             ))}

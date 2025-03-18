@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import Link from "next/link";
 
-
 const childVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -141,9 +140,9 @@ const Facilities = [
 
 export default function Workspace() {
   return (
-    <div>
+    <div className="overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="flex flex-col items-center bg-green-200 pt-40">
+      <div className="flex flex-col items-center justify-center bg-green-200 pt-40 min-h-screen">
         <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%] ">
           <motion.p
             variants={childVariants}
@@ -189,14 +188,14 @@ export default function Workspace() {
       </div>
 
       {/* Room & Services */}
-      <div className="bg-white md:flex flex-rows items-center justify-center flex-wrap gap-5">
+      <div className="bg-white md:flex flex-rows items-center justify-center flex-wrap gap-5 pt-3 pb-10 hd:pb-28 hd:gap-9">
         <div className="flex flex-col items-center text-center md:text-left">
           <motion.ul
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-lg xl:text-xl leading-[2.8] xl:leading-[3] flex flex-col gap-3 lg:mb-10 my-10 md:ml-4 text-green-600 font-medium"
+            className="text-lg xl:text-xl flex flex-col gap-3 lg:mb-10 my-10 md:ml-4 text-green-600 font-medium leading-[2.8] xl:leading-[3]"
           >
             <li>Working space</li>
             <li>Meeting Room</li>
@@ -217,19 +216,22 @@ export default function Workspace() {
               alt=""
               width={960}
               height={455}
-              className="rounded-2xl sm:aspect-[3/5] xs:max-h-[350px] md:max-w-[465px] lg:max-w-[620px] xl:max-h-[455px] xl:max-w-[350px] xl:mt-[-30%] object-cover object-center"
+              className="rounded-2xl sm:aspect-[3/5] xs:max-h-[350px] md:max-w-[465px] lg:max-w-[620px] xl:max-h-[455px] xl:max-w-[350px] object-cover object-center"
               quality={100}
             />
           </div>
-          <div className="absolute bottom-9 sm:mr-16 md:mr-36 md:bottom-[70%] lg:mr-[30%] xl:mr-[-10%] xl:bottom-[96%] xs:w-[300px] w-[400px] flex flex-wrap gap-3 text-green-700 text-center">
+          <motion.div
+            variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="absolute bottom-9 sm:mr-[50%] md:mr-36 md:bottom-[72%] lgl:bottom-[68%] xl:bottom-[75%] lg:mr-[30%] xl:mr-[-10%] xxs:w-[250px] xs:w-[300px] w-[400px] flex flex-wrap gap-3 text-green-700 text-center"
+          >
             <Badge className="w-[80px] p-2 bg-white">Free Wifi</Badge>
             <Badge className="w-[110px] p-2 bg-white">Free Parking</Badge>
-            {/* <Badge className="w-[110px] p-2 bg-white border-2 border-green-500">
-              24/7 Access
-            </Badge> */}
             <Badge className="w-[150px] p-2 bg-white">Free Coffee Break</Badge>
             <Badge className="w-[130px] p-2 bg-white">Flexible Hour</Badge>
-          </div>
+          </motion.div>
         </motion.div>
         <motion.div
           variants={childVariants}
@@ -244,15 +246,14 @@ export default function Workspace() {
               alt=""
               width={960}
               height={550}
-              className="rounded-2xl sm:aspect-[2/5] xs:max-h-[350px] xl:max-h-[555px] mx-5 xl:max-w-[360px] xl:mt-[-20%] object-cover object-center"
+              className="rounded-2xl sm:aspect-[2/5] xs:max-h-[350px] xl:max-h-[555px] mx-5 xl:max-w-[360px] object-cover object-center"
             />
           </div>
           <div className="flex flex-col gap-3 text-green-700 absolute bottom-8 lg:ml-[-64%] md:ml-[-56%] xl:ml-[-12%]">
-            <div className="h-[100px] w-[290px] rounded-2xl bg-white flex items-center justify-center font-medium text-3xl">
+            <div className="h-[100px] xxs:w-[250px] xs:w-[290px] rounded-2xl bg-white flex items-center justify-center font-medium text-3xl">
               <CountUp
                 end={53}
                 duration={3}
-                delay={2}
                 startOnMount={false}
                 enableScrollSpy={true}
                 scrollSpyDelay={2}
@@ -297,7 +298,7 @@ export default function Workspace() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
+              className="xxs:w-[300px] xs:w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
                 src={item.serviceimg}
@@ -361,7 +362,7 @@ export default function Workspace() {
               alt=""
               width={1088}
               height={600}
-              className="hidden xl:block rounded-2xl w-[1088px] h-[600px] object-cover object-center"
+              className="hidden xl:block rounded-2xl max-w-[1200px] h-[600px] object-cover object-center"
             />
             <motion.div
               variants={childVariants}
@@ -558,7 +559,7 @@ export default function Workspace() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="w-[326px] h-[245px] sm:w-3/4 lg:w-[45%] xl:w-[30%] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-4 bg-white p-5"
+              className="xxs:w-[300px] xs:w-[326px] h-[245px] sm:w-3/4 lg:w-[45%] xl:w-[30%] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-4 bg-white p-5"
             >
               <Image
                 src={item.img}

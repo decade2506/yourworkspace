@@ -26,6 +26,7 @@ export default {
         lg: "960px",
         lgl: "1024px", // Common tablet size
         xl: "1200px",
+        mac: "1280px", // Common laptop size
         xsl: "1365px",
         xxl: "1440px", // High-resolution laptops
         xxxl: "1600px", // Large monitors
