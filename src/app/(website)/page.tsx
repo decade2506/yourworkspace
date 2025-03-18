@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <div>
       {/* Title */}
-      <div className="flex flex-col items-center bg-green-50 pt-40 xs:pt-32 xs:pb-8 xsm:pt-32 sm:pt-52 md:pt-24 lg:pt-40 xl:pt-24 xl:pb-3 xsl:pt-28">
+      <div className="flex flex-col items-center bg-green-50 pt-40 xs:pt-32 xs:pb-16 xsm:pt-32 sm:pt-52 md:pt-24 lg:pt-40 xl:pt-24 xl:pb-3 xsl:pt-28">
         <motion.div>
           <div className=" px-5 sm:px-11 xl:pr-20 xsl:pr-[20%]">
             <motion.p
