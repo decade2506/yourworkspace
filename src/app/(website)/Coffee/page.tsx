@@ -20,19 +20,19 @@ const upwardVariants = {
 const Coffee = [
   {
     img: "/brandpic/coffe/quality.jpg",
-    badge: "High Quality Coffee Beans",
+    badge: "Những Hạt cà phê chất lượng cao",
   },
   {
     img: "/brandpic/coffe/fresh.jpg",
-    badge: "100% Freshly Made Coffee",
+    badge: "Cà Phê Pha Mới 100%",
   },
   {
     img: "/brandpic/coffe/aroma.jpg",
-    badge: "Great Aroma",
+    badge: "Hương thơm tuyệt vời",
   },
   {
     img: "/brandpic/coffe/mood.jpg",
-    badge: "Boost Your Mood Everyday",
+    badge: "Tăng cường tâm trạng của bạn mỗi ngày",
   },
 ];
 const Service = [
@@ -86,30 +86,30 @@ export default function Blog() {
     <div className="overflow-hidden w-full min-h-screen">
       {/* Title */}
       <div className="flex flex-col items-center justify-center bg-yellow-100 pt-40 min-h-screen">
-        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[10%]">
+        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%] ml-20">
           <motion.p
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{once: true}}
+            viewport={{ once: true }}
             className="text-sm text-center xl:text-left text-amber-600 font-medium tracking-wider"
           >
-            COFFEE ON THE GO
+            CÀ PHÊ MANG ĐI
           </motion.p>
           <motion.h1
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{once: true}}
-            className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-amber-900 font-medium my-5"
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-amber-900 font-medium my-5 mr-32"
           >
-            Delicious and Fresh Coffee That Will Boost Your Day
+            Cà phê tươi ngon chắc chắn sẽ làm bạn phấn chấn mỗi ngày
           </motion.h1>
           <motion.p
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{once: true}}
+            viewport={{ once: true }}
             className="text-sm text-amber-700 text-center xl:text-left mb-9"
           >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
@@ -117,16 +117,16 @@ export default function Blog() {
           </motion.p>
         </div>
         <motion.div
-            variants={childVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="flex justify-center xl:mr-[80%] gap-4 my-10"
-          >
-            <Button className="rounded-full text-green-500 border-2 border-green-500 bg-white px-10 hover:bg-green-500 hover:text-white">
-              <Link href="/about">More Detail</Link>
-            </Button>
-          </motion.div>
+          variants={childVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="flex justify-center xl:mr-[79%] gap-4 my-3"
+        >
+          <Button className="rounded-full text-green-500 border-2 border-green-500 bg-white px-10 hover:bg-green-500 hover:text-white">
+            <Link href="/About">Biết Thêm chi tiết</Link>
+          </Button>
+        </motion.div>
       </div>
 
       {/* Coffee */}
@@ -138,7 +138,7 @@ export default function Blog() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{once: true}}
+              viewport={{ once: true }}
               className="flex flex-col items-center relative my-6"
             >
               <Image
@@ -163,19 +163,19 @@ export default function Blog() {
             variants={upwardVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{once: true}}
+            viewport={{ once: true }}
             className="text-sm text-center  text-amber-600 font-medium tracking-wider"
           >
-            AMAZING COFFEE EXPERIENCE
+            TRẢI NGHIỆM CÀ PHÊ TUYỆT VỜI
           </motion.p>
           <motion.h1
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{once: true}}
+            viewport={{ once: true }}
             className="text-3xl md:text-5xl md:mx-36 text-center text-amber-900 font-medium my-3"
           >
-            While You Are At It, Why Don't Enjoy A Cup Of Coffee
+            Nhân tiện, sao không thưởng thức một tách cà phê?
           </motion.h1>
         </div>
         <div className="flex flex-wrap md:px-36 xl:px-0 xl:flex-nowrap xl:w-5/6 gap-3 items-center justify-center my-6">
@@ -185,7 +185,7 @@ export default function Blog() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{once: true}}
+              viewport={{ once: true }}
               className="xxs:w-[300px] xs:w-[326px] h-[241px] sm:w-3/4 lg:w-[326px] rounded-2xl border-2 border-solid flex flex-col items-center justify-center my-3 bg-white p-5"
             >
               <Image
@@ -209,25 +209,25 @@ export default function Blog() {
             variants={upwardVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{once: true}}
+            viewport={{ once: true }}
             className="text-sm text-center mt-10 pt-6 text-amber-600 font-medium tracking-wider"
           >
-            FRESH COFFEE MAKE YOUR DAY
+            CÀ PHÊ TƯƠI CHO NGÀY THÊM HỨNG KHỞI
           </motion.p>
           <motion.h1
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{once: true}}
+            viewport={{ once: true }}
             className="text-3xl md:text-5xl text-center text-amber-900 font-medium my-3"
           >
-            Explore YOURS Coffee
+            Khám Phá Cà Phê Của YOURS
           </motion.h1>
           <motion.p
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{once: true}}
+            viewport={{ once: true }}
             className="text-sm text-center"
           >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -240,7 +240,7 @@ export default function Blog() {
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{once: true}}
+              viewport={{ once: true }}
               className="break-inside-avoid rounded-2xl overflow-hidden"
             >
               <Image

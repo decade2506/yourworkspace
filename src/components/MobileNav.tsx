@@ -2,34 +2,34 @@
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "./ui/sheet";
 import { usePathname } from "next/navigation";
-import { CiMenuBurger } from "react-icons/ci";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 
 const Links = [
   {
-    name: "Home",
+    name: "Trang chủ",
     path: "/",
-  },
-  {
-    name: "About",
+},
+{
+    name: "Về chúng tôi",
     path: "/About",
   },
-  {
-    name: "Workspace",
+{
+    name: "Không gian làm việc",
     path: "/Workspace",
-  },
-  {
-    name: "Coffee",
+},
+{
+    name: "Cà phê",
     path: "/Coffee",
-  },
-  {
+},
+{
     name: "Blog",
     path: "/Blog",
-  },
-  {
-    name: "Contact",
+},
+{
+    name: "Liên lạc",
     path: "/Contact",
-  },
+},
 ];
 
 const MobileNav = () => {
@@ -41,7 +41,7 @@ const MobileNav = () => {
         className="flex justify-center items-center"
         onClick={() => setOpen(true)}
       >
-        <CiMenuBurger className="text-[30px] border-2 text-accent"></CiMenuBurger>
+        <GiHamburgerMenu className="text-[30px] text-accent"></GiHamburgerMenu>
       </SheetTrigger>
       <SheetContent className="flex flex-col bg-white">
         <SheetTitle className="sr-only"></SheetTitle>

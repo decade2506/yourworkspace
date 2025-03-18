@@ -47,18 +47,18 @@ export default function BlogClient({ posts }: BlogProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-[1.02rem] text-green-200 font-medium tracking-wider"
+          className="text-[1.02rem] text-green-200 font-medium tracking-wider text-center"
         >
-          OUR BLOG
+          BLOG CỦA CHÚNG TÔI
         </motion.p>
         <motion.h1
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl text-white mt-2 mb-32 font-medium"
+          className="text-3xl md:text-5xl xl:text-6xl text-white mt-2 mb-32 font-medium"
         >
-          Insights, Tips, and Inspirations
+          Thông tin chi tiết, Mẹo và Cảm hứng
         </motion.h1>
         <motion.div
           variants={childVariants}
@@ -89,7 +89,7 @@ export default function BlogClient({ posts }: BlogProps) {
             viewport={{ once: true }}
             className="text-xl text-green-800 ml-5 py-4"
           >
-            Latest Post
+            Bài đăng mới nhất
           </motion.h1>
           <motion.div
             variants={parentVariants}
@@ -156,7 +156,7 @@ export default function BlogClient({ posts }: BlogProps) {
             viewport={{ once: true }}
             className="text-xl text-green-800 ml-2 py-4 pb-6"
           >
-            Feature Post
+            Bài đăng nổi bật
           </motion.h1>
           <div className="flex flex-col items-center gap-3">
             {posts
@@ -195,7 +195,7 @@ export default function BlogClient({ posts }: BlogProps) {
                       </Link>
                       <p className="text-[0.8rem] text-accent mt-2">
                         {new Date(post.publishedAt).toLocaleDateString(
-                          "en-US",
+                          "vi-VN",
                           {
                             year: "numeric",
                             month: "long",
@@ -212,7 +212,7 @@ export default function BlogClient({ posts }: BlogProps) {
                         href={`/post/${post.slug.current}`}
                         className="text-green-800 cursor-pointer"
                       >
-                        Read More
+                        Đọc thêm
                       </Link>
                     </div>
                   </div>
@@ -231,7 +231,7 @@ export default function BlogClient({ posts }: BlogProps) {
                   className="rounded-xl px-6 bg-green-800 text-white mx-auto hover:bg-white hover:text-green-900 hover:border-2 border-green-800"
                   onClick={loadMorePosts}
                 >
-                  Load More
+                  Tải thêm
                 </Button>
               </motion.div>
             )}

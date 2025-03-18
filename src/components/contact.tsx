@@ -186,16 +186,16 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
           viewport={{ once: true }}
           className="text-[1.02rem] text-green-200 font-medium tracking-wider"
         >
-          CONTACT US
+          LIÊN HỆ VỚI CHÚNG TÔI
         </motion.p>
         <motion.h1
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl text-white mt-2 mb-32 font-medium"
+          className="text-3xl md:text-5xl xl:text-6xl text-white mt-2 mb-32 font-medium"
         >
-          We're Here To Help
+          Chúng tôi ở đây để giúp đỡ
         </motion.h1>
         <motion.div
           variants={childVariants}
@@ -223,18 +223,18 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-[1.02rem] text-green-600 my-5 font-medium tracking-wide"
+          className="text-[1.02rem] text-green-600 my-5 font-medium tracking-wide text-center"
         >
-          CONTACT US
+          LIÊN HỆ VỚI CHÚNG TÔI
         </motion.h1>
         <motion.h1
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl text-green-800 font-medium text-center"
+          className="text-3xl md:text-5xl text-green-800 font-medium text-center mx-0 xsl:mx-40"
         >
-          You Can Also Contact Our Friendly Team Directly
+          Bạn cũng có thể liên hệ trực tiếp với đội ngũ thân thiện của chúng tôi
         </motion.h1>
         <div className="pt-10">
           <div className="flex flex-col xl:flex-row items-center">
@@ -396,7 +396,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
           viewport={{ once: true }}
           className="text-[1.02rem] text-green-600 my-5 font-medium tracking-wide"
         >
-          COMMON QUESTIONS
+          CÂU HỎI THƯỜNG GẶP
         </motion.h1>
         <motion.h1
           variants={childVariants}
@@ -405,38 +405,43 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl text-green-800 md:mx-52 xl:mx-64 xsl:mx-72 font-medium text-center"
         >
-          Everything You Need To Know About Worknow
+          Mọi thứ bạn cần biết về YOURS Workspace
         </motion.h1>
         <motion.p
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-sm text-green-900 text-center mt-3 md:mx-52 xl:mx-64 xsl:mx-72"
+          className="text-sm md:text-lg text-green-900 text-center mt-3 md:mx-52 xl:mx-64 xsl:mx-72"
         >
-          We want to make sure that every question you have about our spaces,
-          memberships, and services is answered clearly.
+          Chúng tôi muốn đảm bảo rằng mọi câu hỏi của bạn về không gian, tư cách
+          thành viên và dịch vụ của chúng tôi đều được giải đáp rõ ràng.
         </motion.p>
-        <div className="flex justify-center items-center gap-5">
-          <motion.div
-            variants={childVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="px-10 p-5 text-left rounded-xl mx-auto"
-          >
-            {Question_1.map((item, index) => (
-              <Accordion key={index} type="single" collapsible className="w-full transition-all duration-300 ease-in-out">
-                <AccordionItem value={item.value}>
-                  <AccordionTrigger>{item.question}</AccordionTrigger>
-                  <AccordionContent className="text-wrap w-full">
-                    {item.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            ))}
-          </motion.div>
-        </div>
+        <motion.div
+          variants={childVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="px-10 p-5 text-left flex flex-col justify-center items-center mt-10"
+        >
+          {Question_1.map((item, index) => (
+            <Accordion
+              key={index}
+              type="single"
+              collapsible
+              className="xxs:w-[300px] xsm:w-11/12 sm:w-[500px] md:w-[600] lg:w-[900px] transition-all duration-300 ease-in-out"
+            >
+              <AccordionItem value={item.value}>
+                <AccordionTrigger className="text-wrap">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-wrap max-w-[900px]">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          ))}
+        </motion.div>
       </motion.div>
     </div>
   );

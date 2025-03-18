@@ -143,7 +143,7 @@ export default function Workspace() {
     <div className="overflow-hidden w-full min-h-screen">
       {/* Title */}
       <div className="flex flex-col items-center justify-center bg-green-200 pt-40 min-h-screen">
-        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%] ">
+        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%] ml-10">
           <motion.p
             variants={childVariants}
             initial="hidden"
@@ -151,7 +151,7 @@ export default function Workspace() {
             viewport={{ once: true }}
             className="text-sm text-center xl:text-left text-green-800 font-medium tracking-wider"
           >
-            WORKING SPACE FOR EVERY NEED
+            KHÔNG GIAN LÀM VIỆC CHO MỌI NHU CẦU
           </motion.p>
           <motion.h1
             variants={childVariants}
@@ -160,7 +160,7 @@ export default function Workspace() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-black font-medium my-5"
           >
-            Discover Flexible And Inspiring Workspaces
+            Khám phá không gian làm việc linh hoạt và đầy cảm hứng
           </motion.h1>
           <motion.p
             variants={childVariants}
@@ -182,7 +182,7 @@ export default function Workspace() {
           className="flex justify-center xl:mr-[85%] gap-4 my-10"
         >
           <Button className="rounded-full text-white bg-orange-400 px-10 hover:bg-black/80">
-            <Link href="/contact">Book Now</Link>
+            <Link href="/contact">Đặt Ngay</Link>
           </Button>
         </motion.div>
       </div>
@@ -197,10 +197,10 @@ export default function Workspace() {
             viewport={{ once: true }}
             className="text-lg xl:text-xl flex flex-col gap-3 lg:mb-10 my-10 md:ml-4 text-green-600 font-medium leading-[2.8] xl:leading-[3]"
           >
-            <li>Working space</li>
-            <li>Meeting Room</li>
-            <li>Event Spaces</li>
-            <li>Private Office Room</li>
+            <li>Không gian làm việc</li>
+            <li>Phòng họp</li>
+            <li>Không gian sự kiện</li>
+            <li>Văn phòng làm việc riêng</li>
           </motion.ul>
         </div>
         <motion.div
@@ -225,12 +225,14 @@ export default function Workspace() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="absolute bottom-9 sm:mr-[50%] md:mr-36 md:bottom-[72%] lgl:bottom-[68%] xl:bottom-[75%] lg:mr-[30%] xl:mr-[-10%] xxs:w-[250px] xs:w-[300px] w-[400px] flex flex-wrap gap-3 text-green-700 text-center"
+            className="absolute bottom-9 sm:mr-[50%]  md:bottom-[70%] lgl:bottom-[66%] xl:bottom-[73%] lg:mr-[20%] xsm:mr-[28%] md:mr-[10%] xl:mr-[-25%] xxs:w-[250px] xs:w-[290px] md:w-[400px] w-[800px] flex flex-wrap gap-3 text-green-700 text-center"
           >
-            <Badge className="w-[80px] p-2 bg-white">Free Wifi</Badge>
-            <Badge className="w-[110px] p-2 bg-white">Free Parking</Badge>
+            <Badge className="w-[120px] p-2 bg-white">Wifi Miễn Phí</Badge>
+            <Badge className="w-[130px] p-2 bg-white">Đậu Xe Miễn Phí</Badge>
             <Badge className="w-[150px] p-2 bg-white">Free Coffee Break</Badge>
-            <Badge className="w-[130px] p-2 bg-white">Flexible Hour</Badge>
+            <Badge className="w-[170px] p-2 bg-white">
+              Linh Hoạt Về Thời Gian
+            </Badge>
           </motion.div>
         </motion.div>
         <motion.div
@@ -252,7 +254,7 @@ export default function Workspace() {
           <div className="flex flex-col gap-3 text-green-700 absolute bottom-8 lg:ml-[-64%] md:ml-[-56%] xl:ml-[-12%]">
             <div className="h-[100px] xxs:w-[250px] xs:w-[290px] rounded-2xl bg-white flex items-center justify-center font-medium text-3xl">
               <CountUp
-                end={53}
+                end={52}
                 duration={3}
                 startOnMount={false}
                 enableScrollSpy={true}
@@ -260,8 +262,8 @@ export default function Workspace() {
                 scrollSpyOnce={true}
               />
               <span className="text-yellow-500">+</span>
-              <p className="text-sm text-green-600 p-4 font-medium">
-                Happy Customer
+              <p className="text-lg text-green-600 p-4 font-medium">
+                Khách hàng vui vẻ
               </p>
             </div>
           </div>
@@ -278,7 +280,7 @@ export default function Workspace() {
             viewport={{ once: true }}
             className="text-sm text-center text-green-700 font-medium tracking-wider"
           >
-            COMFORTABLE WORKSPACES
+            KHÔNG GIAN LÀM VIỆC THOẢI MÁI
           </motion.p>
           <motion.h1
             variants={childVariants}
@@ -287,7 +289,8 @@ export default function Workspace() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
-            We Offer A Range Of Modern And Flexible Workspaces
+            Chúng tôi mang đến không gian làm việc hiện đại và linh hoạt, phù
+            hợp mọi nhu cầu.
           </motion.h1>
         </div>
         <div className="pb-7 flex flex-wrap md:px-36 xl:px-0 xl:flex-nowrap xl:w-5/6 gap-3 items-center justify-center">
@@ -324,7 +327,7 @@ export default function Workspace() {
             viewport={{ once: true }}
             className="text-sm text-center xl:text-left mt-10 pt-6 text-green-700 font-medium tracking-wider"
           >
-            OUR SPACES
+            KHÔNG GIAN CỦA CHÚNG TÔI
           </motion.p>
           <motion.h1
             variants={childVariants}
@@ -333,7 +336,8 @@ export default function Workspace() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl xl:leading-relaxed text-center xl:text-left xl:w-[50%] text-black font-medium my-6"
           >
-            Take A Look At Our Vibrant And Dynamic Workspaces
+            Hãy ghé thăm không gian làm việc đầy năng nượng và hiện đại của
+            chúng tôi
           </motion.h1>
           <motion.p
             variants={childVariants}
@@ -342,9 +346,9 @@ export default function Workspace() {
             viewport={{ once: true }}
             className="text-lg text-center xl:text-right xl:w-1/2 xl:ml-[40%] xl:absolute top-[70%]"
           >
-            Whether you’re looking for a quiet spot to work, a professional
-            setting for a meeting, or a venue for your next seminar, we have the
-            perfect space for you.
+            Cho dù bạn đang tìm kiếm một nơi yên tĩnh để làm việc, một không
+            gian chuyên nghiệp để họp hay một địa điểm tổ chức hội thảo tiếp
+            theo, chúng tôi đều có không gian hoàn hảo dành cho bạn.
           </motion.p>
         </div>
 
@@ -444,7 +448,7 @@ export default function Workspace() {
             viewport={{ once: true }}
             className="text-sm text-center mt-10 pt-6 text-green-700 font-medium tracking-wider"
           >
-            COMFORTABLE SPACES
+            KHÔNG GIAN CHUẨN HÓA
           </motion.p>
           <motion.h1
             variants={childVariants}
@@ -453,7 +457,7 @@ export default function Workspace() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
-            Explore Our Spaces
+            Khám phá không gian của chúng tôi
           </motion.h1>
           <motion.p
             variants={childVariants}
@@ -498,7 +502,7 @@ export default function Workspace() {
               viewport={{ once: true }}
               className="text-sm text-center xl:text-left mt-10 pt-6 text-green-700 font-medium tracking-wider"
             >
-              OUR FACILITIES
+              CƠ SỞ VẬT CHẤT
             </motion.p>
             <motion.h1
               variants={childVariants}
@@ -507,7 +511,7 @@ export default function Workspace() {
               viewport={{ once: true }}
               className="text-3xl md:text-5xl text-center xl:text-left text-green-700 font-medium my-6"
             >
-              Premium Amenities for a Seamless Work Experience
+              Tiện nghi cao cấp cho trải nghiệm làm việc liền mạch
             </motion.h1>
             <motion.p
               variants={childVariants}
@@ -516,8 +520,9 @@ export default function Workspace() {
               viewport={{ once: true }}
               className="text-lg text-center xl:text-left"
             >
-              We provide a wide range of top-notch amenities designed to make
-              your work experience as smooth and comfortable as possible.
+              Chúng tôi cung cấp nhiều tiện nghi hàng đầu được thiết kế để giúp
+              trải nghiệm làm việc của bạn trở nên suôn sẻ và thoải mái nhất có
+              thể.
             </motion.p>
           </div>
           <motion.div
@@ -532,21 +537,21 @@ export default function Workspace() {
               alt=""
               height={85}
               width={85}
-              className="rounded-full md:w-[20%] xl:mt-[-20%]"
+              className="rounded-full md:w-[20%] xl:mt-[-20%] object-center object-cover"
             />
             <Image
               src="/brandpic/profile/profile2.jpg"
               alt=""
               height={120}
               width={120}
-              className="rounded-full md:w-[50%] xl:mb-[-20%]"
+              className="rounded-full md:w-[50%] xl:mb-[-20%] object-center object-cover"
             />
             <Image
               src="/brandpic/profile/profile3.jpg"
               alt=""
               height={80}
               width={80}
-              className="rounded-full md:w-[40%] xl:mt-[-10%] xl:w-[48%]"
+              className="rounded-full md:w-[40%] xl:mt-[-10%] xl:w-[48%] object-center object-cover"
             />
           </motion.div>
         </div>

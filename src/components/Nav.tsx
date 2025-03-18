@@ -5,19 +5,19 @@ import { usePathname } from "next/navigation";
 
 const Links = [
     {
-        name: "Home",
+        name: "Trang chủ",
         path: "/",
     },
     {
-        name: "About",
+        name: "Về chúng tôi",
         path: "/About",
       },
     {
-        name: "Workspace",
+        name: "Không gian làm việc",
         path: "/Workspace",
     },
     {
-        name: "Coffee",
+        name: "Cà phê",
         path: "/Coffee",
     },
     {
@@ -25,9 +25,9 @@ const Links = [
         path: "/Blog",
     },
     {
-        name: "Contact",
+        name: "Liên lạc",
         path: "/Contact",
-      },
+    },
 ]
 
 const Nav = () => {

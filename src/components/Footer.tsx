@@ -22,8 +22,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-bold mb-4">Liên Hệ với chúng tôi</h3>
+            <ul className="space-y-2 leading-loose">
               <li className="flex items-center">
                 <FaPhone className="mr-2 text-gray-600" />
                 <span>+84 94 777 71 02</span>
@@ -37,12 +37,12 @@ const Footer = () => {
 
           {/* Address */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Visit Us</h3>
+            <h3 className="text-lg font-bold mb-4">Ghé thăm chúng tôi</h3>
             <div className="flex items-start">
-              <FaMapMarkerAlt className="mr-2 mt-1 text-gray-600" />
-              <address className="not-italic">
-                103 đường số 4, Khu đô thị mới An Cựu, <br />
-                phường An Đông quận Thuận Hoá, <br />
+              <FaMapMarkerAlt className="mr-2 mt-1 text-gray-600 text-4xl" />
+              <address className="not-italic mr-9 leading-relaxed">
+                103 đường số 4, Khu đô thị mới An Cựu,
+                phường An Đông quận Thuận Hoá,
                 thành phố Huế
               </address>
             </div>
@@ -50,17 +50,19 @@ const Footer = () => {
 
           {/* Working Hours */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Working Hours</h3>
-            <ul className="space-y-2">
-              <li className="flex items-start">
+            <h3 className="text-lg font-bold mb-4">Giờ Làm Việc</h3>
+            <ul className="space-y-2 leading-loose flex flex-col items-start">
+              <li className="flex items-center">
                 <FaClock className="mr-2 mt-1 text-gray-600" />
-                <div>
-                  <p>Thứ 2 - Thứ 6: 7:00 AM - 8:00 PM</p>
-                  <br />
-                  <p>Thứ 7: 9:00 AM - 6:00 PM</p>
-                  <br />
-                  <p>Chủ nhật: Đóng cửa</p>
-                </div>
+                Thứ 2 - Thứ 6: 7:00 AM - 8:00 PM
+              </li>
+              <li className="flex items-center">
+                <FaClock className="mr-2 mt-1 text-gray-600" />
+                Thứ 7: 9:00 AM - 6:00 PM
+              </li>
+              <li className="flex items-center">
+                <FaClock className="mr-2 mt-1 text-gray-600" />
+                Chủ nhật: 7:00 AM - 12:00 PM
               </li>
             </ul>
           </div>
@@ -72,7 +74,7 @@ const Footer = () => {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 pt-4">
           {/* Copyright Text */}
           <p className="text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} <b>YOUR Workspace</b>. All rights
+            &copy; {new Date().getFullYear()} <b>YOURS Workspace</b>. All rights
             reserved.
           </p>
 

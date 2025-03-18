@@ -102,7 +102,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-sm text-center xl:text-left  text-green-800 font-medium tracking-wider"
             >
-              COFFEE & WORKING SPACE
+              CÀ PHÊ & KHÔNG GIAN LÀM VIỆC
             </motion.p>
             <motion.h1
               variants={childVariants}
@@ -111,14 +111,14 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-black font-medium my-5 xl:mr-20"
             >
-              Comfortable Working Space & Amazing Coffee Experience
+              Không gian làm việc thoải mái và trải nghiệm cà phê tuyệt vời
             </motion.h1>
             <motion.p
               variants={childVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-sm text-center xl:text-left xl:mr-20"
+              className="text-sm md:text-lg text-center xl:text-left xl:mr-20"
             >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
               quos repudiandae unde ut velit sapiente labore expedita soluta
@@ -133,7 +133,7 @@ export default function Home() {
             className="flex justify-center xl:mr-[80%] gap-4 my-10"
           >
             <Button className="rounded-full text-green-500 border-2 border-green-500 bg-white px-10 hover:bg-green-500 hover:text-white">
-              <Link href="/about">More Detail</Link>
+              <Link href="/About">More Detail</Link>
             </Button>
           </motion.div>
         </motion.div>
