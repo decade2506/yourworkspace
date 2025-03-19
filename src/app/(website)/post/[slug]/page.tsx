@@ -89,7 +89,7 @@ export default async function Post(props: any) {
           />
         </div>
       </div>
-      <div className="pt-44 flex flex-col gap-10 xl:flex-row mx-[15%]">
+      <div className="pt-44 xxxl:mt-32 flex flex-col gap-10 xl:flex-row mx-[15%]">
         {/* content */}
         <article className="pt-10 pl-0 pb-20 prose max-w-5xl mx-auto">
           <PortableText value={post.body} />
