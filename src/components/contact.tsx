@@ -19,31 +19,36 @@ import { useState, useEffect } from "react";
 import { ContactAction } from "@/app/action";
 import { getCaptchaToken } from "@/utils/captcha";
 import Script from "next/script";
+import Link from "next/link";
 
 const contact = [
   {
     image: "/brandpic/svimg/chat.png",
-    title: "Chat To Sales",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    info: "yours@workspace.vn",
+    title: "Liên hệ tư vấn không gian làm việc",
+    des: "Hãy trò chuyện với đội ngũ thân thiện của chúng tôi.",
+    info: "hatran121289@gmail.com",
+    link: "#"
   },
   {
     image: "/brandpic/svimg/mail.png",
-    title: "Chat To Support",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    info: "yours@workspace.vn",
+    title: "Trò chuyện để hỗ trợ",
+    des: "Hãy trò chuyện với đội ngũ thân thiện của chúng tôi.",
+    info: "hatran121289@gmail.com",
+    link: "#"
   },
   {
     image: "/brandpic/svimg/map.png",
-    title: "Visit Us",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Ghé thăm chúng tôi",
+    des: "Ghé thăm Văn phòng của chúng tôi",
     info: "yours@workspace.vn",
+    link: "#"
   },
   {
     image: "/brandpic/svimg/phone.png",
-    title: "Call Us",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Gọi cho chúng tôi",
+    des: "Ghé thăm Văn phòng của chúng tôi",
     info: "(+84) 94 777 71 02",
+    link: "#"
   },
 ];
 const childVariants = {
@@ -243,7 +248,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
           Bạn cũng có thể liên hệ trực tiếp với đội ngũ thân thiện của chúng tôi
         </motion.h1>
         <div className="pt-10">
-          <div className="flex flex-col xl:flex-row items-center">
+          <div className="flex flex-col xl:flex-row gap-8 items-center">
             <motion.form
               onSubmit={handleSubmit(onSubmit)}
               variants={upwardVariants}
@@ -255,12 +260,12 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
                 <div>
                   <p>
-                    Full name <span className="text-red-500">*</span>
+                    Họ và tên <span className="text-red-500">*</span>
                   </p>
                   <Input
                     className="rounded-xl bg-slate-100 px-2"
                     type="text"
-                    placeholder="Your name"
+                    placeholder="Tên của bạn"
                     {...register("name")}
                   />
                   <div className="h-[10px]">
@@ -278,7 +283,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                   <Input
                     className="rounded-xl bg-slate-100 px-2"
                     type="email"
-                    placeholder="Email"
+                    placeholder="Email của bạn"
                     {...register("email")}
                   />
                   <div className="h-[10px]">
@@ -291,12 +296,12 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                 </div>
                 <div>
                   <p>
-                    Phone <span className="text-red-500">*</span>
+                    Số điện thoại <span className="text-red-500">*</span>
                   </p>
                   <Input
                     className="rounded-xl bg-slate-100 px-2"
                     type="phone"
-                    placeholder="Phone number"
+                    placeholder="Số điện thoại của bạn"
                     {...register("phone")}
                   />
                   <div className="h-[10px]">
@@ -309,12 +314,12 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                 </div>
                 <div>
                   <p>
-                    Company name <span className="text-red-500">*</span>
+                    Tên doanh nghiệp <span className="text-red-500">*</span>
                   </p>
                   <Input
                     className="rounded-xl bg-slate-100 px-2"
                     type="company"
-                    placeholder="Your comany name"
+                    placeholder="Tên doanh nghiệp của bạn"
                     {...register("company")}
                   />
                   <div className="h-[10px]">
@@ -326,10 +331,10 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                   </div>
                 </div>
               </div>
-              <p>Message</p>
+              <p>Lời nhắn</p>
               <Textarea
                 className="h-[120px] rounded-2xl bg-slate-100 px-2"
-                placeholder="send your message"
+                placeholder="Gửi lời nhắn của bạn"
                 {...register("message")}
               />
 
@@ -358,11 +363,11 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
 
               <Button
                 size="lg"
-                className="max-w-50 rounded-full bg-green-800 text-white hover:bg-green-900"
+                className="rounded-full bg-green-800 text-white hover:bg-green-900"
                 disabled={isSubmitting}
-                type="submit"
+                type="Đặt ngay"
               >
-                {isSubmitting ? "Processing..." : "Submit"}
+                {isSubmitting ? "Đang xử lý..." : "Đặt ngay"}
               </Button>
             </motion.form>
             <div className="flex flex-wrap gap-8 justify-center xl:mr-[-12%]">
@@ -373,7 +378,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                   whileInView="visible"
                   viewport={{ once: true }}
                   key={index}
-                  className="xxs:w-[300px] xs:w-[326px] h-[254px] sm:w-3/4 md:w-1/3 rounded-2xl bg-white flex flex-col items-center justify-center my-3"
+                  className="xxs:w-[300px] xs:w-[326px] h-[254px] sm:w-3/4 md:w-1/3 rounded-2xl border-2 bg-white flex flex-col items-center justify-center my-3"
                 >
                   <Image
                     src={item.image}
@@ -385,9 +390,9 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                   />
                   <h1 className="text-xl my-3 text-center">{item.title}</h1>
                   <p className="text-sm text-center mb-3 mx-7">{item.des}</p>
-                  <p className="text-sm text-green-600 text-center mb-2 mx-10">
+                  <Link href={item.link} className="text-sm text-green-600 text-center mb-2 mx-10 hover:mr-3">
                     {item.info}
-                  </p>
+                  </Link>
                 </motion.div>
               ))}
             </div>

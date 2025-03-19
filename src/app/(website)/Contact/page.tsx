@@ -21,33 +21,33 @@ export default function Contact() {
       const textContent = `
         New Contact Form Submission
         --------------------------
-        Name: ${data.name}
+        Họ và Tên: ${data.name}
         Email: ${data.email}
-        Phone: ${data.phone}
-        Company: ${data.company}
+        Số điện thoại: ${data.phone}
+        Thuộc doanh nghiệp: ${data.company}
         
-        Message:
-        ${data.message || 'No message provided'}
+        Lời nhắn:
+        ${data.message || 'Không có tin nhắn nào được cung cấp'}
       `;
 
       const htmlContent = `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${data.name}</p>
+        <h2>Bạn có một yêu cầu liên hệ mới</h2>
+        <p><strong>Họ và Tên:</strong> ${data.name}</p>
         <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Phone:</strong> ${data.phone}</p>
-        <p><strong>Company:</strong> ${data.company}</p>
-        <p><strong>Message:</strong></p>
-        <p>${data.message || 'No message provided'}</p>
+        <p><strong>Số điện thoại:</strong> ${data.phone}</p>
+        <p><strong>Thuộc doanh nghiệp:</strong> ${data.company}</p>
+        <p><strong>Lời nhắn:</strong></p>
+        <p>${data.message || 'Không có tin nhắn nào được cung cấp'}</p>
       `;
       
       const mailOptions = {
         from: {
-          name: "Your Website Contact Form",
+          name: "Từ Form liên hệ của YOURS",
           address: process.env.SMTP_USERNAME as string
         },
         replyTo: data.email,
         to: process.env.MAIL_RECIEVER_ADDRESS,
-        subject: `Website Contact: ${data.name} from ${data.company}`,
+        subject: `Website Contact: ${data.name} từ ${data.company}`,
         text: textContent,
         html: htmlContent,
         headers: {

@@ -19,19 +19,19 @@ const upwardVariants = {
 };
 const Numbers = [
   {
-    count: 100,
-    title: "Active Members",
+    count: 136,
+    title: "Thành viên tích cực",
   },
   {
-    count: 100,
-    title: "Successful Events",
+    count: 65,
+    title: "Sự kiện thành công",
   },
   {
-    count: 100,
-    title: "Partnerships",
+    count: 32,
+    title: "Quan hệ đối tác",
   },
   {
-    count: 100,
+    count: 5,
     title: "Locations Serving",
   },
 ];
@@ -151,8 +151,8 @@ export default function About() {
 
       {/* About Us */}
       <div className="px-10 pt-52 xxs:mt-26 mt-40 sm:pt-[200px] pb-16 bg-slate-100 flex flex-col items-center">
-        <div className="flex flex-col xl:flex-row items-center justify-center gap-0">
-          <div className="flex flex-col xl:items-start xl:ml-[10%] xl:mr-[5%] w-full">
+        <div className="flex flex-col lgl:flex-row items-center justify-center gap-0">
+          <div className="flex flex-col lgl:items-start xl:ml-[10%] xl:mr-[5%] w-full">
             <motion.h1
               variants={upwardVariants}
               initial="hidden"
@@ -167,7 +167,7 @@ export default function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-3xl md:text-5xl text-green-900 font-medium text-center xl:text-left"
+              className="text-3xl md:text-5xl text-green-900 font-medium text-center lgl:text-left"
             >
               Nơi kết nối sáng tạo và năng suất
             </motion.h1>
@@ -176,15 +176,15 @@ export default function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-lg text-green-900 text-center mt-3 xl:text-left"
+              className="text-lg text-green-900 text-center mt-3 lgl:text-left"
             >
               YOURS Workspace không chỉ là một không gian làm việc chung – mà
               còn là một trung tâm sáng tạo phát triển mạnh mẽ được thiết kế để
               trao quyền cho những người làm việc tự do, các công ty khởi nghiệp
               và các chuyên gia sáng tạo.
             </motion.p>
-            <div className="flex flex-col md:flex-row">
-              <div className="my-7 text-center">
+            <div className="flex flex-col md:flex-row gap-2">
+              <div className="my-7 text-center lgl:text-left">
                 <motion.h6
                   variants={childVariants}
                   initial="hidden"
@@ -206,7 +206,7 @@ export default function About() {
                   mạnh mẽ và sự hợp tác liền mạch.
                 </motion.p>
               </div>
-              <div className="my-7 text-center">
+              <div className="my-7 text-center lgl:text-left">
                 <motion.h6
                   variants={childVariants}
                   initial="hidden"
@@ -256,7 +256,7 @@ export default function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex flex-col p-3 px-10 gap-2 items-center justify-center bg-green-900 rounded-2xl h-[130px] xxs:w-[250px] xs:w-[300px] sm:w-[98%] md:w-[49%] lg:w-[45%] text-2xl font-medium"
+              className="flex flex-col p-3 px-10 gap-2 items-center justify-center bg-green-950 rounded-2xl h-[130px] xxs:w-[250px] xs:w-[300px] sm:w-[98%] md:w-[49%] lg:w-[45%] text-2xl font-medium"
             >
               <div className="flex justify-center">
                 <CountUp
@@ -267,9 +267,9 @@ export default function About() {
                   enableScrollSpy={true}
                   scrollSpyDelay={2}
                   scrollSpyOnce={true}
-                  className="text-white"
+                  className="text-white text-5xl font-bold"
                 />
-                <span className="text-yellow-500">+</span>
+                <span className="text-yellow-500 text-4xl">+</span>
               </div>
               <h1 className="text-green-50 text-xl">{item.title}</h1>
             </motion.div>
@@ -326,35 +326,39 @@ export default function About() {
 
       {/* Comunity */}
       <div className="py-10 bg-slate-100 flex flex-col items-center p-8">
-        <motion.h1
-          variants={upwardVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-[1.02rem] text-green-600 my-5 font-medium"
-        >
-          CỘNG ĐỒNG CỦA YOURS
-        </motion.h1>
-        <motion.h1
-          variants={childVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-3xl md:text-5xl text-green-800 font-medium text-center"
-        >
-          Mạng lưới đa dạng của những nhà sáng tạo và đổi mới
-        </motion.h1>
-        <motion.p
-          variants={childVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-sm xl:text-lg xl:mx-[20%] text-green-900 text-center mt-3"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
-          architecto sit reiciendis voluptates dolorum molestiae hic numquam
-          beatae similique ipsum ea nulla voluptate, fugit.
-        </motion.p>
+        <div className="flex flex-col lgl:flex-row gap-8 items-center justify-center mx-8">
+          <div className="flex flex-col">
+            <motion.h1
+              variants={upwardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="text-[1.02rem] text-green-600 my-5 font-medium text-center lgl:text-left"
+            >
+              CỘNG ĐỒNG CỦA YOURS
+            </motion.h1>
+            <motion.h1
+              variants={childVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="text-3xl md:text-5xl text-green-800 font-medium text-center lgl:text-left"
+            >
+              Mạng lưới đa dạng của những nhà sáng tạo và đổi mới
+            </motion.h1>
+          </div>
+          <motion.p
+            variants={childVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-sm lgl:text-lg xl:mx-[20%] text-green-900 text-center mt-3 lgl:text-left"
+          >
+            Cộng đồng của chúng tôi phát triển mạnh mẽ nhờ sự hợp tác được tạo
+            ra bởi những trải nghiệm chung, trao đổi kiến ​​thức và hỗ trợ lẫn
+            nhau. Sau đây là một số thành viên chủ chốt tạo nên cộng đồng YOURS:
+          </motion.p>
+        </div>
         <div className="flex flex-wrap gap-4 justify-center items-center mt-8">
           {Community.map((item, index) => (
             <motion.div
