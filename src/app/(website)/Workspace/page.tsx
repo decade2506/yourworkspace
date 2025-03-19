@@ -463,7 +463,7 @@ export default function Workspace() {
             Hãy xem không gian làm việc sôi động và năng động của chúng tôi.
           </motion.p>
         </div>
-        <div className="columns-1 air:columns-3 my-6 air:space-y-4 xl:space-y-5 xxl:space-y-6 xxxl:space-y-7 hd:space-y-8 px-3 air:px-20 xl:px-28 hd:px-52">
+        <div className="columns-1 air:columns-3 my-6 space-y-2 air:space-y-4 xl:space-y-5 xxl:space-y-6 xxxl:space-y-7 hd:space-y-8 px-3 air:px-20 xl:px-28 hd:px-52">
           {Gallery.map((item, index) => (
             <motion.div
               key={index}
