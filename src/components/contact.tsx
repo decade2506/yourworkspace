@@ -110,16 +110,10 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
   });
 
   // Add state for client-side rendering of reCAPTCHA
-  const [isClient, setIsClient] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
-    setIsClient(true);
   }, []);
 
   // Add state for submission status
@@ -139,7 +133,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
       if (!token) {
         setSubmitStatus({
           success: false,
-          message: "CAPTCHA verification failed. Please try again.",
+          message: "Xác minh không thành công. Vui lòng thử lại.",
         });
         return;
       }
@@ -152,7 +146,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
           success: false,
           message:
             captchaResult.message ||
-            "CAPTCHA verification failed. Please try again.",
+            "Xác minh không thành công. Vui lòng thử lại.",
         });
         return;
       }
@@ -163,19 +157,19 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
       if (result.success) {
         setSubmitStatus({
           success: true,
-          message: "Thank you! Your message has been sent successfully.",
+          message: "Cảm ơn bạn! Lời nhắn của bạn đã được gửi thành công.",
         });
         reset();
       } else {
         setSubmitStatus({
           success: false,
-          message: result.error || "Failed to send message. Please try again.",
+          message: result.error || "Không gửi được lời nhắn. Vui lòng thử lại.",
         });
       }
     } catch (error) {
       setSubmitStatus({
         success: false,
-        message: "An unexpected error occurred. Please try again later.",
+        message: "Đã xảy ra lỗi không mong muốn. Vui lòng thử lại sau.",
       });
       console.error("Form submission error:", error);
     }
@@ -365,7 +359,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                 size="lg"
                 className="rounded-full bg-green-800 text-white hover:bg-green-900"
                 disabled={isSubmitting}
-                type="Đặt ngay"
+                type="submit"
               >
                 {isSubmitting ? "Đang xử lý..." : "Đặt ngay"}
               </Button>
