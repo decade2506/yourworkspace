@@ -38,22 +38,22 @@ const Coffee = [
 const Service = [
   {
     serviceimg: "/brandpic/coffe/beans.png",
-    title: "Exotic Coffee",
+    title: "Cà phê hảo hạng",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/coffe/variety.png",
-    title: "Muliple variety",
+    title: "Đa dạng lựa chọn",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/coffe/service.png",
-    title: "Fast Service",
+    title: "Phục vụ nhanh",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/coffe/abient.png",
-    title: "Pleasent Abient",
+    title: "Không khí dễ chịu",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
 ];
@@ -79,14 +79,14 @@ export default function Blog() {
   return (
     <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="flex flex-col items-center justify-center bg-yellow-100 pt-40 min-h-screen">
+      <div className="flex flex-col items-center justify-center bg-[#f0c19f] pt-40 min-h-screen">
         <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[10%] xl:ml-4 hd:ml-20">
           <motion.p
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-sm text-center xl:text-left text-amber-600 font-medium tracking-wider"
+            className="text-sm text-center xl:text-left text-amber-900 font-medium tracking-wider"
           >
             CÀ PHÊ MANG ĐI
           </motion.p>
@@ -104,7 +104,7 @@ export default function Blog() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-sm text-amber-700 text-center xl:text-left mb-9"
+            className="text-sm lgl:text-lg text-amber-900 text-center xl:text-left mb-9"
           >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
             repudiandae unde ut velit sapiente labore expedita soluta.
@@ -117,8 +117,8 @@ export default function Blog() {
           viewport={{ once: true }}
           className="flex justify-center xl:mr-[79%] gap-4 my-3"
         >
-          <Button className="rounded-full text-green-500 border-2 border-green-500 bg-white px-10 hover:bg-green-500 hover:text-white">
-            <Link href="/About">Biết Thêm chi tiết</Link>
+          <Button className="rounded-full text-slate-600 bg-white px-10 hover:bg-slate-600 hover:text-white/90 font-medium">
+            <Link href="/About">Biết thêm chi tiết</Link>
           </Button>
         </motion.div>
       </div>
@@ -197,8 +197,8 @@ export default function Blog() {
       </div>
 
       {/* gallery */}
-      <div className="bg-white">
-        <div className="mt-[40px] px-3 ">
+      <div className="bg-white py-10">
+        <div className="mt-[40px] px-3">
           <motion.p
             variants={upwardVariants}
             initial="hidden"
@@ -215,7 +215,7 @@ export default function Blog() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl text-center text-amber-900 font-medium my-3"
           >
-            Khám Phá Cà Phê Của YOURS
+            Khám phá cà phê của YOURS
           </motion.h1>
           <motion.p
             variants={childVariants}

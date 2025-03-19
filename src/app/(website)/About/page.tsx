@@ -32,28 +32,28 @@ const Numbers = [
   },
   {
     count: 5,
-    title: "Locations Serving",
+    title: "Địa điểm phục vụ",
   },
 ];
 const service = [
   {
     serviceimg: "/brandpic/svimg/modern.png",
-    title: "Modern Design",
+    title: "Thiết kế hiện đại",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/svimg/cozy.png",
-    title: "Cozy Space",
+    title: "Không gian ấm cúng",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/svimg/flexible.png",
-    title: "Flexible Booking",
+    title: "Đặt phòng linh hoạt",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/svimg/beanbag.png",
-    title: "Office Space",
+    title: "Văn phòng làm việc",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
 ];
@@ -111,7 +111,7 @@ export default function About() {
   return (
     <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[500px] xssm:h-[650px] md:h-[660px] air:h-[799px] lgl:h-[980px] xl:max-h-[900px] hd:max-h-[700px] xxs:pt-52 sm:pt-32 md:pt-0">
+      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[500px] xssm:h-[650px] md:h-[660px] air:h-[799px] lgl:h-[980px] xl:max-h-[600px] hd:max-h-[700px] xxs:pt-52 sm:pt-32 md:pt-0">
         <motion.p
           variants={childVariants}
           initial="hidden"
@@ -256,7 +256,7 @@ export default function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex flex-col p-3 px-10 gap-2 items-center justify-center bg-green-950 rounded-2xl h-[130px] xxs:w-[250px] xs:w-[300px] sm:w-[98%] md:w-[49%] lg:w-[45%] text-2xl font-medium"
+              className="flex flex-col p-3 px-6 gap-2 items-center justify-center bg-green-950 rounded-2xl h-[130px] xxs:w-[250px] xs:w-[300px] sm:w-[98%] md:w-[49%] lg:w-[45%] text-2xl font-medium"
             >
               <div className="flex justify-center">
                 <CountUp
@@ -326,7 +326,7 @@ export default function About() {
 
       {/* Comunity */}
       <div className="py-10 bg-slate-100 flex flex-col items-center p-8">
-        <div className="flex flex-col lgl:flex-row gap-8 items-center justify-center mx-8">
+        <div className="flex flex-col lgl:flex-row gap-8 lgl:gap-10 items-center justify-center px-12">
           <div className="flex flex-col">
             <motion.h1
               variants={upwardVariants}
@@ -352,7 +352,7 @@ export default function About() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-sm lgl:text-lg xl:mx-[20%] text-green-900 text-center mt-3 lgl:text-left"
+            className="text-sm lgl:text-lg text-green-900 text-center mt-3 lgl:text-left lgl:w-[90%] lgl:mb-[-5%]"
           >
             Cộng đồng của chúng tôi phát triển mạnh mẽ nhờ sự hợp tác được tạo
             ra bởi những trải nghiệm chung, trao đổi kiến ​​thức và hỗ trợ lẫn

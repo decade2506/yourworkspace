@@ -21,22 +21,22 @@ const upwardVariants = {
 const service = [
   {
     serviceimg: "/brandpic/svimg/modern.png",
-    title: "Modern Design",
+    title: "Thiết kế hiện đại",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/svimg/cozy.png",
-    title: "Cozy Space",
+    title: "Không gian ấm cúng",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/svimg/flexible.png",
-    title: "Flexible Booking",
+    title: "Đặt phòng linh hoạt",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/svimg/beanbag.png",
-    title: "Office Space",
+    title: "Văn phòng làm việc",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
 ];
@@ -102,33 +102,33 @@ const Gallery = [
 const Facilities = [
   {
     img: "/brandpic/svimg/wifi.png",
-    title: "High-speed Internet",
-    content: "We provide dedicated Private, fast, and secure Wi-Fi.",
+    title: "Internet tốc độ cao",
+    content: "Chúng tôi cung cấp Wi-Fi riêng tư, nhanh chóng và an toàn.",
   },
   {
     img: "/brandpic/svimg/storage.png",
-    title: "Personal Storage",
-    content: "Lockable storage cabinets for personal or team use.",
+    title: "Lưu trữ cá nhân",
+    content: "Tủ lưu trữ có khóa dành cho cá nhân hoặc nhóm sử dụng.",
   },
   {
     img: "/brandpic/svimg/soundproof.png",
-    title: "Soundproofing",
-    content: "For privacy and a quiet work environment.",
+    title: "Cách âm",
+    content: "Để có sự riêng tư và môi trường làm việc yên tĩnh.",
   },
   {
     img: "/brandpic/svimg/climate.png",
-    title: "Climate Control",
-    content: "Adjustable air conditioning and heating.",
+    title: "Kiểm soát nhiệt độ",
+    content: "Hệ thống điều hòa và sưởi ấm có thể điều chỉnh.",
   },
   {
     img: "/brandpic/svimg/locker.png",
-    title: "Private Lockers",
-    content: "Secure, rentable lockers for storing personal items.",
+    title: "Tủ đựng đồ riêng",
+    content: "Tủ đựng đồ an toàn, có thể cho thuê để cất giữ đồ dùng cá nhân.",
   },
   {
     img: "/brandpic/svimg/board.png",
-    title: "Whiteboards",
-    content: "For brainstorming and collaborative sessions.",
+    title: "Bảng trắng",
+    content: "Dành cho các buổi động não và hợp tác.",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function Workspace() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-sm text-center xl:text-left"
+            className="text-sm lgl:text-lg text-center xl:text-left"
           >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
             repudiandae unde ut velit sapiente labore expedita soluta maiores
@@ -223,7 +223,7 @@ export default function Workspace() {
           >
             <Badge className="w-[120px] p-2 bg-white">Wifi Miễn Phí</Badge>
             <Badge className="w-[130px] p-2 bg-white">Đậu Xe Miễn Phí</Badge>
-            <Badge className="w-[150px] p-2 bg-white">Free Coffee Break</Badge>
+            <Badge className="w-[150px] p-2 bg-white">Cà phê tiện lợi</Badge>
             <Badge className="w-[170px] p-2 bg-white">
               Linh Hoạt Về Thời Gian
             </Badge>
@@ -248,7 +248,7 @@ export default function Workspace() {
           <div className="flex flex-col gap-3 text-green-700 absolute bottom-8 lg:ml-[-64%] md:ml-[-56%] xl:ml-[-12%]">
             <div className="h-[100px] xxs:w-[250px] xs:w-[290px] rounded-2xl bg-white flex items-center justify-center font-medium text-3xl">
               <CountUp
-                end={52}
+                end={552}
                 duration={3}
                 startOnMount={false}
                 enableScrollSpy={true}
@@ -424,7 +424,7 @@ export default function Workspace() {
                   {item.price}
                 </motion.p>
                 <Button className="rounded-full text-white bg-green-700 px-10 hover:bg-black/80">
-                  Book Now
+                  Đặt ngay
                 </Button>
               </div>
             </motion.div>
@@ -460,7 +460,7 @@ export default function Workspace() {
             viewport={{ once: true }}
             className="text-sm text-center"
           >
-            Take a look at our vibrant and dynamic workspaces.
+            Hãy xem không gian làm việc sôi động và năng động của chúng tôi.
           </motion.p>
         </div>
         <div className="columns-1 air:columns-3 my-6 air:space-y-4 xl:space-y-5 xxl:space-y-6 xxxl:space-y-7 hd:space-y-8 px-3 air:px-20 xl:px-28 hd:px-52">

@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 
-
 const childVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -23,44 +22,44 @@ const upwardVariants = {
 const Workspace = [
   {
     serviceimg: "/brandpic/svimg/modern.png",
-    title: "Modern Design",
+    title: "Thiết kế hiện đại",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/svimg/cozy.png",
-    title: "Cozy Space",
+    title: "Không gian ấm cúng",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/svimg/flexible.png",
-    title: "Flexible Booking",
+    title: "Đặt phòng linh hoạt",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/svimg/beanbag.png",
-    title: "Office Space",
+    title: "Văn phòng làm việc",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
 ];
 const Coffee = [
   {
     serviceimg: "/brandpic/coffe/beans.png",
-    title: "Exotic Coffee",
+    title: "Cà phê hảo hạng",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/coffe/variety.png",
-    title: "Muliple variety",
+    title: "Đa dạng lựa chọn",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/coffe/service.png",
-    title: "Fast Service",
+    title: "Phục vụ nhanh",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     serviceimg: "/brandpic/coffe/abient.png",
-    title: "Pleasent Abient",
+    title: "Không khí dễ chịu",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
 ];
@@ -126,7 +125,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="flex justify-center xl:mr-[80%] gap-4 my-10"
           >
-            <Button className="rounded-full text-green-500 border-2 border-green-500 bg-white px-10 hover:bg-green-500 hover:text-white">
+            <Button className="rounded-full text-slate-600 bg-white px-10 hover:bg-slate-600 hover:text-white/90 font-medium">
               <Link href="/About">Biết thêm chi tiết</Link>
             </Button>
           </motion.div>
@@ -143,10 +142,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-lg xl:text-xl flex flex-col gap-3 lg:mb-10 my-10 md:ml-4 text-green-600 font-medium leading-[2.8] xl:leading-[3]"
           >
-            <li>Working space</li>
-            <li>Meeting Room</li>
-            <li>Event Spaces</li>
-            <li>Private Office Room</li>
+            <li>Không gian làm việc</li>
+            <li>Phòng họp</li>
+            <li>Không gian sự kiện</li>
+            <li>Văn phòng làm việc riêng</li>
           </motion.ul>
         </div>
         <motion.div
@@ -171,12 +170,14 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="absolute bottom-9 sm:mr-[50%] md:mr-36 md:bottom-[72%] lgl:bottom-[68%] xl:bottom-[75%] lg:mr-[30%] xl:mr-[-10%] xxs:w-[250px] xs:w-[300px] w-[400px] flex flex-wrap gap-3 text-green-700 text-center"
+            className="absolute bottom-9 sm:mr-[50%]  md:bottom-[70%] lgl:bottom-[66%] xl:bottom-[73%] lg:mr-[20%] xsm:mr-[28%] md:mr-[10%] xl:mr-[-25%] xxs:w-[250px] xs:w-[290px] md:w-[400px] w-[800px] flex flex-wrap gap-3 text-green-700 text-center"
           >
-            <Badge className="w-[80px] p-2 bg-white">Free Wifi</Badge>
-            <Badge className="w-[110px] p-2 bg-white">Free Parking</Badge>
-            <Badge className="w-[150px] p-2 bg-white">Free Coffee Break</Badge>
-            <Badge className="w-[130px] p-2 bg-white">Flexible Hour</Badge>
+            <Badge className="w-[120px] p-2 bg-white">Wifi Miễn Phí</Badge>
+            <Badge className="w-[130px] p-2 bg-white">Đậu Xe Miễn Phí</Badge>
+            <Badge className="w-[150px] p-2 bg-white">Cà phê tiện lợi</Badge>
+            <Badge className="w-[170px] p-2 bg-white">
+              Linh Hoạt Về Thời Gian
+            </Badge>
           </motion.div>
         </motion.div>
         <motion.div
@@ -198,7 +199,7 @@ export default function Home() {
           <div className="flex flex-col gap-3 text-green-700 absolute bottom-8 lg:ml-[-64%] md:ml-[-56%] xl:ml-[-12%]">
             <div className="h-[100px] xxs:w-[250px] xs:w-[290px] rounded-2xl bg-white flex items-center justify-center font-medium text-3xl">
               <CountUp
-                end={52}
+                end={552}
                 duration={3}
                 startOnMount={false}
                 enableScrollSpy={true}
@@ -206,8 +207,8 @@ export default function Home() {
                 scrollSpyOnce={true}
               />
               <span className="text-yellow-500">+</span>
-              <p className="text-sm text-green-600 p-4 font-medium">
-                Happy Customer
+              <p className="text-lg text-green-600 p-4 font-medium">
+                Khách hàng vui vẻ
               </p>
             </div>
           </div>
@@ -224,7 +225,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-sm text-center  text-green-700 font-medium tracking-wider"
           >
-            COMFORTABLE WORKSPACES
+            KHÔNG GIAN LÀM VIỆC THOẢI MÁI
           </motion.p>
           <motion.h1
             variants={childVariants}
@@ -233,7 +234,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
-            We Offer A Range Of Modern And Flexible Workspaces
+            Chúng tôi mang đến không gian làm việc hiện đại và linh hoạt, phù
+            hợp mọi nhu cầu.
           </motion.h1>
         </div>
         <div className="pb-7 flex flex-wrap gap-3 items-center justify-center">
@@ -286,26 +288,17 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-sm text-center mt-10 pt-6 text-green-700 font-medium tracking-wider"
           >
-            COMFORTABLE SPACES
+            KHÔNG GIAN CỦA YOURS
           </motion.p>
           <motion.h1
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl text-center text-black font-medium my-3"
+            className="text-3xl md:text-5xl text-center text-black font-medium my-3 xl:mx-40"
           >
-            Explore Our Spaces
+            Khám phá không gian đầy cảm hứng của chúng tôi
           </motion.h1>
-          <motion.p
-            variants={childVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-sm text-center"
-          >
-            Lorem ipsum dolor sit amet consectetur, <br /> adipisicing elit.
-          </motion.p>
         </div>
         <div className="columns-1 air:columns-3 my-6 space-y-2 air:space-y-4 xl:space-y-5 xxl:space-y-6 xxxl:space-y-7 hd:space-y-8 px-3 air:px-20 xl:px-28 hd:px-52">
           {Space.map((item, index) => (
@@ -339,7 +332,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-sm text-center text-amber-800 font-medium tracking-wider"
           >
-            AMAZING COFFEE EXPERIENCE
+            TRẢI NGHIỆM CÀ PHÊ TUYỆT VỜI
           </motion.p>
           <motion.h1
             variants={childVariants}
@@ -348,7 +341,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
-            While You Are At It, Why Don't Enjoy A Cup Of Coffee
+            Nhân tiện, sao không thưởng thức một tách cà phê?
           </motion.h1>
         </div>
         <div className="pb-7 flex flex-wrap gap-3 items-center justify-center">

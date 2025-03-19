@@ -183,7 +183,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
       />
 
       {/* Title */}
-      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[500px] xssm:h-[650px] md:h-[660px] air:h-[799px] lgl:h-[980px] xl:max-h-[900px] hd:max-h-[700px] xxs:pt-52 sm:pt-32 md:pt-0">
+      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[500px] xssm:h-[650px] md:h-[660px] air:h-[799px] lgl:h-[980px] xl:max-h-[600px] hd:max-h-[700px] xxs:pt-52 sm:pt-32 md:pt-0">
         <motion.p
           variants={childVariants}
           initial="hidden"
@@ -222,7 +222,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
       </div>
 
       {/* Contact Us */}
-      <motion.div className="px-20 pt-44 xxs:mt-26 mt-40 pb-16 bg-slate-100 flex flex-col items-center">
+      <motion.div className="px-20 pt-44 xxs:mt-26 xl:mt-20 xxl:mt-40 pb-16 bg-slate-100 flex flex-col items-center">
         <motion.h1
           variants={upwardVariants_2}
           initial="hidden"
@@ -372,7 +372,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                   whileInView="visible"
                   viewport={{ once: true }}
                   key={index}
-                  className="xxs:w-[300px] xs:w-[326px] h-[254px] sm:w-3/4 md:w-1/3 rounded-2xl border-2 bg-white flex flex-col items-center justify-center my-3"
+                  className="xxs:w-[300px] xs:w-[326px] h-[254px] sm:w-3/4 md:w-1/3 rounded-2xl border-2 bg-white flex flex-col items-center justify-center my-3 lgl:px-8"
                 >
                   <Image
                     src={item.image}
