@@ -30,9 +30,7 @@ export default function RootLayout({
           async
           defer
         ></script>
-        <div>
-          <Header />
-        </div>
+        <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
       </body>

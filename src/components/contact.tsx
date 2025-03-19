@@ -106,6 +106,12 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
 
   // Add state for client-side rendering of reCAPTCHA
   const [isClient, setIsClient] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     setIsClient(true);
@@ -178,7 +184,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
       />
 
       {/* Title */}
-      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[300px] md:h-[600px] xl:max-h-[900px] xxs:pt-52 sm:pt-32 md:pt-0" style={{ background: "linear-gradient(to bottom, #065F46 90%, #f1f5f9 100%)" }}>
+      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[500px] xssm:h-[650px] md:h-[660px] air:h-[799px] lgl:h-[980px] xl:max-h-[900px] hd:max-h-[700px] xxs:pt-52 sm:pt-32 md:pt-0">
         <motion.p
           variants={childVariants}
           initial="hidden"
@@ -202,14 +208,14 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="absolute top-[85%] md:top-[60%] lg:top-[70%] xl:top-[60%] flex justify-center md:px-5 xl:px-8 lg:px-0 left-0 right-0 mx-auto"
+          className="absolute top-[85%] md:top-[60%] air:top-[70%] lg:top-[70%] lgl:top-[78%] xl:top-[60%] flex justify-center md:px-5 xl:px-8 lg:px-0 left-0 right-0 mx-auto"
         >
           <Image
             src="/brandpic/office/exmpl3.jpg"
             alt="H"
             width={1800}
             height={500}
-            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[165px] xsm:max-h-[250px] md:max-h-[340px] xl:max-h-[300px] xxxl:max-h-[450px] hd:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
+            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[195px] xsm:max-h-[250px] md:max-h-[340px] lgl:max-h-[400px] xl:max-h-[300px] xxxl:max-h-[450px] hd:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
             priority
             quality={100}
           />
@@ -217,7 +223,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
       </div>
 
       {/* Contact Us */}
-      <motion.div className="px-20 pt-44 mt-20 pb-16 bg-slate-100 flex flex-col items-center">
+      <motion.div className="px-20 pt-44 xxs:mt-26 mt-40 pb-16 bg-slate-100 flex flex-col items-center">
         <motion.h1
           variants={upwardVariants_2}
           initial="hidden"
@@ -328,12 +334,14 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
               />
 
               {/* Only render reCAPTCHA on client side */}
-              {isClient && (
+              {isMounted ? (
                 <div
                   id="recaptcha-container"
                   className="g-recaptcha mb-4 xxs:ml-[-3%] sm:ml-0"
                   data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                 />
+              ) : (
+                <div className="mb-4 h-[78px]"></div> // Placeholder with same height
               )}
 
               {submitStatus && (

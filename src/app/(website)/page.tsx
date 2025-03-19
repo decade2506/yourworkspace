@@ -66,35 +66,29 @@ const Coffee = [
 ];
 const Space = [
   {
-    img: "/brandpic/office/office3_3.jpg",
+    img: "/brandpic/gallert/ga1.jpg",
   },
   {
-    img: "/brandpic/office/office3_2.jpg",
+    img: "/brandpic/gallert/ga2.png",
   },
   {
-    img: "/brandpic/office/office3_1.jpg",
+    img: "/brandpic/gallert/ga3.png",
   },
   {
-    img: "/brandpic/office/office5.png",
+    img: "/brandpic/gallert/ga4.png",
   },
   {
-    img: "/brandpic/office/office4.png",
-  },
-  {
-    img: "/brandpic/office/office5.png",
-  },
-  {
-    img: "/brandpic/office/office6.png",
+    img: "/brandpic/gallert/ga5.jpg",
   },
 ];
 
 export default function Home() {
   return (
-    <div className="bg-slate-50 overflow-hidden w-full min-h-screen">
+    <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="flex flex-col items-center justify-center bg-green-700 pt-40 min-h-screen xs:pt-32 xsm:pt-32 sm:pt-52 md:pt-24 lg:pt-40 xl:pt-24 xl:pb-3 xsl:pt-28">
+      <div className="flex flex-col items-center justify-center bg-green-800 pt-40 min-h-screen xs:pt-32 xsm:pt-32 sm:pt-52 md:pt-24 lg:pt-40 xl:pt-24 xl:pb-3 xsl:pt-28">
         <motion.div>
-          <div className=" px-5 sm:px-11 xl:pr-20 xsl:pr-[20%]">
+          <div className=" px-5 sm:px-11 xl:pr-20 xsl:pr-[20%] hd:ml-12">
             <motion.p
               variants={childVariants}
               initial="hidden"
@@ -313,7 +307,7 @@ export default function Home() {
             Lorem ipsum dolor sit amet consectetur, <br /> adipisicing elit.
           </motion.p>
         </div>
-        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 px-3 my-6 space-y-4">
+        <div className="columns-1 air:columns-3 my-6 space-y-2 air:space-y-4 xl:space-y-5 xxl:space-y-6 xxxl:space-y-7 hd:space-y-8 px-3 air:px-20 xl:px-28 hd:px-52">
           {Space.map((item, index) => (
             <motion.div
               key={index}
@@ -326,9 +320,9 @@ export default function Home() {
               <Image
                 src={item.img}
                 alt={`Coffee Image ${index + 1}`}
-                width={326}
-                height={index % 2 === 0 ? 500 : 350} // Random heights for organic look
-                className="w-full object-cover rounded-2xl"
+                width={1000}
+                height={1000}
+                className="w-full aspect-auto object-cover rounded-2xl"
               />
             </motion.div>
           ))}

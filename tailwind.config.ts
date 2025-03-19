@@ -19,10 +19,12 @@ export default {
       screens: {
         xxs: "320px",
         xs: "360px",
+        xssm: "412px",
         xsm: "480px", // Added for small devices
         sm: "640px",
         sml: "720px", // Added to bridge sm and md
         md: "768px",
+        air: "820px", // Added for small tablets
         lg: "960px",
         lgl: "1024px", // Common tablet size
         xl: "1200px",

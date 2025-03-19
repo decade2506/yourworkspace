@@ -38,10 +38,19 @@ export default function BlogClient({ posts }: BlogProps) {
   const loadMorePosts = () => {
     setVisiblePosts((prevVisiblePosts) => prevVisiblePosts + POSTS_PER_PAGE);
   };
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString("vi-VN", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  };
+
   return (
     <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[300px] md:h-[600px] xl:max-h-[900px] xxs:pt-52 sm:pt-32 md:pt-0" style={{ background: "linear-gradient(to bottom, #065F46 90%, #f1f5f9 100%)" }}>
+      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[500px] xssm:h-[650px] md:h-[660px] air:h-[799px] lgl:h-[980px] xl:max-h-[900px] hd:max-h-[700px] xxs:pt-52 sm:pt-32 md:pt-0">
         <motion.p
           variants={childVariants}
           initial="hidden"
@@ -65,23 +74,23 @@ export default function BlogClient({ posts }: BlogProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="absolute top-[85%] md:top-[60%] lg:top-[70%] xl:top-[60%] flex justify-center md:px-5 xl:px-8 lg:px-0 left-0 right-0 mx-auto"
+          className="absolute top-[85%] md:top-[60%] air:top-[70%] lg:top-[70%] lgl:top-[78%] xl:top-[60%] flex justify-center md:px-5 xl:px-8 lg:px-0 left-0 right-0 mx-auto"
         >
           <Image
             src="/brandpic/office/exmpl2.jpg"
             alt="H"
             width={1800}
             height={500}
-            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[165px] xsm:max-h-[250px] md:max-h-[340px] xl:max-h-[300px] xxxl:max-h-[450px] hd:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
+            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[195px] xsm:max-h-[250px] md:max-h-[340px] lgl:max-h-[400px] xl:max-h-[300px] xxxl:max-h-[450px] hd:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
             priority
             quality={100}
           />
         </motion.div>
       </div>
 
-      <div className="flex xl:flex-row-reverse flex-col justify-center gap-5 pt-52 mt-20 bg-slate-100">
+      <div className="flex xl:flex-row-reverse flex-col justify-center gap-5 pt-52 xxs:mt-26 mt-32 bg-slate-100">
         {/* Latest Blog */}
-        <div>
+        <div className="px-10 py-2">
           <motion.h1
             variants={childVariants}
             initial="hidden"
@@ -127,11 +136,7 @@ export default function BlogClient({ posts }: BlogProps) {
                     </h1>
                   </Link>
                   <p className="text-[0.8rem] text-accent">
-                    {new Date(post.publishedAt).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
+                    {formatDate(post.publishedAt)}
                   </p>
                   <div className="text-sm my-2 line-clamp-2">
                     <PortableText value={post.body} />
@@ -185,7 +190,7 @@ export default function BlogClient({ posts }: BlogProps) {
                       className="rounded-2xl min-w-[105px] aspect-square object-cover object-center cursor-pointer"
                     />
                   </Link>
-                  <div className="flex flex-col gap-2 items-start max-w-[465px]">
+                  <div className="flex flex-col gap-5 items-start max-w-[465px]">
                     <div>
                       <Link
                         href={`/post/${post.slug.current}`}
@@ -194,14 +199,7 @@ export default function BlogClient({ posts }: BlogProps) {
                         {post.title}
                       </Link>
                       <p className="text-[0.8rem] text-accent mt-2">
-                        {new Date(post.publishedAt).toLocaleDateString(
-                          "vi-VN",
-                          {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                          }
-                        )}
+                        {formatDate(post.publishedAt)}
                       </p>
                       <div className="line-clamp-5 mt-2 text-sm">
                         <PortableText value={post.body} />

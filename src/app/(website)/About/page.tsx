@@ -59,59 +59,59 @@ const service = [
 ];
 const Community = [
   {
-    profile1: "/brandpic/profile/profile1.jpg",
-    profile2: "/brandpic/profile/profile2.jpg",
-    profile3: "/brandpic/profile/profile3.jpg",
+    profile1: "/brandpic/profile/freelancer1.jpg",
+    profile2: "/brandpic/profile/freelancer2.jpg",
+    profile3: "/brandpic/profile/freelancer3.jpg",
     title: "Freelancers",
     content:
-      "Freelancers who value flexible work in an inspiring space while connecting with like-minded peers.",
+      "Những Freelancer coi trọng công việc linh hoạt trong một không gian truyền cảm hứng, đồng thời kết nối với những người cùng chí hướng.",
   },
   {
-    profile1: "/brandpic/profile/profile1.jpg",
-    profile2: "/brandpic/profile/profile2.jpg",
-    profile3: "/brandpic/profile/profile3.jpg",
-    title: "Remote Workers",
+    profile1: "/brandpic/profile/remote1.jpg",
+    profile2: "/brandpic/profile/remote2.jpg",
+    profile3: "/brandpic/profile/remote3.jpg",
+    title: "Nhân viên làm việc từ xa",
     content:
-      "Our space offers the ideal environment for those who need the freedom to work from anywhere but still want the benefits of a professional.",
+      "Không gian của chúng tôi mang đến môi trường lý tưởng cho những ai cần sự tự do để làm việc ở bất cứ đâu nhưng vẫn muốn được hưởng những lợi ích của một người chuyên nghiệp.",
   },
   {
-    profile1: "/brandpic/profile/profile1.jpg",
-    profile2: "/brandpic/profile/profile2.jpg",
-    profile3: "/brandpic/profile/profile3.jpg",
-    title: "Startups & Entrepreneurs",
+    profile1: "/brandpic/profile/startup1.jpg",
+    profile2: "/brandpic/profile/startup2.jpg",
+    profile3: "/brandpic/profile/startup3.jpg",
+    title: "Các Công Ty Khởi Nghiệp & Doanh Nhân",
     content:
-      "Visionaries building the next big idea, leveraging our collaborative environment to meet partners, mentors, and investors.",
+      "Những người có tầm nhìn xây dựng ý tưởng lớn tiếp theo, tận dụng môi trường hợp tác của chúng tôi để gặp gỡ các đối tác, cố vấn và nhà đầu tư.",
   },
   {
-    profile1: "/brandpic/profile/profile1.jpg",
-    profile2: "/brandpic/profile/profile2.jpg",
-    profile3: "/brandpic/profile/profile3.jpg",
-    title: "Creative Professionals",
+    profile1: "/brandpic/profile/pro1.jpg",
+    profile2: "/brandpic/profile/pro2.jpg",
+    profile3: "/brandpic/profile/pro3.jpg",
+    title: "Chuyên gia sáng tạo",
     content:
-      "Designers, writers, artists, and content creators who find inspiration in the vibrant atmosphere of Worknow and collaborate on innovative projects.",
+      "Các nhà thiết kế, nhà văn, nghệ sĩ và người sáng tạo nội dung tìm thấy cảm hứng trong bầu không khí sôi động của YOURS và hợp tác trong các dự án sáng tạo.",
   },
   {
-    profile1: "/brandpic/profile/profile1.jpg",
-    profile2: "/brandpic/profile/profile2.jpg",
-    profile3: "/brandpic/profile/profile3.jpg",
-    title: "Tech Enthusiasts",
+    profile1: "/brandpic/profile/tech1.jpg",
+    profile2: "/brandpic/profile/tech2.jpg",
+    profile3: "/brandpic/profile/tech3.jpg",
+    title: "Những tín đồ công nghệ",
     content:
-      "Innovators in the tech space who use our high-tech facilities to build, test, and launch cutting-edge digital solutions.",
+      "Những nhà đổi mới trong lĩnh vực công nghệ sử dụng cơ sở công nghệ cao của chúng tôi để xây dựng, thử nghiệm và ra mắt các giải pháp kỹ thuật số tiên tiến.",
   },
   {
-    profile1: "/brandpic/profile/profile1.jpg",
-    profile2: "/brandpic/profile/profile2.jpg",
-    profile3: "/brandpic/profile/profile3.jpg",
-    title: "Business Consultants",
+    profile1: "/brandpic/profile/consult1.jpg",
+    profile2: "/brandpic/profile/consult2.jpg",
+    profile3: "/brandpic/profile/consult3.jpg",
+    title: "Nhà tư vấn doanh nghiệp",
     content:
-      "Professionals offering expertise in various fields, from marketing to legal services, helping startups and small businesses grow.",
+      "Các chuyên gia cung cấp kiến ​​thức chuyên môn trong nhiều lĩnh vực, từ tiếp thị đến dịch vụ pháp lý, giúp các công ty khởi nghiệp và doanh nghiệp nhỏ phát triển.",
   },
 ];
 export default function About() {
   return (
     <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[300px] md:h-[600px] xl:max-h-[900px] xxs:pt-52 sm:pt-32 md:pt-0" style={{ background: "linear-gradient(to bottom, #065F46 90%, #f1f5f9 100%)" }}>
+      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[500px] xssm:h-[650px] md:h-[660px] air:h-[799px] lgl:h-[980px] xl:max-h-[900px] hd:max-h-[700px] xxs:pt-52 sm:pt-32 md:pt-0">
         <motion.p
           variants={childVariants}
           initial="hidden"
@@ -119,7 +119,7 @@ export default function About() {
           viewport={{ once: true }}
           className="text-[1.02rem] text-green-200 font-medium tracking-wider"
         >
-          ABOUT
+          VỀ CHÚNG TÔI
         </motion.p>
         <motion.h1
           variants={childVariants}
@@ -128,21 +128,21 @@ export default function About() {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl text-white mt-2 mb-32 font-medium"
         >
-          Empowering Innovation Through Community
+          Thúc đẩy đổi mới thông qua cộng đồng
         </motion.h1>
         <motion.div
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="absolute top-[85%] md:top-[60%] lg:top-[70%] xl:top-[60%]  flex justify-center md:px-5 xl:px-8 lg:px-0 left-0 right-0 mx-auto"
+          className="absolute top-[85%] md:top-[60%] air:top-[70%] lg:top-[70%] lgl:top-[78%] xl:top-[60%]  flex justify-center md:px-5 xl:px-8 lg:px-0 left-0 right-0 mx-auto"
         >
           <Image
             src="/brandpic/office/exmpl.jpg"
             alt="H"
             width={1800}
             height={500}
-            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[165px] xsm:max-h-[250px] md:max-h-[340px] xl:max-h-[300px] xxxl:max-h-[450px] hd:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
+            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[195px] xsm:max-h-[250px] md:max-h-[340px] lgl:max-h-[400px] xl:max-h-[300px] xxxl:max-h-[450px] hd:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
             priority
             quality={100}
           />
@@ -150,7 +150,7 @@ export default function About() {
       </div>
 
       {/* About Us */}
-      <div className="px-10 pt-52 mt-20 sm:pt-[200px] pb-16 bg-slate-100 flex flex-col items-center">
+      <div className="px-10 pt-52 xxs:mt-26 mt-40 sm:pt-[200px] pb-16 bg-slate-100 flex flex-col items-center">
         <div className="flex flex-col xl:flex-row items-center justify-center gap-0">
           <div className="flex flex-col xl:items-start xl:ml-[10%] xl:mr-[5%] w-full">
             <motion.h1
@@ -160,7 +160,7 @@ export default function About() {
               viewport={{ once: true }}
               className="text-[1.02rem] text-green-600 my-5 font-medium tracking-wider text-center"
             >
-              ABOUT US
+              VỀ CHÚNG TÔI
             </motion.h1>
             <motion.h1
               variants={childVariants}
@@ -169,7 +169,7 @@ export default function About() {
               viewport={{ once: true }}
               className="text-3xl md:text-5xl text-green-900 font-medium text-center xl:text-left"
             >
-              Where Creativity Meets Productivity
+              Nơi kết nối sáng tạo và năng suất
             </motion.h1>
             <motion.p
               variants={childVariants}
@@ -178,9 +178,10 @@ export default function About() {
               viewport={{ once: true }}
               className="text-lg text-green-900 text-center mt-3 xl:text-left"
             >
-              YOURS Workspace is more than just a coworking space – it’s a
-              thriving creative center designed to empower freelancers,
-              startups, and creative professionals.
+              YOURS Workspace không chỉ là một không gian làm việc chung – mà
+              còn là một trung tâm sáng tạo phát triển mạnh mẽ được thiết kế để
+              trao quyền cho những người làm việc tự do, các công ty khởi nghiệp
+              và các chuyên gia sáng tạo.
             </motion.p>
             <div className="flex flex-col md:flex-row">
               <div className="my-7 text-center">
@@ -191,7 +192,7 @@ export default function About() {
                   viewport={{ once: true }}
                   className="font-medium mb-1 text-green-950"
                 >
-                  Mission
+                  Nhiệm vụ
                 </motion.h6>
                 <motion.p
                   variants={childVariants}
@@ -200,9 +201,9 @@ export default function About() {
                   viewport={{ once: true }}
                   className="text-sm"
                 >
-                  Our mission is to create a dynamic coworking space and
-                  creative center where innovation thrives and collaboration is
-                  seamless.
+                  Sứ mệnh của chúng tôi là tạo ra một không gian làm việc chung
+                  năng động và trung tâm sáng tạo, nơi sự đổi mới phát triển
+                  mạnh mẽ và sự hợp tác liền mạch.
                 </motion.p>
               </div>
               <div className="my-7 text-center">
@@ -213,7 +214,7 @@ export default function About() {
                   viewport={{ once: true }}
                   className="font-medium mb-1 text-green-950"
                 >
-                  Vision
+                  Tầm nhìn
                 </motion.h6>
                 <motion.p
                   variants={childVariants}
@@ -222,9 +223,9 @@ export default function About() {
                   viewport={{ once: true }}
                   className="text-sm"
                 >
-                  Our vision is to become the leading hub for modern
-                  professionals who seek a flexible, innovative, and
-                  community-driven workspace.
+                  Tầm nhìn của chúng tôi là trở thành trung tâm hàng đầu cho các
+                  chuyên gia hiện đại đang tìm kiếm một không gian làm việc linh
+                  hoạt, sáng tạo và hướng đến cộng đồng.
                 </motion.p>
               </div>
             </div>
@@ -238,11 +239,11 @@ export default function About() {
             className="mb-7 w-full flex justify-center xl:mr-[10%]"
           >
             <Image
-              src="/brandpic/office/office3_3.jpg"
+              src="/brandpic/office/exmpl4.jpg"
               alt=""
-              height={300}
-              width={300}
-              className="rounded-2xl h-[300px] md:h-[432px] xl:w-[420px] sm:w-[98%] xl:h-[505px] object-cover object-center"
+              height={900}
+              width={900}
+              className="rounded-2xl h-[300px] md:h-[432px] xl:w-[420px] sm:w-[98%] xl:h-[505px] xxl:w-[90%] xxxl:w-[95%] object-cover object-center"
             ></Image>
           </motion.div>
         </div>
@@ -286,7 +287,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-sm text-center text-green-700 font-medium tracking-wider"
           >
-            COMFORTABLE WORKSPACES
+            KHÔNG GIAN LÀM VIỆC THOẢI MÁI
           </motion.p>
           <motion.h1
             variants={childVariants}
@@ -295,7 +296,8 @@ export default function About() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl text-center text-black font-medium my-3"
           >
-            We Offer A Range Of Modern And Flexible Workspaces
+            Chúng tôi mang đến không gian làm việc hiện đại và linh hoạt, phù
+            hợp mọi nhu cầu.
           </motion.h1>
         </div>
         <div className="pb-7 flex flex-wrap md:px-36 xl:px-0 xl:flex-nowrap xl:w-5/6 gap-3 items-center justify-center">
@@ -331,23 +333,23 @@ export default function About() {
           viewport={{ once: true }}
           className="text-[1.02rem] text-green-600 my-5 font-medium"
         >
-          THE YOURS COMMUNITY
+          CỘNG ĐỒNG CỦA YOURS
         </motion.h1>
         <motion.h1
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-2xl text-green-800 font-medium text-center"
+          className="text-3xl md:text-5xl text-green-800 font-medium text-center"
         >
-          A Diverse Network Of Innovators And Creators
+          Mạng lưới đa dạng của những nhà sáng tạo và đổi mới
         </motion.h1>
         <motion.p
           variants={childVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-sm text-green-900 text-center mt-3"
+          className="text-sm xl:text-lg xl:mx-[20%] text-green-900 text-center mt-3"
         >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
           architecto sit reiciendis voluptates dolorum molestiae hic numquam
@@ -361,35 +363,35 @@ export default function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="bg-white p-5 flex flex-col md:w-[45%] md:h-[380px] xl:w-[30%] xl:mx-1 items-center center rounded-2xl py-7"
+              className="bg-white p-5 flex flex-col gap-5 md:w-[45%] md:h-[380px] xl:w-[30%] xl:mx-1 items-center center rounded-2xl py-7"
             >
               <motion.div
                 variants={childVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="flex flex-wrap md:flex-nowrap items-center justify-center gap-3 mx-10 my-6 xl:w-[40%]"
+                className="flex flex-wrap md:flex-nowrap items-center justify-center gap-3 mx-10 my-6 xl:w-[80%]"
               >
                 <Image
                   src={item.profile1}
                   alt=""
-                  height={70}
-                  width={70}
-                  className="rounded-full sm:w-[30%] md:w-[20%] xl:mt-[-20%]"
+                  height={800} //85
+                  width={800}
+                  className="rounded-full aspect-square xxs:w-[36%] md:w-[26%] xl:w-[22%] xl:mt-[-20%] object-center object-cover"
                 />
                 <Image
                   src={item.profile2}
                   alt=""
-                  height={105}
-                  width={105}
-                  className="rounded-full sm:w-[50%] md:w-[50%] xl:mb-[-20%]"
+                  height={800} //120
+                  width={800}
+                  className="rounded-full aspect-square xxs:w-[50%] md:w-[38%] xl:w-[35%] xl:mb-[-20%] object-center object-cover"
                 />
                 <Image
                   src={item.profile3}
                   alt=""
-                  height={65}
-                  width={65}
-                  className="rounded-full sm:w-[30%] md:w-[40%] xl:mt-[-10%] xl:w-[48%]"
+                  height={800} //80
+                  width={800}
+                  className="rounded-full aspect-square xxs:w-[32%] md:w-[33%] xl:w-[30%] xl:mt-[-3%] object-center object-cover"
                 />
               </motion.div>
               <div className="text-center">
@@ -422,7 +424,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center font-medium"
           >
-            Ready To Join A Community That Fosters Collaboration?
+            Bạn đã sẵn sàng gia nhập một cộng đồng gắn kết?
           </motion.p>
           <motion.div
             variants={childVariants}
@@ -431,7 +433,7 @@ export default function About() {
             viewport={{ once: true }}
           >
             <Button className="bg-green-800 text-white hover:bg-white hover:text-green-800 text-[1.05rem] rounded-full py-7 px-8">
-              <Link href="/Contact">Schedule A Tour</Link>
+              <Link href="/Contact">Hẹn lịch trải nghiệm</Link>
             </Button>
           </motion.div>
         </div>

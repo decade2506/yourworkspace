@@ -59,34 +59,28 @@ const Service = [
 ];
 const Images = [
   {
-    img: "/brandpic/office/office3_3.jpg",
+    img: "/brandpic/gallert/ga1.jpg",
   },
   {
-    img: "/brandpic/office/office3_2.jpg",
+    img: "/brandpic/gallert/ga2.png",
   },
   {
-    img: "/brandpic/office/office3_1.jpg",
+    img: "/brandpic/gallert/ga3.png",
   },
   {
-    img: "/brandpic/office/office5.png",
+    img: "/brandpic/gallert/ga4.png",
   },
   {
-    img: "/brandpic/office/office4.png",
-  },
-  {
-    img: "/brandpic/office/office5.png",
-  },
-  {
-    img: "/brandpic/office/office6.png",
+    img: "/brandpic/gallert/ga5.jpg",
   },
 ];
 
 export default function Blog() {
   return (
-    <div className="overflow-hidden w-full min-h-screen">
+    <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       {/* Title */}
       <div className="flex flex-col items-center justify-center bg-yellow-100 pt-40 min-h-screen">
-        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[10%] xl:ml-4">
+        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[10%] xl:ml-4 hd:ml-20">
           <motion.p
             variants={childVariants}
             initial="hidden"
@@ -101,7 +95,7 @@ export default function Blog() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-amber-900 font-medium my-5 xl:mr-32"
+            className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left font-medium my-5 xl:mr-32"
           >
             Cà phê tươi ngon chắc chắn sẽ làm bạn phấn chấn mỗi ngày
           </motion.h1>
@@ -131,7 +125,7 @@ export default function Blog() {
 
       {/* Coffee */}
       <div className="bg-white p-10">
-        <div className="text-amber-700 md:flex items-center justify-center gap-4">
+        <div className="text-amber-700 md:flex items-center justify-center gap-8">
           {Coffee.map((item, index) => (
             <motion.div
               key={index}
@@ -139,7 +133,7 @@ export default function Blog() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex flex-col items-center relative my-6"
+              className="flex flex-col items-center relative my-6 hover:scale-[103%]"
             >
               <Image
                 src={item.img}
@@ -157,7 +151,7 @@ export default function Blog() {
       </div>
 
       {/* Coffee Sercvices */}
-      <div className="bg-yellow-100 flex flex-col items-center">
+      <div className="flex flex-col items-center">
         <div className="mt-[40px] px-2 ">
           <motion.p
             variants={upwardVariants}
@@ -233,7 +227,7 @@ export default function Blog() {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </motion.p>
         </div>
-        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 px-3 my-6 space-y-4">
+        <div className="columns-1 air:columns-3 my-6 air:space-y-4 xl:space-y-5 xxl:space-y-6 xxxl:space-y-7 hd:space-y-8 px-3 air:px-20 xl:px-28 hd:px-52">
           {Images.map((item, index) => (
             <motion.div
               key={index}
@@ -246,9 +240,9 @@ export default function Blog() {
               <Image
                 src={item.img}
                 alt={`Coffee Image ${index + 1}`}
-                width={326}
-                height={index % 2 === 0 ? 500 : 350} // Random heights for organic look
-                className="w-full object-cover rounded-2xl"
+                width={1000}
+                height={1000}
+                className="w-full aspect-auto object-cover rounded-2xl"
               />
             </motion.div>
           ))}

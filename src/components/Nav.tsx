@@ -25,7 +25,7 @@ const Links = [
         path: "/Blog",
     },
     {
-        name: "Liên lạc",
+        name: "Liên hệ",
         path: "/Contact",
     },
 ]

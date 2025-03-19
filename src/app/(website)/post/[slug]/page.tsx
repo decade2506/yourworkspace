@@ -57,10 +57,16 @@ export default async function Post(props: any) {
         <h1 className="text-3xl md:text-5xl text-white mt-2 mb-2 font-medium">
           {post.title}
         </h1>
-        <div className="text-yellow-600 text-sm mb-52 flex items-center gap-10 font-semibold">
+        <div className="text-yellow-600 text-sm mb-52 flex items-center justify-center gap-10 font-semibold">
           <div className="flex items-center gap-2">
             <CalendarIcon size={20} />
-            {new Date(post.publishedAt).toDateString()}
+            {new Date(post.publishedAt).toLocaleString("vi-VN", {
+              timeZone: "Asia/Ho_Chi_Minh",
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
           </div>
           <div>|</div>
           {post.author && (
@@ -76,7 +82,7 @@ export default async function Post(props: any) {
             src={urlFor(post.image).url()}
             alt={post.title}
             width={1800}
-            height={500}
+            height={1000}
             className="sm:aspect-[5/2] xs:max-h-[165px] md:max-h-[340px] xl:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
             priority
             quality={100}

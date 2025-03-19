@@ -26,7 +26,7 @@ const Header = () => {
   }, []);
 
   // Calculate background opacity based on scroll position
-  const bgOpacity = Math.max(0, 0.4 + (scrollPosition / 300) * 0.5);
+  const bgOpacity = Math.max(0, 0.8 + (scrollPosition / 300) * 0.5);
   const invalidPath: boolean = useInvalidname();
   if (invalidPath) return <></>;
 
@@ -44,8 +44,8 @@ const Header = () => {
             <Image
               src="/brandpic/logo.png"
               alt="Logo"
-              width={92}
-              height={60}
+              width={200}
+              height={200}
               priority
               className="w-[92px] h-[60px] object-contain"
             />

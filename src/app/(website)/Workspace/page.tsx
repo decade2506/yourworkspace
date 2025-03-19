@@ -84,25 +84,19 @@ const space = [
 ];
 const Gallery = [
   {
-    img: "/brandpic/office/office3_3.jpg",
+    img: "/brandpic/gallert/ga1.jpg",
   },
   {
-    img: "/brandpic/office/office3_2.jpg",
+    img: "/brandpic/gallert/ga2.png",
   },
   {
-    img: "/brandpic/office/office3_1.jpg",
+    img: "/brandpic/gallert/ga3.png",
   },
   {
-    img: "/brandpic/office/office5.png",
+    img: "/brandpic/gallert/ga4.png",
   },
   {
-    img: "/brandpic/office/office4.png",
-  },
-  {
-    img: "/brandpic/office/office5.png",
-  },
-  {
-    img: "/brandpic/office/office6.png",
+    img: "/brandpic/gallert/ga5.jpg",
   },
 ];
 const Facilities = [
@@ -143,7 +137,7 @@ export default function Workspace() {
     <div className="overflow-hidden w-full min-h-screen">
       {/* Title */}
       <div className="flex flex-col items-center justify-center bg-green-200 pt-40 min-h-screen">
-        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%] xl:ml-4">
+        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%] xl:ml-4 hd:ml-16">
           <motion.p
             variants={childVariants}
             initial="hidden"
@@ -469,7 +463,7 @@ export default function Workspace() {
             Take a look at our vibrant and dynamic workspaces.
           </motion.p>
         </div>
-        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 px-3 my-6 space-y-4">
+        <div className="columns-1 air:columns-3 my-6 air:space-y-4 xl:space-y-5 xxl:space-y-6 xxxl:space-y-7 hd:space-y-8 px-3 air:px-20 xl:px-28 hd:px-52">
           {Gallery.map((item, index) => (
             <motion.div
               key={index}
@@ -482,9 +476,9 @@ export default function Workspace() {
               <Image
                 src={item.img}
                 alt={`Coffee Image ${index + 1}`}
-                width={326}
-                height={index % 2 === 0 ? 500 : 350} // Random heights for organic look
-                className="w-full object-cover rounded-2xl"
+                width={1000}
+                height={1000}
+                className="w-full aspect-auto object-cover rounded-2xl"
               />
             </motion.div>
           ))}
@@ -530,28 +524,28 @@ export default function Workspace() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 mx-10 my-6 xl:w-[40%]"
+            className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 my-6 xl:w-[40%]"
           >
             <Image
               src="/brandpic/profile/profile1.jpg"
               alt=""
-              height={85}
-              width={85}
-              className="rounded-full md:w-[20%] xl:mt-[-20%] object-center object-cover"
+              height={800} //85
+              width={800}
+              className="rounded-full aspect-square xxs:w-[36%] md:w-[16%] xl:w-[22%] xl:mt-[-20%] object-center object-cover"
             />
             <Image
               src="/brandpic/profile/profile2.jpg"
               alt=""
-              height={120}
-              width={120}
-              className="rounded-full md:w-[50%] xl:mb-[-20%] object-center object-cover"
+              height={800} //120
+              width={800}
+              className="rounded-full aspect-square xxs:w-[50%] md:w-[28%] xl:w-[35%] xl:mb-[-20%] object-center object-cover"
             />
             <Image
               src="/brandpic/profile/profile3.jpg"
               alt=""
-              height={80}
-              width={80}
-              className="rounded-full md:w-[40%] xl:mt-[-10%] xl:w-[48%] object-center object-cover"
+              height={800} //80
+              width={800}
+              className="rounded-full aspect-square xxs:w-[32%] md:w-[23%] xl:w-[30%] xl:mt-[-3%] object-center object-cover"
             />
           </motion.div>
         </div>
