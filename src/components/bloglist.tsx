@@ -90,7 +90,7 @@ export default function BlogClient({ posts }: BlogProps) {
 
       <div className="flex xl:flex-row-reverse flex-col justify-center gap-5 pt-52 xxs:mt-26 mt-32 bg-slate-100">
         {/* Latest Blog */}
-        <div className="px-10 py-2">
+        <div className="py-2">
           <motion.h1
             variants={childVariants}
             initial="hidden"

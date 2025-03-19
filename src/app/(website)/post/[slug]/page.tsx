@@ -51,14 +51,14 @@ export default async function Post(props: any) {
   const latestPosts = await getLatestPosts(post._id);
 
   return (
-    <div>
+    <div className="overflow-hidden w-full">
       {/* title */}
-      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 h-[300px] md:h-[600px] xl:h-[900px] xs:pt-72 sm:pt-32 md:pt-0">
+      <div className="relative flex flex-col items-center justify-center text-center bg-green-800 p-8 min-h-[500px] xssm:h-[650px] md:h-[660px] air:h-[799px] lgl:h-[980px] xl:max-h-[600px] hd:max-h-[700px] xxs:pt-48 sm:pt-32 md:pt-0">
         <h1 className="text-3xl md:text-5xl text-white mt-2 mb-2 font-medium">
           {post.title}
         </h1>
-        <div className="text-yellow-600 text-sm mb-52 flex items-center justify-center gap-10 font-semibold">
-          <div className="flex items-center gap-2">
+        <div className="text-yellow-600 text-sm mb-52 flex items-center justify-center gap-2 font-semibold">
+          <div className="flex items-center gap-1">
             <CalendarIcon size={20} />
             {new Date(post.publishedAt).toLocaleString("vi-VN", {
               timeZone: "Asia/Ho_Chi_Minh",
@@ -72,18 +72,18 @@ export default async function Post(props: any) {
           {post.author && (
             <div>
               <div className="flex items-center gap-2">
-                <span>By {post.author}</span>
+                <span>Bởi {post.author}</span>
               </div>
             </div>
           )}
         </div>
-        <div className="absolute top-[88%] md:top-[60%] lg:top-[70%] xl:top-[60%] md:px-5 lg:px-0 flex justify-center left-0 right-0 mx-auto">
+        <div className="absolute top-[85%] md:top-[60%] air:top-[70%] lg:top-[70%] lgl:top-[78%] xl:top-[60%]  flex justify-center md:px-5 xl:px-8 lg:px-0 left-0 right-0 mx-auto xxs:mx-5">
           <Image
             src={urlFor(post.image).url()}
             alt={post.title}
             width={1800}
             height={1000}
-            className="sm:aspect-[5/2] xs:max-h-[165px] md:max-h-[340px] xl:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
+            className="w-full h-auto sm:aspect-[5/3] xxs:max-h-[165px] xs:max-h-[195px] xsm:max-h-[250px] md:max-h-[340px] lgl:max-h-[400px] xl:max-h-[300px] xxxl:max-h-[450px] hd:max-h-[500px] aspect-auto mx-8 rounded-2xl object-cover object-center"
             priority
             quality={100}
           />
@@ -97,13 +97,13 @@ export default async function Post(props: any) {
         {/* Latest Blog */}
         <div className="pr-3 py-2 xl:mr-[-10%]">
           <h1 className="text-xl text-center xl:text-left text-green-800 ml-2 py-4 mb-5">
-            Latest Post
+            Bài đăng mới nhất
           </h1>
           <div className="flex flex-col md:flex-row flex-wrap xl:flex-nowrap xl:flex-col md:items-center justify-center items-start gap-3">
             {latestPosts.map((latestPosts) => (
               <div
                 key={latestPosts._id}
-                className="flex items-center xs:gap-12 sm:gap-3 pb-4"
+                className="flex items-start xs:gap-12 sm:gap-3 pb-4"
               >
                 <Link href={`/post/${latestPosts.slug.current}`}>
                   <Image
