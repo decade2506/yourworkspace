@@ -312,7 +312,7 @@ export default function Workspace() {
       </div>
 
       {/* Our Space */}
-      <div className="bg-slate-50 flex flex-col items-center">
+      <div className="bg-slate-100 flex flex-col items-center xsl:px-20 xxl:px-40 xxxl:px-52">
         <div className="mt-[40px] px-11 lgl:relative">
           <motion.p
             variants={upwardVariants}
