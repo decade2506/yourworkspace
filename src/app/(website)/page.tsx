@@ -85,7 +85,7 @@ export default function Home() {
   return (
     <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="flex flex-col items-center justify-center bg-green-800 pt-40 min-h-screen xs:pt-32 xsm:pt-32 sm:pt-52 md:pt-24 lg:pt-40 xl:pt-24 xl:pb-3 xsl:pt-28">
+      <div className="flex flex-col items-center justify-center bg-green-800 pt-40 min-h-screen xxs:pt-20 xsm:pt-32 sm:pt-52 md:pt-24 lg:pt-40 xl:pt-24 xl:pb-3 xsl:pt-28">
         <motion.div>
           <div className=" px-5 sm:px-11 xl:pr-20 xsl:pr-[20%] hd:ml-12">
             <motion.p

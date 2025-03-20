@@ -79,7 +79,7 @@ export default function Blog() {
   return (
     <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="flex flex-col items-center justify-center bg-[#f0c19f] pt-40 min-h-screen">
+      <div className="flex flex-col items-center justify-center bg-[#f0c19f] xxs:pt-12 pt-40 min-h-screen">
         <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[10%] xl:ml-4 hd:ml-20">
           <motion.p
             variants={childVariants}
