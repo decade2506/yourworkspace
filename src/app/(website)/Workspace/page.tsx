@@ -313,13 +313,13 @@ export default function Workspace() {
 
       {/* Our Space */}
       <div className="bg-slate-50 flex flex-col items-center">
-        <div className="mt-[40px] px-11 xl:relative">
+        <div className="mt-[40px] px-11 lgl:relative">
           <motion.p
             variants={upwardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-sm text-center xl:text-left mt-10 pt-6 text-green-700 font-medium tracking-wider"
+            className="text-sm text-center lgl:text-left mt-10 pt-6 text-green-700 font-medium tracking-wider"
           >
             KHÔNG GIAN CỦA CHÚNG TÔI
           </motion.p>
@@ -328,7 +328,7 @@ export default function Workspace() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl xl:leading-relaxed text-center xl:text-left xl:w-[50%] text-black font-medium my-6"
+            className="text-3xl md:text-5xl lgl:leading-relaxed text-center lgl:text-left lgl:w-[50%] text-black font-medium my-6"
           >
             Hãy ghé thăm không gian làm việc đầy năng lượng và hiện đại của
             chúng tôi
@@ -338,7 +338,7 @@ export default function Workspace() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-lg text-center xl:text-right xl:w-1/2 xl:ml-[40%] xl:absolute top-[70%]"
+            className="text-sm md:text-lg text-center lgl:text-right lgl:w-1/2 lgl:ml-[40%] lgl:pl-3 lgl:absolute top-[70%]"
           >
             Cho dù bạn đang tìm kiếm một nơi yên tĩnh để làm việc, một không
             gian chuyên nghiệp để họp hay một địa điểm tổ chức hội thảo tiếp
@@ -487,14 +487,14 @@ export default function Workspace() {
 
       {/* Our Facilities */}
       <div className="bg-slate-50 flex flex-col items-center">
-        <div className="md:flex flex-col xl:flex-row items-center justify-center">
-          <div className="mt-[40px] px-11 xl:w-[40%]">
+        <div className="md:flex flex-col lgl:flex-row items-center justify-center">
+          <div className="mt-[40px] px-11 lgl:w-[40%]">
             <motion.p
               variants={upwardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-sm text-center xl:text-left mt-10 pt-6 text-green-700 font-medium tracking-wider"
+              className="text-sm text-center lgl:text-left mt-10 pt-6 text-green-700 font-medium tracking-wider"
             >
               CƠ SỞ VẬT CHẤT
             </motion.p>
@@ -503,7 +503,7 @@ export default function Workspace() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-3xl md:text-5xl text-center xl:text-left text-green-700 font-medium my-6"
+              className="text-3xl md:text-5xl lgl:leading-relaxed text-center lgl:text-left text-green-700 font-medium my-6"
             >
               Tiện nghi cao cấp cho trải nghiệm làm việc liền mạch
             </motion.h1>
@@ -512,7 +512,7 @@ export default function Workspace() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-lg text-center xl:text-left"
+              className="text-sm md:text-lg text-center lgl:text-left"
             >
               Chúng tôi cung cấp nhiều tiện nghi hàng đầu được thiết kế để giúp
               trải nghiệm làm việc của bạn trở nên suôn sẻ và thoải mái nhất có
@@ -524,28 +524,28 @@ export default function Workspace() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 my-6 xl:w-[40%]"
+            className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 my-6 lgl:w-[40%]"
           >
             <Image
               src="/brandpic/profile/profile1.jpg"
               alt=""
               height={800} //85
               width={800}
-              className="rounded-full aspect-square xxs:w-[36%] md:w-[16%] xl:w-[22%] xl:mt-[-20%] object-center object-cover"
+              className="rounded-full aspect-square xxs:w-[36%] md:w-[16%] lgl:w-[22%] lgl:mt-[-20%] object-center object-cover"
             />
             <Image
               src="/brandpic/profile/profile2.jpg"
               alt=""
               height={800} //120
               width={800}
-              className="rounded-full aspect-square xxs:w-[50%] md:w-[28%] xl:w-[35%] xl:mb-[-20%] object-center object-cover"
+              className="rounded-full aspect-square xxs:w-[50%] md:w-[28%] lgl:w-[35%] lgl:mb-[-20%] object-center object-cover"
             />
             <Image
               src="/brandpic/profile/profile3.jpg"
               alt=""
               height={800} //80
               width={800}
-              className="rounded-full aspect-square xxs:w-[32%] md:w-[23%] xl:w-[30%] xl:mt-[-3%] object-center object-cover"
+              className="rounded-full aspect-square xxs:w-[32%] md:w-[23%] lgl:w-[30%] lgl:mt-[-3%] object-center object-cover"
             />
           </motion.div>
         </div>
