@@ -9,6 +9,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "next-sanity";
 import { useState } from "react";
 
+export const revalidate = 3;
 interface BlogProps {
   posts: SanityTypes.Post[];
 }
@@ -46,7 +47,6 @@ export default function BlogClient({ posts }: BlogProps) {
       day: "numeric",
     });
   };
-
   return (
     <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       {/* Title */}
