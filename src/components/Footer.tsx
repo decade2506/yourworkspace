@@ -58,7 +58,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <FaClock className="mr-2 mt-1 text-gray-600" />
-                Chủ nhật: 7:00 AM - 12:00 PM
+                Chủ nhật: 7:00 AM - 12:00 AM
               </li>
             </ul>
           </div>
