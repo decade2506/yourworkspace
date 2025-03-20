@@ -163,9 +163,9 @@ export default function Workspace() {
             viewport={{ once: true }}
             className="text-sm lgl:text-lg text-center lgl:text-left"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
-            repudiandae unde ut velit sapiente labore expedita soluta maiores
-            deserunt exercitationem aliquam natus quis accusantium, m.
+            Chúng tôi cung cấp nhiều không gian làm việc hiện đại và linh hoạt
+            được thiết kế để đáp ứng nhu cầu của những người làm việc tự do, các
+            công ty khởi nghiệp và các doanh nghiệp đã thành lập.
           </motion.p>
         </div>
         <motion.div
@@ -424,7 +424,7 @@ export default function Workspace() {
                   {item.price}
                 </motion.p>
                 <Button className="rounded-full text-white bg-green-700 px-10 hover:bg-black/80">
-                <Link href="/Contact">Đặt ngay</Link>
+                  <Link href="/Contact">Đặt ngay</Link>
                 </Button>
               </div>
             </motion.div>
