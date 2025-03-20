@@ -133,7 +133,7 @@ export default function Blog() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="flex flex-col items-center relative my-6 hover:scale-[103%]"
+              className="flex flex-col items-center relative my-6 lgl:hover:scale-[103%]"
             >
               <Image
                 src={item.img}

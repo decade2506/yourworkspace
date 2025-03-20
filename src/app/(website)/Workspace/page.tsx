@@ -136,7 +136,7 @@ export default function Workspace() {
   return (
     <div className="overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="flex flex-col items-center justify-center bg-green-200 pt-40 min-h-screen">
+      <div className="flex flex-col items-center justify-center bg-green-200 xxs:pt-12 pt-40 min-h-screen">
         <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%] xl:ml-4 hd:ml-16">
           <motion.p
             variants={childVariants}
