@@ -54,11 +54,7 @@ const Footer = () => {
             <ul className="space-y-2 leading-loose flex flex-col items-start">
               <li className="flex items-center">
                 <FaClock className="mr-2 mt-1 text-gray-600" />
-                Thứ 2 - Thứ 6: 7:00 AM - 8:00 PM
-              </li>
-              <li className="flex items-center">
-                <FaClock className="mr-2 mt-1 text-gray-600" />
-                Thứ 7: 9:00 AM - 6:00 PM
+                Thứ 2 - Thứ 7: 7:00 AM - 6:00 PM
               </li>
               <li className="flex items-center">
                 <FaClock className="mr-2 mt-1 text-gray-600" />
