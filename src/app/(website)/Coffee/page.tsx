@@ -167,7 +167,7 @@ export default function Blog() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl md:mx-36 text-center text-amber-900 font-medium my-3"
+            className="text-3xl md:text-5xl md:mx-36 text-center text-amber-900 font-medium my-3 xxl:px-28 xxxl:px-40 hd:px-64"
           >
             Nhân tiện, sao không thưởng thức một tách cà phê?
           </motion.h1>

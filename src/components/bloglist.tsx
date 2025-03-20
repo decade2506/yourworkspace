@@ -135,7 +135,7 @@ export default function BlogClient({ posts }: BlogProps) {
                       {post.title}
                     </h1>
                   </Link>
-                  <p className="text-[0.8rem] text-accent">
+                  <p className="text-[0.8rem] text-accent font-medium">
                     {formatDate(post.publishedAt)}
                   </p>
                   <div className="text-sm my-2 line-clamp-2">
@@ -143,7 +143,7 @@ export default function BlogClient({ posts }: BlogProps) {
                   </div>
                   <Link
                     href={`/post/${post.slug.current}`}
-                    className="text-green-800 my-2 md:hidden"
+                    className="text-green-800 my-2 md:hidden font-medium hover:text-black/80 hover:underline"
                   >
                     Read More
                   </Link>
@@ -198,7 +198,7 @@ export default function BlogClient({ posts }: BlogProps) {
                       >
                         {post.title}
                       </Link>
-                      <p className="text-[0.8rem] text-accent mt-2">
+                      <p className="text-[0.8rem] text-accent mt-2 font-medium">
                         {formatDate(post.publishedAt)}
                       </p>
                       <div className="line-clamp-5 mt-2 text-sm">
@@ -208,7 +208,7 @@ export default function BlogClient({ posts }: BlogProps) {
                     <div>
                       <Link
                         href={`/post/${post.slug.current}`}
-                        className="text-green-800 cursor-pointer"
+                        className="text-green-800 cursor-pointer hover:text-black/80 font-medium hover:underline"
                       >
                         Đọc thêm
                       </Link>
@@ -226,7 +226,7 @@ export default function BlogClient({ posts }: BlogProps) {
                 className="p-6 flex justify-center bg-slate-100"
               >
                 <Button
-                  className="rounded-xl px-6 bg-green-800 text-white mx-auto hover:bg-white hover:text-green-900 hover:border-2 border-green-800"
+                  className="rounded-xl px-6 bg-green-800 text-white mx-auto hover:bg-black/80"
                   onClick={loadMorePosts}
                 >
                   Tải thêm

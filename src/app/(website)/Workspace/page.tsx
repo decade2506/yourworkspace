@@ -281,7 +281,7 @@ export default function Workspace() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl text-center text-black font-medium my-3"
+            className="text-3xl md:text-5xl text-center text-black font-medium my-3 xxl:px-28 xxxl:px-40 hd:px-64"
           >
             Chúng tôi mang đến không gian làm việc hiện đại và linh hoạt, phù
             hợp mọi nhu cầu.
@@ -424,7 +424,7 @@ export default function Workspace() {
                   {item.price}
                 </motion.p>
                 <Button className="rounded-full text-white bg-green-700 px-10 hover:bg-black/80">
-                  Đặt ngay
+                <Link href="/Contact">Đặt ngay</Link>
                 </Button>
               </div>
             </motion.div>
@@ -434,7 +434,7 @@ export default function Workspace() {
 
       {/* Gallery */}
       <div className="bg-white">
-        <div className="mt-[40px] px-11 ">
+        <div className="mt-[40px] px-11">
           <motion.p
             variants={upwardVariants}
             initial="hidden"
@@ -449,7 +449,7 @@ export default function Workspace() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl text-center text-black font-medium my-3"
+            className="text-3xl md:text-5xl text-center text-black font-medium my-3 xxl:px-28 xxxl:px-40 hd:px-64"
           >
             Khám phá không gian của chúng tôi
           </motion.h1>

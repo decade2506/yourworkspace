@@ -294,7 +294,7 @@ export default function About() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl text-center text-black font-medium my-3"
+            className="text-3xl md:text-5xl text-center text-black font-medium my-3 xxl:px-28 xxxl:px-40 hd:px-64"
           >
             Chúng tôi mang đến không gian làm việc hiện đại và linh hoạt, phù
             hợp mọi nhu cầu.
@@ -436,7 +436,7 @@ export default function About() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <Button className="bg-green-800 text-white hover:bg-white hover:text-green-800 text-[1.05rem] rounded-full py-7 px-8">
+            <Button className="bg-green-800 text-white hover:bg-black/80 text-[1.05rem] rounded-full py-7 px-8">
               <Link href="/Contact">Hẹn lịch trải nghiệm</Link>
             </Button>
           </motion.div>

@@ -237,7 +237,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl text-green-800 font-medium text-center mx-0 xsl:mx-40"
+          className="text-3xl md:text-5xl text-green-800 font-medium text-center mx-0 xsl:mx-40 xxl:px-28 xxxl:px-40 hd:px-64"
         >
           Bạn cũng có thể liên hệ trực tiếp với đội ngũ thân thiện của chúng tôi
         </motion.h1>
@@ -357,7 +357,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
 
               <Button
                 size="lg"
-                className="rounded-full bg-green-800 text-white hover:bg-green-900"
+                className="rounded-full bg-green-800 text-white hover:bg-black/80"
                 disabled={isSubmitting}
                 type="submit"
               >
@@ -419,7 +419,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-sm md:text-lg text-green-900 text-center mt-3 md:mx-52 xl:mx-64 xsl:mx-72"
+          className="text-sm md:text-lg text-green-900 text-center mt-3 md:mx-52 xl:mx-64 xsl:mx-72 xxl:px-20 xxxl:px-28 hd:px-52"
         >
           Chúng tôi muốn đảm bảo rằng mọi câu hỏi của bạn về không gian, tư cách
           thành viên và dịch vụ của chúng tôi đều được giải đáp rõ ràng.

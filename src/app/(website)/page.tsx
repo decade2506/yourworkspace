@@ -232,13 +232,13 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl text-center text-black font-medium my-3"
+            className="text-3xl md:text-5xl text-center text-black font-medium my-3 xxl:px-28 xxxl:px-40 hd:px-64"
           >
             Chúng tôi mang đến không gian làm việc hiện đại và linh hoạt, phù
             hợp mọi nhu cầu.
           </motion.h1>
         </div>
-        <div className="pb-7 flex flex-wrap gap-3 items-center justify-center">
+        <div className="pb-7 flex flex-wrap md:px-36 xl:px-0 xl:flex-nowrap xl:w-5/6 gap-3 items-center justify-center">
           {Workspace.map((item, index) => (
             <motion.div
               key={index}
@@ -295,7 +295,7 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl text-center text-black font-medium my-3 xl:mx-40"
+            className="text-3xl md:text-5xl text-center text-black font-medium my-3 xl:mx-40 xxl:px-28 xxxl:px-40 hd:px-64"
           >
             Khám phá không gian đầy cảm hứng của chúng tôi
           </motion.h1>
@@ -339,12 +339,12 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl text-center text-black font-medium my-3"
+            className="text-3xl md:text-5xl text-center text-black font-medium my-5 xxl:px-28 xxxl:px-40 hd:px-64"
           >
             Nhân tiện, sao không thưởng thức một tách cà phê?
           </motion.h1>
         </div>
-        <div className="pb-7 flex flex-wrap gap-3 items-center justify-center">
+        <div className="pb-7 flex flex-wrap md:px-36 xl:px-0 xl:flex-nowrap xl:w-5/6 gap-3 items-center justify-center">
           {Coffee.map((item, index) => (
             <motion.div
               key={index}
