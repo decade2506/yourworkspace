@@ -93,7 +93,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-sm text-center xl:text-left  text-green-300 font-medium tracking-wider"
+              className="text-sm text-center lgl:text-left  text-green-300 font-medium tracking-wider"
             >
               CÀ PHÊ & KHÔNG GIAN LÀM VIỆC
             </motion.p>
@@ -102,7 +102,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-white font-medium my-5 xl:mr-20"
+              className="text-4xl md:text-5xl lgl:text-6xl text-center lgl:text-left text-white font-medium my-5 xl:mr-20"
             >
               Không gian làm việc thoải mái và trải nghiệm cà phê tuyệt vời
             </motion.h1>
@@ -111,7 +111,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-sm md:text-lg text-center xl:text-left xl:mr-20 text-white/70"
+              className="text-sm md:text-lg text-center lgl:text-left xl:mr-20 text-white/70"
             >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
               quos repudiandae unde ut velit sapiente labore expedita soluta
@@ -123,7 +123,7 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="flex justify-center xl:mr-[80%] gap-4 my-10"
+            className="flex justify-center lgl:mr-[74%] xl:mr-[80%] gap-4 my-10"
           >
             <Button className="rounded-full text-slate-600 bg-white px-10 hover:bg-slate-600 hover:text-white/90 font-medium">
               <Link href="/About">Biết thêm chi tiết</Link>

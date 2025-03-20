@@ -137,13 +137,13 @@ export default function Workspace() {
     <div className="overflow-hidden w-full min-h-screen">
       {/* Title */}
       <div className="flex flex-col items-center justify-center bg-green-200 xxs:pt-12 pt-40 min-h-screen">
-        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%] xl:ml-4 hd:ml-16">
+        <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[20%] lgl:ml-4 hd:ml-16">
           <motion.p
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-sm text-center xl:text-left text-green-800 font-medium tracking-wider"
+            className="text-sm text-center lgl:text-left text-green-800 font-medium tracking-wider"
           >
             KHÔNG GIAN LÀM VIỆC CHO MỌI NHU CẦU
           </motion.p>
@@ -152,7 +152,7 @@ export default function Workspace() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left text-black font-medium my-5"
+            className="text-4xl md:text-5xl lgl:text-6xl text-center lgl:text-left text-black font-medium my-5"
           >
             Khám phá không gian làm việc linh hoạt và đầy cảm hứng
           </motion.h1>
@@ -161,7 +161,7 @@ export default function Workspace() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-sm lgl:text-lg text-center xl:text-left"
+            className="text-sm lgl:text-lg text-center lgl:text-left"
           >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
             repudiandae unde ut velit sapiente labore expedita soluta maiores
@@ -173,7 +173,7 @@ export default function Workspace() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex justify-center xl:mr-[85%] gap-4 my-10"
+          className="flex justify-center lgl:mr-[82%] xl:mr-[85%] gap-4 my-10"
         >
           <Button className="rounded-full text-white bg-orange-400 px-10 hover:bg-black/80">
             <Link href="/contact">Đặt Ngay</Link>

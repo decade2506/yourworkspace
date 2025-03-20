@@ -65,7 +65,7 @@ export default function BlogClient({ posts }: BlogProps) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl xl:text-6xl text-white mt-2 mb-32 font-medium"
+          className="text-3xl md:text-5xl lgl:text-6xl text-white mt-2 mb-32 font-medium"
         >
           Thông tin chi tiết, Mẹo và Cảm hứng
         </motion.h1>

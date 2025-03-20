@@ -126,7 +126,7 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl text-white mt-2 mb-32 font-medium"
+          className="text-3xl md:text-5xl lgl:text-6xl text-white mt-2 mb-32 font-medium"
         >
           Thúc đẩy đổi mới thông qua cộng đồng
         </motion.h1>

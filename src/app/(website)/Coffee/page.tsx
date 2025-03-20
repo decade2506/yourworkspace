@@ -86,7 +86,7 @@ export default function Blog() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-sm text-center xl:text-left text-amber-900 font-medium tracking-wider"
+            className="text-sm text-center lgl:text-left text-amber-900 font-medium tracking-wider"
           >
             CÀ PHÊ MANG ĐI
           </motion.p>
@@ -95,7 +95,7 @@ export default function Blog() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl xl:text-6xl text-center xl:text-left font-medium my-5 xl:mr-32"
+            className="text-4xl md:text-5xl lgl:text-6xl text-center lgl:text-left font-medium my-5 xl:mr-32"
           >
             Cà phê tươi ngon chắc chắn sẽ làm bạn phấn chấn mỗi ngày
           </motion.h1>
@@ -104,7 +104,7 @@ export default function Blog() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-sm lgl:text-lg text-amber-900 text-center xl:text-left mb-9"
+            className="text-sm lgl:text-lg text-amber-900 text-center lgl:text-left mb-9"
           >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
             repudiandae unde ut velit sapiente labore expedita soluta.
@@ -115,7 +115,7 @@ export default function Blog() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex justify-center xl:mr-[79%] gap-4 my-3"
+          className="flex justify-center lgl:mr-[77%] xl:mr-[79%] gap-4 my-3"
         >
           <Button className="rounded-full text-slate-600 bg-white px-10 hover:bg-slate-600 hover:text-white/90 font-medium">
             <Link href="/About">Biết thêm chi tiết</Link>
