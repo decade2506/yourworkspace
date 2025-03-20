@@ -93,7 +93,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-sm text-center lgl:text-left  text-green-300 font-medium tracking-wider xxs:mx-[-10]"
+              className="text-sm text-center lgl:text-left  text-green-300 font-medium tracking-wider xxs:mx-[-10] lgl:mx-0"
             >
               CÀ PHÊ & KHÔNG GIAN LÀM VIỆC
             </motion.p>
