@@ -246,7 +246,7 @@ export default function Workspace() {
             />
           </div>
           <div className="flex flex-col gap-3 text-green-700 absolute bottom-8 lg:ml-[-64%] md:ml-[-56%] xl:ml-[-12%]">
-            <div className="h-[100px] xxs:w-[250px] xs:w-[290px] rounded-2xl bg-white flex items-center justify-center font-medium text-3xl">
+            <div className="h-[100px] xxs:w-[250px] xs:w-[290px] rounded-2xl bg-white flex items-center justify-center font-semibold text-3xl">
               <CountUp
                 end={552}
                 duration={3}
