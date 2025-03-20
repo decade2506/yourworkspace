@@ -330,7 +330,7 @@ export default function Workspace() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl xl:leading-relaxed text-center xl:text-left xl:w-[50%] text-black font-medium my-6"
           >
-            Hãy ghé thăm không gian làm việc đầy năng nượng và hiện đại của
+            Hãy ghé thăm không gian làm việc đầy năng lượng và hiện đại của
             chúng tôi
           </motion.h1>
           <motion.p
