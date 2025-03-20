@@ -338,7 +338,7 @@ export default function Workspace() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-sm md:text-lg text-center lgl:text-right lgl:w-1/2 lgl:ml-[40%] lgl:pl-3 lgl:absolute top-[70%]"
+            className="text-sm md:text-lg text-center lgl:text-right lgl:w-1/2 lgl:ml-[40%] lgl:pl-10 lgl:absolute top-[70%]"
           >
             Cho dù bạn đang tìm kiếm một nơi yên tĩnh để làm việc, một không
             gian chuyên nghiệp để họp hay một địa điểm tổ chức hội thảo tiếp
