@@ -140,7 +140,7 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-lg xl:text-xl flex flex-col gap-3 lg:mb-10 my-10 md:ml-4 text-green-600 font-medium leading-[2.8] xl:leading-[3]"
+            className="text-lg xl:text-xl flex flex-col gap-3 lg:mb-10 my-10 md:ml-1 text-green-600 font-medium leading-[2.8] xl:leading-[3]"
           >
             <li>Không gian làm việc</li>
             <li>Phòng họp</li>
@@ -161,7 +161,7 @@ export default function Home() {
               alt=""
               width={960}
               height={455}
-              className="rounded-2xl sm:aspect-[3/5] xs:max-h-[350px] md:max-w-[465px] lg:max-w-[620px] xl:max-h-[455px] xl:max-w-[350px] object-cover object-center"
+              className="rounded-2xl sm:aspect-[2/5] xs:max-h-[350px] md:max-w-[460px] xl:max-h-[455px] sml:aspect-[2/5] air:max-w-[500px] lg:max-w-[595px] xl:max-w-[350px] object-cover object-center"
               quality={100}
             />
           </div>
