@@ -143,7 +143,7 @@ export default function Workspace() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-sm text-center lgl:text-left text-green-800 font-medium tracking-wider"
+            className="text-sm text-center lgl:text-left text-green-800 font-medium tracking-wider xxs:px-8 lgl:px-0"
           >
             KHÔNG GIAN LÀM VIỆC CHO MỌI NHU CẦU
           </motion.p>
