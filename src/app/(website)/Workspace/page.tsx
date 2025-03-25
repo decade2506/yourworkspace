@@ -176,7 +176,7 @@ export default function Workspace() {
           className="flex justify-center lgl:mr-[82%] xl:mr-[85%] gap-4 my-10"
         >
           <Button className="rounded-full text-white bg-orange-400 px-10 hover:bg-black/80">
-            <Link href="/contact">Đặt Ngay</Link>
+            <Link href="/Contact">Đặt Ngay</Link>
           </Button>
         </motion.div>
       </div>
