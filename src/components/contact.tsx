@@ -27,14 +27,14 @@ const contact = [
     title: "Liên hệ tư vấn không gian làm việc",
     des: "Hãy trò chuyện với đội ngũ thân thiện của chúng tôi.",
     info: "hatran121289@gmail.com",
-    link: "#"
+    link: ""
   },
   {
     image: "/brandpic/svimg/mail.png",
     title: "Trò chuyện để hỗ trợ",
     des: "Hãy trò chuyện với đội ngũ thân thiện của chúng tôi.",
     info: "hatran121289@gmail.com",
-    link: "#"
+    link: ""
   },
   {
     image: "/brandpic/svimg/map.png",
@@ -48,7 +48,7 @@ const contact = [
     title: "Gọi cho chúng tôi",
     des: "Ghé thăm Văn phòng của chúng tôi",
     info: "(+84) 94 777 71 02",
-    link: "#"
+    link: ""
   },
 ];
 const childVariants = {
@@ -384,7 +384,7 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                   />
                   <h1 className="text-xl my-3 text-center">{item.title}</h1>
                   <p className="text-sm text-center mb-3 mx-7">{item.des}</p>
-                  <Link href={item.link} className="text-sm text-green-600 text-center mb-2 mx-10 hover:mr-3">
+                  <Link href={item.link} target={index === 2 ? "_blank" : undefined} className="text-sm text-green-600 text-center mb-2 mx-10 hover:mr-3">
                     {item.info}
                   </Link>
                 </motion.div>
