@@ -40,8 +40,8 @@ const contact = [
     image: "/brandpic/svimg/map.png",
     title: "Ghé thăm chúng tôi",
     des: "Ghé thăm Văn phòng của chúng tôi",
-    info: "yours@workspace.vn",
-    link: "#"
+    info: "Tìm chúng tôi trên Google Maps",
+    link: "https://www.google.com/maps/place/16%C2%B027'30.2%22N+107%C2%B036'47.6%22E/@16.4583889,107.6132222,19z/data=!3m1!4b1!4m4!3m3!8m2!3d16.4583889!4d107.6132222?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
   },
   {
     image: "/brandpic/svimg/phone.png",
