@@ -106,8 +106,9 @@ export default function Blog() {
             viewport={{ once: true }}
             className="text-sm lgl:text-lg text-amber-900 text-center lgl:text-left mb-9"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quos
-            repudiandae unde ut velit sapiente labore expedita soluta.
+            Hạt cà phê rang thủ công, pha chế điêu luyện. Mỗi tách cà phê không
+            chỉ tiếp thêm cảm hứng sáng tạo mà còn kết nối các chuyên gia qua
+            nghệ thuật của cà phê thượng hạng.
           </motion.p>
         </div>
         <motion.div
@@ -117,9 +118,11 @@ export default function Blog() {
           viewport={{ once: true }}
           className="flex justify-center lgl:mr-[77%] xl:mr-[79%] gap-4 my-3"
         >
-          <Button className="rounded-full text-slate-600 bg-white px-10 hover:bg-slate-600 hover:text-white/90 font-medium">
-            <Link href="/About">Biết thêm chi tiết</Link>
-          </Button>
+          <Link href="/About">
+            <Button className="rounded-full text-slate-600 bg-white px-10 hover:bg-slate-600 hover:text-white/90 font-medium">
+              Xem thêm
+            </Button>
+          </Link>
         </motion.div>
       </div>
 
@@ -189,8 +192,9 @@ export default function Blog() {
                 width={75}
                 className="my-3"
               />
-              <h1 className="text-xl my-3 text-center">{item.title}</h1>
-              <p className="text-sm text-center mb-5">{item.description}</p>
+              <h1 className="text-xl my-3 text-center font-medium">
+                {item.title}
+              </h1>
             </motion.div>
           ))}
         </div>
@@ -217,15 +221,6 @@ export default function Blog() {
           >
             Khám phá cà phê của YOURS
           </motion.h1>
-          <motion.p
-            variants={childVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-sm text-center"
-          >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          </motion.p>
         </div>
         <div className="columns-1 air:columns-3 my-6 space-y-2 air:space-y-4 xl:space-y-5 xxl:space-y-6 xxxl:space-y-7 hd:space-y-8 px-3 air:px-20 xl:px-28 hd:px-52">
           {Images.map((item, index) => (

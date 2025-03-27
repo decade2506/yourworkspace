@@ -44,42 +44,42 @@ const space = [
   {
     image: "/brandpic/office/office3_1.jpg",
     littleimg: "/brandpic/svimg/beanbag.png",
-    capacity: "Capacity 10 person",
-    title: "Executive Private Office",
+    capacity: "Sức chứa: 8 người",
+    title: "Văn phòng Riêng Cao Cấp",
     content:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Voluptate quod quia mollitia reprehenderit corrupti veniam nemo aspernatur adipisci!",
-    price: "200$/day",
-    badge: "PRIVATE OFFICE",
+      "Văn phòng riêng biệt, được thiết kế dành riêng cho các nhóm hoặc cá nhân cần sự riêng tư và một không gian làm việc chuyên biệt.",
+    price: "5.000.000/Tháng",
+    badge: "VĂN PHÒNG RIÊNG",
   },
   {
     image: "/brandpic/office/office3_1.jpg",
     littleimg: "/brandpic/svimg/beanbag.png",
-    capacity: "Capacity 10 person",
-    title: "Executive Private Office",
+    capacity: "Sức chứa: 8 người",
+    title: "Văn phòng Riêng Cao Cấp",
     content:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Voluptate quod quia mollitia reprehenderit corrupti veniam nemo aspernatur adipisci!",
-    price: "200$/day",
-    badge: "PRIVATE OFFICE",
+      "Văn phòng riêng biệt, được thiết kế dành riêng cho các nhóm hoặc cá nhân cần sự riêng tư và một không gian làm việc chuyên biệt.",
+    price: "5.000.000/Tháng",
+    badge: "VĂN PHÒNG RIÊNG",
   },
   {
     image: "/brandpic/office/office3_1.jpg",
     littleimg: "/brandpic/svimg/beanbag.png",
-    capacity: "Capacity 10 person",
-    title: "Executive Private Office",
+    capacity: "Sức chứa: 8 người",
+    title: "Văn phòng Riêng Cao Cấp",
     content:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Voluptate quod quia mollitia reprehenderit corrupti veniam nemo aspernatur adipisci!",
-    price: "200$/day",
-    badge: "PRIVATE OFFICE",
+      "Văn phòng riêng biệt, được thiết kế dành riêng cho các nhóm hoặc cá nhân cần sự riêng tư và một không gian làm việc chuyên biệt.",
+    price: "5.000.000/Tháng",
+    badge: "VĂN PHÒNG RIÊNG",
   },
   {
     image: "/brandpic/office/office3_1.jpg",
     littleimg: "/brandpic/svimg/beanbag.png",
-    capacity: "Capacity 10 person",
-    title: "Executive Private Office",
+    capacity: "Sức chứa: 8 người",
+    title: "Văn phòng Riêng Cao Cấp",
     content:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Voluptate quod quia mollitia reprehenderit corrupti veniam nemo aspernatur adipisci!",
-    price: "200$/day",
-    badge: "PRIVATE OFFICE",
+      "Văn phòng riêng biệt, được thiết kế dành riêng cho các nhóm hoặc cá nhân cần sự riêng tư và một không gian làm việc chuyên biệt.",
+    price: "5.000.000/Tháng",
+    badge: "VĂN PHÒNG RIÊNG",
   },
 ];
 const Gallery = [
@@ -175,9 +175,11 @@ export default function Workspace() {
           viewport={{ once: true }}
           className="flex justify-center lgl:mr-[82%] xl:mr-[85%] gap-4 my-10"
         >
-          <Button className="rounded-full text-white bg-orange-400 px-10 hover:bg-black/80">
-            <Link href="/Contact">Đặt Ngay</Link>
-          </Button>
+          <Link href="/Contact">
+            <Button className="rounded-full text-white bg-orange-400 px-10 hover:bg-black/80">
+              Đặt Ngay
+            </Button>
+          </Link>
         </motion.div>
       </div>
 
@@ -304,8 +306,7 @@ export default function Workspace() {
                 width={75}
                 className="my-3"
               />
-              <h1 className="text-xl my-3 text-center">{item.title}</h1>
-              <p className="text-sm text-center mb-5">{item.description}</p>
+              <h1 className="text-xl my-3 text-center font-medium">{item.title}</h1>
             </motion.div>
           ))}
         </div>
@@ -415,7 +416,7 @@ export default function Workspace() {
                   {item.content}
                 </motion.p>
               </div>
-              <div className="border-t-2 border-solid border-slate-300 pt-6 sm:px-6 md:px-8 lg:px-14 xl:px-6 flex justify-center items-center gap-5 sm:gap-40 md:gap-[250px] lg:gap-[350px] xl:gap-24">
+              <div className="border-t-2 border-solid border-slate-300 pt-6 px-1 sm:px-2 md:px-3 lg:px-4 xl:px-1 flex justify-center items-center gap-5 sm:gap-40 md:gap-[250px] lg:gap-[350px] xl:gap-24">
                 <motion.p
                   variants={childVariants}
                   initial="hidden"
@@ -423,9 +424,11 @@ export default function Workspace() {
                 >
                   {item.price}
                 </motion.p>
-                <Button className="rounded-full text-white bg-green-700 px-10 hover:bg-black/80">
-                  <Link href="/Contact">Đặt ngay</Link>
-                </Button>
+                <Link href="/Contact">
+                  <Button className="rounded-full text-white bg-green-700 px-10 hover:bg-black/80">
+                    Đặt ngay
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </motion.div>
@@ -453,7 +456,7 @@ export default function Workspace() {
           >
             Khám phá không gian của chúng tôi
           </motion.h1>
-          <motion.p
+          {/* <motion.p
             variants={childVariants}
             initial="hidden"
             whileInView="visible"
@@ -461,7 +464,7 @@ export default function Workspace() {
             className="text-sm text-center"
           >
             Hãy xem không gian làm việc sôi động và năng động của chúng tôi.
-          </motion.p>
+          </motion.p> */}
         </div>
         <div className="columns-1 air:columns-3 my-6 space-y-2 air:space-y-4 xl:space-y-5 xxl:space-y-6 xxxl:space-y-7 hd:space-y-8 px-3 air:px-20 xl:px-28 hd:px-52">
           {Gallery.map((item, index) => (
@@ -567,7 +570,7 @@ export default function Workspace() {
                 width={75}
                 className="my-3"
               />
-              <h1 className="text-xl my-3 mx-[-5] text-center">{item.title}</h1>
+              <h1 className="text-xl my-3 mx-[-5] text-center font-medium">{item.title}</h1>
               <p className="text-sm text-center mb-5">{item.content}</p>
             </motion.div>
           ))}

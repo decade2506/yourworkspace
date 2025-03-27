@@ -27,28 +27,28 @@ const contact = [
     title: "Liên hệ tư vấn không gian làm việc",
     des: "Hãy trò chuyện với đội ngũ thân thiện của chúng tôi.",
     info: "hatran121289@gmail.com",
-    link: ""
+    link: "",
   },
   {
     image: "/brandpic/svimg/mail.png",
     title: "Trò chuyện để hỗ trợ",
     des: "Hãy trò chuyện với đội ngũ thân thiện của chúng tôi.",
     info: "hatran121289@gmail.com",
-    link: ""
+    link: "",
   },
   {
     image: "/brandpic/svimg/map.png",
     title: "Ghé thăm chúng tôi",
     des: "Ghé thăm Văn phòng của chúng tôi",
     info: "Tìm chúng tôi trên Google Maps",
-    link: "https://www.google.com/maps/place/16%C2%B027'30.2%22N+107%C2%B036'47.6%22E/@16.4583889,107.6132222,19z/data=!3m1!4b1!4m4!3m3!8m2!3d16.4583889!4d107.6132222?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+    link: "https://www.google.com/maps/place/16%C2%B027'30.2%22N+107%C2%B036'47.6%22E/@16.4583889,107.6132222,19z/data=!3m1!4b1!4m4!3m3!8m2!3d16.4583889!4d107.6132222?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D",
   },
   {
     image: "/brandpic/svimg/phone.png",
     title: "Gọi cho chúng tôi",
     des: "Ghé thăm Văn phòng của chúng tôi",
     info: "(+84) 94 777 71 02",
-    link: ""
+    link: "",
   },
 ];
 const childVariants = {
@@ -382,9 +382,12 @@ export default function ContactForm({ sendMail }: ContactFormProps) {
                     className="w-[75px] h-[75px] object-contain"
                     priority={index === 0}
                   />
-                  <h1 className="text-xl my-3 text-center">{item.title}</h1>
-                  <p className="text-sm text-center mb-3 mx-7">{item.des}</p>
-                  <Link href={item.link} target={index === 2 ? "_blank" : undefined} className="text-sm text-green-600 text-center mb-2 mx-10 hover:mr-3">
+                  <h1 className="text-xl my-3 text-center font-medium">{item.title}</h1>
+                  <Link
+                    href={item.link}
+                    target={index === 2 ? "_blank" : undefined}
+                    className="text-sm text-green-600 text-center mb-2 mx-10 hover:mr-3"
+                  >
                     {item.info}
                   </Link>
                 </motion.div>

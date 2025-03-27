@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { SanityTypes } from "@/@types";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "next-sanity";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const revalidate = 3;
 interface BlogProps {
@@ -35,18 +35,33 @@ const childVariants = {
 const POSTS_PER_PAGE = 4;
 
 export default function BlogClient({ posts }: BlogProps) {
+  const [isClient, setIsClient] = useState(false);
+  
+  // Use useEffect to mark when component is mounted on client
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   const [visiblePosts, setVisiblePosts] = useState(POSTS_PER_PAGE);
   const loadMorePosts = () => {
     setVisiblePosts((prevVisiblePosts) => prevVisiblePosts + POSTS_PER_PAGE);
   };
 
   const formatDate = (dateString: string) => {
+    if (!isClient) {
+      return new Date(dateString).toISOString().split('T')[0]; // YYYY-MM-DD format
+    }
     return new Date(dateString).toLocaleDateString("vi-VN", {
       year: "numeric",
       month: "long",
       day: "numeric",
     });
   };
+  if (!isClient) {
+    return <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
+      {/* Simple loading state or skeleton */}
+    </div>;
+  }
+  
   return (
     <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
       {/* Title */}

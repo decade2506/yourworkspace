@@ -113,9 +113,10 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-sm md:text-lg text-center lgl:text-left xl:mr-20 text-white/70"
             >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
-              quos repudiandae unde ut velit sapiente labore expedita soluta
-              maiores deserunt exercitationem aliquam natus quis accusantium.
+              Nâng tầm trải nghiệm làm việc của bạn với không gian linh hoạt,
+              hiện đại, được thiết kế để truyền cảm hứng cho sự hợp tác, năng
+              suất và kết nối. Văn phòng cao cấp, cà phê hảo hạng, tiềm năng vô
+              hạn.
             </motion.p>
           </div>
           <motion.div
@@ -125,9 +126,11 @@ export default function Home() {
             viewport={{ once: true }}
             className="flex justify-center lgl:mr-[74%] xl:mr-[80%] gap-4 my-10"
           >
-            <Button className="rounded-full text-slate-600 bg-white px-10 hover:bg-slate-600 hover:text-white/90 font-medium">
-              <Link href="/About">Biết thêm chi tiết</Link>
-            </Button>
+            <Link href="/About">
+              <Button className="rounded-full text-slate-600 bg-white px-10 hover:bg-slate-600 hover:text-white/90 font-medium">
+                Xem thêm
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
@@ -260,19 +263,10 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-xl my-3 text-center"
+                className="text-xl my-3 text-center font-medium"
               >
                 {item.title}
               </motion.h1>
-              <motion.p
-                variants={childVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="text-sm text-center mb-5"
-              >
-                {item.description}
-              </motion.p>
             </motion.div>
           ))}
         </div>
@@ -366,19 +360,10 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-xl my-3 text-center"
+                className="text-xl my-3 text-center font-medium"
               >
                 {item.title}
               </motion.h1>
-              <motion.p
-                variants={childVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="text-sm text-center mb-5"
-              >
-                {item.description}
-              </motion.p>
             </motion.div>
           ))}
         </div>

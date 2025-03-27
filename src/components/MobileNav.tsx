@@ -15,7 +15,7 @@ const Links = [
     path: "/About",
   },
 {
-    name: "Không gian làm việc",
+    name: "Workspace",
     path: "/Workspace",
 },
 {

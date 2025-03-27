@@ -317,8 +317,7 @@ export default function About() {
                 width={75}
                 className="my-3"
               />
-              <h1 className="text-xl my-3 text-center">{item.title}</h1>
-              <p className="text-sm text-center mb-5">{item.description}</p>
+              <h1 className="text-xl my-3 text-center font-medium">{item.title}</h1>
             </motion.div>
           ))}
         </div>
@@ -436,9 +435,11 @@ export default function About() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <Button className="bg-green-800 text-white hover:bg-black/80 text-[1.05rem] rounded-full py-7 px-8">
-              <Link href="/Contact">Hẹn lịch trải nghiệm</Link>
-            </Button>
+            <Link href="/Contact">
+              <Button className="bg-green-800 text-white hover:bg-black/80 text-[1.05rem] rounded-full py-7 px-8">
+                Trải nghiệm ngay
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </div>
