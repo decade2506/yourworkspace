@@ -83,7 +83,7 @@ const Space = [
 
 export default function Home() {
   return (
-    <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
+    <div className="bg-white overflow-hidden w-full min-h-screen">
       {/* Title */}
       <div className="flex flex-col items-center justify-center bg-green-800 pt-40 min-h-screen xxs:pt-20 xsm:pt-32 sm:pt-52 md:pt-24 lg:pt-40 xl:pt-24 xl:pb-3 xsl:pt-28">
         <motion.div>

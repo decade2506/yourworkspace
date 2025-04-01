@@ -77,9 +77,9 @@ const Images = [
 
 export default function Blog() {
   return (
-    <div className="bg-slate-100 overflow-hidden w-full min-h-screen">
+    <div className="bg-white overflow-hidden w-full min-h-screen">
       {/* Title */}
-      <div className="flex flex-col items-center justify-center bg-[#f0c19f] xxs:pt-12 pt-40 min-h-screen">
+      <div className="flex flex-col items-center justify-center bg-[#F5E5D9] xxs:pt-12 pt-40 min-h-screen">
         <div className="mt-[40px] px-5 xl:pr-20 xsl:pr-[10%] xl:ml-4 hd:ml-20">
           <motion.p
             variants={childVariants}
@@ -170,7 +170,7 @@ export default function Blog() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl md:mx-36 text-center text-amber-900 font-medium my-3 xxl:px-28 xxxl:px-40 hd:px-64"
+            className="text-3xl md:text-5xl md:mx-36 text-center font-medium my-3 xxl:px-28 xxxl:px-40 hd:px-64"
           >
             Nhân tiện, sao không thưởng thức một tách cà phê?
           </motion.h1>
@@ -217,7 +217,7 @@ export default function Blog() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl text-center text-amber-900 font-medium my-3"
+            className="text-3xl md:text-5xl text-center font-medium my-3"
           >
             Khám phá cà phê của YOURS
           </motion.h1>
