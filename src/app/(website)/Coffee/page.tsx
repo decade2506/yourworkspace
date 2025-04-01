@@ -161,7 +161,7 @@ export default function Blog() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-sm text-center  text-amber-600 font-medium tracking-wider"
+            className="text-sm text-center  text-amber-900 font-medium tracking-wider"
           >
             TRẢI NGHIỆM CÀ PHÊ TUYỆT VỜI
           </motion.p>
@@ -208,7 +208,7 @@ export default function Blog() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-sm text-center mt-10 pt-6 text-amber-600 font-medium tracking-wider"
+            className="text-sm text-center mt-10 pt-6 text-amber-900 font-medium tracking-wider"
           >
             CÀ PHÊ TƯƠI CHO NGÀY THÊM HỨNG KHỞI
           </motion.p>
