@@ -39,22 +39,22 @@ const Service = [
   {
     serviceimg: "/brandpic/coffe/beans.png",
     title: "Cà phê hảo hạng",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Cà phê độc đáo từ khắp nơi trên thế giới trong mỗi tách",
   },
   {
     serviceimg: "/brandpic/coffe/variety.png",
     title: "Đa dạng lựa chọn",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Đa dạng lựa chọn, thỏa mãn vị giác.",
   },
   {
     serviceimg: "/brandpic/coffe/service.png",
     title: "Phục vụ nhanh",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Phục vụ nhanh gọn, phù hợp thời gian.",
   },
   {
     serviceimg: "/brandpic/coffe/abient.png",
     title: "Không khí dễ chịu",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Không gian ấm cúng, thưởng thức khoảnh khắc.",
   },
 ];
 const Images = [
@@ -192,9 +192,8 @@ export default function Blog() {
                 width={75}
                 className="my-3"
               />
-              <h1 className="text-xl my-3 text-center font-medium">
-                {item.title}
-              </h1>
+              <h1 className="text-[1.1rem] my-3 text-center font-medium">{item.title}</h1>
+              <p className="text-sm mx-1 my-1 text-center font-normal">{item.description}</p>
             </motion.div>
           ))}
         </div>

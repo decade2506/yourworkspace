@@ -22,22 +22,22 @@ const service = [
   {
     serviceimg: "/brandpic/svimg/modern.png",
     title: "Thiết kế hiện đại",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Thiết kế hiện đại truyền cảm hứng sáng tạo.",
   },
   {
     serviceimg: "/brandpic/svimg/cozy.png",
     title: "Không gian ấm cúng",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Không gian ấm cúng mang lại cảm giác như ở nhà.",
   },
   {
     serviceimg: "/brandpic/svimg/flexible.png",
     title: "Đặt phòng linh hoạt",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Đặt chỗ linh hoạt cho lịch trình bận rộn của bạn.",
   },
   {
     serviceimg: "/brandpic/svimg/beanbag.png",
     title: "Văn phòng làm việc",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Văn phòng được thiết kế dành cho các chuyên gia.",
   },
 ];
 const space = [
@@ -306,7 +306,8 @@ export default function Workspace() {
                 width={75}
                 className="my-3"
               />
-              <h1 className="text-xl my-3 text-center font-medium">{item.title}</h1>
+              <h1 className="text-[1.1rem] my-3 text-center font-medium">{item.title}</h1>
+              <p className="text-sm mx-1 my-1 text-center font-normal">{item.description}</p>
             </motion.div>
           ))}
         </div>
