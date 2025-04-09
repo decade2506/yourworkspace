@@ -59,19 +59,22 @@ const Service = [
 ];
 const Images = [
   {
-    img: "/brandpic/gallert/ga1.jpg",
+    img: "/brandpic/coffe/cf1.jpg",
   },
   {
-    img: "/brandpic/gallert/ga2.png",
+    img: "/brandpic/coffe/cf2.jpg",
   },
   {
-    img: "/brandpic/gallert/ga3.png",
+    img: "/brandpic/coffe/cf3.jpg",
   },
   {
-    img: "/brandpic/gallert/ga4.png",
+    img: "/brandpic/coffe/cf4.jpg",
   },
   {
-    img: "/brandpic/gallert/ga5.jpg",
+    img: "/brandpic/coffe/cf5.jpg",
+  },
+  {
+    img: "/brandpic/coffe/Cafe.jpg",
   },
 ];
 
@@ -218,7 +221,7 @@ export default function Blog() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl text-center font-medium my-3"
           >
-            Khám phá cà phê của YOURS
+            Khám phá không gian cà phê của YOURS
           </motion.h1>
         </div>
         <div className="columns-1 air:columns-3 my-6 space-y-2 air:space-y-4 xl:space-y-5 xxl:space-y-6 xxxl:space-y-7 hd:space-y-8 px-3 air:px-20 xl:px-28 hd:px-52">

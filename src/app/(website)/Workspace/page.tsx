@@ -42,7 +42,7 @@ const service = [
 ];
 const space = [
   {
-    image: "/brandpic/office/office3_1.jpg",
+    image: "/brandpic/office/vp3.png",
     littleimg: "/brandpic/svimg/beanbag.png",
     capacity: "Sức chứa: 8 người",
     title: "Văn phòng Riêng Cao Cấp",
@@ -52,7 +52,7 @@ const space = [
     badge: "VĂN PHÒNG RIÊNG",
   },
   {
-    image: "/brandpic/office/office3_1.jpg",
+    image: "/brandpic/office/vp4.png",
     littleimg: "/brandpic/svimg/beanbag.png",
     capacity: "Sức chứa: 8 người",
     title: "Văn phòng Riêng Cao Cấp",
@@ -62,7 +62,7 @@ const space = [
     badge: "VĂN PHÒNG RIÊNG",
   },
   {
-    image: "/brandpic/office/office3_1.jpg",
+    image: "/brandpic/office/vp5.png",
     littleimg: "/brandpic/svimg/beanbag.png",
     capacity: "Sức chứa: 8 người",
     title: "Văn phòng Riêng Cao Cấp",
@@ -72,7 +72,7 @@ const space = [
     badge: "VĂN PHÒNG RIÊNG",
   },
   {
-    image: "/brandpic/office/office3_1.jpg",
+    image: "/brandpic/office/vp6.png",
     littleimg: "/brandpic/svimg/beanbag.png",
     capacity: "Sức chứa: 8 người",
     title: "Văn phòng Riêng Cao Cấp",
@@ -84,19 +84,22 @@ const space = [
 ];
 const Gallery = [
   {
-    img: "/brandpic/gallert/ga1.jpg",
+    img: "/brandpic/office/vp7.png",
   },
   {
-    img: "/brandpic/gallert/ga2.png",
+    img: "/brandpic/office/vp8.png",
   },
   {
-    img: "/brandpic/gallert/ga3.png",
+    img: "/brandpic/office/vp9.png",
   },
   {
-    img: "/brandpic/gallert/ga4.png",
+    img: "/brandpic/office/vp10.png",
   },
   {
-    img: "/brandpic/gallert/ga5.jpg",
+    img: "/brandpic/office/vp11.png",
+  },
+  {
+    img: "/brandpic/office/vp12.png",
   },
 ];
 const Facilities = [
@@ -208,7 +211,7 @@ export default function Workspace() {
         >
           <div className="flex justify-center my-6 lg:mt-6 lg:mb-0 lg:ml-16 mx-6">
             <Image
-              src="/brandpic/office/office3_3.jpg"
+              src="/brandpic/office/vp1.png"
               alt=""
               width={960}
               height={955}
@@ -240,7 +243,7 @@ export default function Workspace() {
         >
           <div className="flex justify-center mb-6 mt-0">
             <Image
-              src="/brandpic/office/office3_3.jpg"
+              src="/brandpic/gallert/ga4.png"
               alt=""
               width={960}
               height={950}
@@ -467,7 +470,7 @@ export default function Workspace() {
             Hãy xem không gian làm việc sôi động và năng động của chúng tôi.
           </motion.p> */}
         </div>
-        <div className="columns-1 air:columns-3 my-6 space-y-2 air:space-y-4 xl:space-y-5 xxl:space-y-6 xxxl:space-y-7 hd:space-y-8 px-3 air:px-20 xl:px-28 hd:px-52">
+        <div className="columns-1 air:columns-2 my-6 space-y-2 air:space-y-4 xl:space-y-5 xxl:space-y-6 xxxl:space-y-7 hd:space-y-8 px-3 air:px-20 xl:px-28 hd:px-52">
           {Gallery.map((item, index) => (
             <motion.div
               key={index}

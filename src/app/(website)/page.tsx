@@ -77,7 +77,7 @@ const Space = [
     img: "/brandpic/gallert/ga4.png",
   },
   {
-    img: "/brandpic/gallert/ga5.jpg",
+    img: "/brandpic/coffe/cf5.jpg",
   },
 ];
 
@@ -160,7 +160,7 @@ export default function Home() {
         >
           <div className="flex justify-center my-6 lg:mt-6 lg:mb-0 lg:ml-16 mx-6">
             <Image
-              src="/brandpic/office/office3_3.jpg"
+              src="/brandpic/office/vp2.png"
               alt=""
               width={960}
               height={455}
@@ -192,7 +192,7 @@ export default function Home() {
         >
           <div className="flex justify-center mb-6 mt-0">
             <Image
-              src="/brandpic/office/office3_3.jpg"
+              src="/brandpic/gallert/ga4.png"
               alt=""
               width={960}
               height={550}
